@@ -589,7 +589,6 @@
 /*{form/comboBox2:currentOptions$value},{form/comboBox4:currentOptions$value},{form/comboBox5:currentOptions$value},{form/comboBox3:currentOptions$value},{form/uploader0:image})*/
 /*callFunction({users.Aditya.models.Add_User:},&quot;Add_User1&quot;,{form/textField0:text},{form/comboBox0:currentOptions$value},{form/comboBox1:currentOptions$value},{form/comboBox2:currentOptions$value},{form/comboBox4:currentOptions$value},{form/comboBox5:currentOptions$value},{form/comboBox3:currentOptions$value},{form/uploader0:image})*/</value>
                             <value name="activator">form/label18:mouseClicked@</value>
-                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">7264534634350876672</value>
@@ -598,6 +597,37 @@
 
 /*{form/comboBox2:currentOptions$value},{form/comboBox4:currentOptions$value},{form/comboBox5:currentOptions$value},{form/comboBox3:currentOptions$value},{form/uploader0:image})*/</value>
                             <value name="activator">form/label18:mouseClicked@</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">6220739949811271680</value>
+                            <value name="expression">{users:create({form/textField0:text$text},null,null,{form/textField1:text$text},&apos;dateAdd(now(),100,&quot;year&quot;)&apos;,false,false,true, 0,null,null,null,null,null,null,null,null,{form/comboBox1:currentOptions$value},{form/comboBox2:currentOptions$value},null,null,&quot;en&quot;,&quot;dd.MM.yyyy&quot;,&quot;HH:mm:ss&quot;,1)}</value>
+                            <value name="activator">form/label18:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">100827545009246208</value>
+                            <value name="expression">callFunction({users.Aditya.models.Add_User:},&apos;Inser_user&apos;,{form/textField0:text},{form/comboBox0:currentOptions$value},{form/comboBox1:currentOptions$value},{form/comboBox2:currentOptions$value},{form/comboBox4:currentOptions$value},{form/comboBox5:currentOptions$value},{form/comboBox3:currentOptions$value})</value>
+                            <value name="activator">form/label18:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">538125322985320448</value>
+                            <value name="target">users.Aditya.models.Add_User:Add_UserImage</value>
+                            <value name="expression">addRecords({users.Aditya.models.Add_User:Add_UserImage},{form/textField0:text$text},cell({form/uploader0:uploadData},&apos;data&apos;))</value>
+                            <value name="activator">form/label18:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">6812391208695607296</value>
+                            <value name="expression">{form/dataTableEditor0:exportData()}</value>
+                            <value name="activator">form/label7:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">6751456304311367680</value>
+                            <value name="expression">{form/dataTableEditor0:importData()}</value>
+                            <value name="activator">form/label6:mouseClicked@</value>
+                            <value name="onevent">1</value>
                           </record>
                         </records>
                       </table>
@@ -703,6 +733,9 @@
                             <value name="path">label2</value>
                           </record>
                           <record>
+                            <value name="path">label20</value>
+                          </record>
+                          <record>
                             <value name="path">label4</value>
                           </record>
                           <record>
@@ -746,6 +779,9 @@
                           </record>
                           <record>
                             <value name="path">textField0</value>
+                          </record>
+                          <record>
+                            <value name="path">textField1</value>
                           </record>
                           <record>
                             <value name="path">uploader0</value>
@@ -2112,8 +2148,6 @@ td:nth-child(n) {color:#000000;background:transparent!important}    background: 
                       </table>
                     </value>
                     <value name="additionalActionStyle"/>
-                    <value name="readOnly">1</value>
-                    <value name="showToolbar">0</value>
                     <value name="enableContextMenu">1</value>
                     <value name="customPaginatorValues">
                       <table>
@@ -2126,6 +2160,7 @@ td:nth-child(n) {color:#000000;background:transparent!important}    background: 
                         </format>
                       </table>
                     </value>
+                    <value name="fixedFormat">1</value>
                     <value name="format">
                       <table>
                         <format maxRecords="1" minRecords="1">
@@ -2481,7 +2516,6 @@ td:nth-child(n) {color:#000000;background:transparent!important}    background: 
                         </format>
                       </table>
                     </value>
-                    <value name="checkRows">0</value>
                     <value name="resizableColumn">0</value>
                     <value name="confirmActionDelete">0</value>
                     <value name="confirmActionAdd">0</value>
@@ -6208,6 +6242,12 @@ padding: 10px;
                           <record>
                             <value name="childContexts">dataTableEditor1</value>
                           </record>
+                          <record>
+                            <value name="childContexts">label20</value>
+                          </record>
+                          <record>
+                            <value name="childContexts">textField1</value>
+                          </record>
                         </records>
                       </table>
                     </value>
@@ -6774,8 +6814,8 @@ background: transparent;</value>
                 <records>
                   <record>
                     <value name="name">label10</value>
-                    <value name="gridx">2</value>
-                    <value name="gridy">2</value>
+                    <value name="gridx">1</value>
+                    <value name="gridy">4</value>
                     <value name="style"/>
                     <value name="gridBreakpoints">
                       <table>
@@ -6800,7 +6840,7 @@ background: transparent;</value>
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
-                            <value name="containerStyle">gridx:2;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
+                            <value name="containerStyle">gridx:1;gridy:4;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 10px/16px Poppins;&#xd;
 letter-spacing: 0.33px;&#xd;
@@ -6979,8 +7019,8 @@ z-index: 3;</value>
                 <records>
                   <record>
                     <value name="name">comboBox0</value>
-                    <value name="gridx">2</value>
-                    <value name="gridy">3</value>
+                    <value name="gridx">1</value>
+                    <value name="gridy">5</value>
                     <value name="overflow">visible</value>
                     <value name="style">background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
@@ -7016,7 +7056,7 @@ border-radius: 2px;&#xd;
 opacity: 1;&#xd;
 backdrop-filter: blur(10px);&#xd;
 -webkit-backdrop-filter: blur(10px);;</value>
-                            <value name="containerStyle">gridx:2;gridy:3;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+                            <value name="containerStyle">gridx:1;gridy:5;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 2px;&#xd;
 opacity: 1;&#xd;
@@ -7422,7 +7462,7 @@ height: 33px;</value>
                 <records>
                   <record>
                     <value name="name">label11</value>
-                    <value name="gridx">1</value>
+                    <value name="gridx">2</value>
                     <value name="gridy">4</value>
                     <value name="overflow">visible</value>
                     <value name="style"/>
@@ -7449,7 +7489,7 @@ height: 33px;</value>
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
-                            <value name="containerStyle">gridx:1;gridy:4;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
+                            <value name="containerStyle">gridx:2;gridy:4;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 10px/16px Poppins;&#xd;
 letter-spacing: 0.33px;&#xd;
@@ -7563,8 +7603,8 @@ background: transparent;</value>
                 <records>
                   <record>
                     <value name="name">label12</value>
-                    <value name="gridx">2</value>
-                    <value name="gridy">4</value>
+                    <value name="gridx">1</value>
+                    <value name="gridy">6</value>
                     <value name="style"/>
                     <value name="gridBreakpoints">
                       <table>
@@ -7589,7 +7629,7 @@ background: transparent;</value>
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
-                            <value name="containerStyle">gridx:2;gridy:4;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
+                            <value name="containerStyle">gridx:1;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 10px/16px Poppins;&#xd;
 letter-spacing: 0.33px;&#xd;
@@ -7766,7 +7806,7 @@ background: transparent;</value>
                 <records>
                   <record>
                     <value name="name">comboBox1</value>
-                    <value name="gridx">1</value>
+                    <value name="gridx">2</value>
                     <value name="gridy">5</value>
                     <value name="overflow">visible</value>
                     <value name="style"> background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
@@ -7795,7 +7835,7 @@ background: transparent;</value>
                             <value name="breakpoint">fullHD</value>
                             <value name="style">style: background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 ;</value>
-                            <value name="containerStyle">gridx:1;gridy:5;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+                            <value name="containerStyle">gridy:5;gridx:2;gridHeight:1;gridWidth:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 2px;&#xd;
 opacity: 1;&#xd;
@@ -7846,8 +7886,12 @@ height: 33px;</value>
                         </format>
                         <records>
                           <record>
-                            <value name="value">VI</value>
-                            <value name="label">VI</value>
+                            <value name="value">newuser@gmail.com</value>
+                            <value name="label">newuser@gmail.com</value>
+                          </record>
+                          <record>
+                            <value name="value">creatuser@gmail.com</value>
+                            <value name="label">creatuser@gmail.com</value>
                           </record>
                         </records>
                       </table>
@@ -8012,8 +8056,8 @@ height: 33px;</value>
                 <records>
                   <record>
                     <value name="name">comboBox2</value>
-                    <value name="gridx">2</value>
-                    <value name="gridy">5</value>
+                    <value name="gridx">1</value>
+                    <value name="gridy">7</value>
                     <value name="overflow">visible</value>
                     <value name="style">background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
@@ -8049,7 +8093,7 @@ border-radius: 2px;&#xd;
 opacity: 1;&#xd;
 backdrop-filter: blur(10px);&#xd;
 -webkit-backdrop-filter: blur(10px);;</value>
-                            <value name="containerStyle">gridx:2;gridy:5;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+                            <value name="containerStyle">gridx:1;gridy:7;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 2px;&#xd;
 opacity: 1;&#xd;
@@ -8100,8 +8144,8 @@ height: 33px;</value>
                         </format>
                         <records>
                           <record>
-                            <value name="value">VI</value>
-                            <value name="label">VI</value>
+                            <value name="value">1234567891</value>
+                            <value name="label">1234567891</value>
                           </record>
                         </records>
                       </table>
@@ -8203,7 +8247,7 @@ height: 33px;</value>
                 <records>
                   <record>
                     <value name="name">label13</value>
-                    <value name="gridx">1</value>
+                    <value name="gridx">2</value>
                     <value name="gridy">8</value>
                     <value name="style"/>
                     <value name="gridBreakpoints">
@@ -8229,7 +8273,7 @@ height: 33px;</value>
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
-                            <value name="containerStyle">gridx:1;gridy:8;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
+                            <value name="containerStyle">gridx:2;gridy:8;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 10px/16px Poppins;&#xd;
 letter-spacing: 0.33px;&#xd;
@@ -8406,7 +8450,7 @@ background: transparent;</value>
                 <records>
                   <record>
                     <value name="name">comboBox3</value>
-                    <value name="gridx">1</value>
+                    <value name="gridx">2</value>
                     <value name="gridy">9</value>
                     <value name="overflow">visible</value>
                     <value name="style">background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
@@ -8435,7 +8479,7 @@ background: transparent;</value>
                             <value name="breakpoint">fullHD</value>
                             <value name="style">style:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 ;</value>
-                            <value name="containerStyle">gridx:1;gridy:9;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
+                            <value name="containerStyle">gridx:2;gridy:9;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 10px/16px Poppins;&#xd;
 letter-spacing: 0.33px;&#xd;
@@ -8917,7 +8961,7 @@ backdrop-filter: blur(10px);&#xd;
                 <records>
                   <record>
                     <value name="name">label15</value>
-                    <value name="gridx">1</value>
+                    <value name="gridx">2</value>
                     <value name="gridy">6</value>
                     <value name="style"/>
                     <value name="gridBreakpoints">
@@ -8943,7 +8987,7 @@ backdrop-filter: blur(10px);&#xd;
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
-                            <value name="containerStyle">gridx:1;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
+                            <value name="containerStyle">gridx:2;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 10px/16px Poppins;&#xd;
 letter-spacing: 0.33px;&#xd;
@@ -9057,8 +9101,8 @@ background: transparent;</value>
                 <records>
                   <record>
                     <value name="name">label16</value>
-                    <value name="gridx">2</value>
-                    <value name="gridy">6</value>
+                    <value name="gridx">1</value>
+                    <value name="gridy">8</value>
                     <value name="style"/>
                     <value name="gridBreakpoints">
                       <table>
@@ -9083,7 +9127,7 @@ background: transparent;</value>
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
-                            <value name="containerStyle">gridx:2;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
+                            <value name="containerStyle">gridx:1;gridy:8;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 10px/16px Poppins;&#xd;
 letter-spacing: 0.33px;&#xd;
@@ -9260,7 +9304,7 @@ background: transparent;</value>
                 <records>
                   <record>
                     <value name="name">comboBox4</value>
-                    <value name="gridx">1</value>
+                    <value name="gridx">2</value>
                     <value name="gridy">7</value>
                     <value name="overflow">visible</value>
                     <value name="style">background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
@@ -9289,7 +9333,7 @@ background: transparent;</value>
                             <value name="breakpoint">fullHD</value>
                             <value name="style">style:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 ;</value>
-                            <value name="containerStyle">gridx:1;gridy:7;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+                            <value name="containerStyle">gridx:2;gridy:7;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 2px;&#xd;
 opacity: 1;&#xd;
@@ -9506,8 +9550,8 @@ height: 33px;</value>
                 <records>
                   <record>
                     <value name="name">comboBox5</value>
-                    <value name="gridx">2</value>
-                    <value name="gridy">7</value>
+                    <value name="gridx">1</value>
+                    <value name="gridy">9</value>
                     <value name="overflow">visible</value>
                     <value name="style">background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 </value>
@@ -9535,7 +9579,7 @@ height: 33px;</value>
                             <value name="breakpoint">fullHD</value>
                             <value name="style">style:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 ;</value>
-                            <value name="containerStyle">gridx:2;gridy:7;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+                            <value name="containerStyle">gridx:1;gridy:9;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 2px;&#xd;
 opacity: 1;&#xd;
@@ -10386,6 +10430,7 @@ text-align: center;</value>
                         </format>
                       </table>
                     </value>
+                    <value name="fixedFormat">1</value>
                     <value name="format">
                       <table>
                         <format maxRecords="1" minRecords="1">
@@ -10615,7 +10660,257 @@ text-align: center;</value>
                           <validators contentType="base64">HEUeZTIxcGJsSmxZMjl5WkhOOUlEdzlJSHR0WVhoU1pXTnZjbVJ6ZlNBL0lHNTFiR3dnT2lBblRXRjRhVzFoYkNCdWRXMWlaWElnYjJZZw0KY21WamIzSmtjeUJqWVc1dWIzUWdZbVVnYkdWemN5QjBhR1Z1SUcxcGJtbHRZV3duDQod</validators>
                         </format>
                         <records>
-                          <record/>
+                          <record>
+                            <value name="fields">
+                              <table>
+                                <format maxRecords="2147483647" reorderable="true">
+                                  <fields>
+                                    <field hidden="true" name="oldname" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                    <field description="Name" keyfield="true" name="name" type="S">
+                                      <validators contentType="base64">HFIeXHcrXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                                      <defaultValue/>
+                                    </field>
+                                    <field description="Type" name="type" type="S">
+                                      <selectionValues>
+                                        <option description="Integer">I</option>
+                                        <option description="String">S</option>
+                                        <option description="Boolean">B</option>
+                                        <option description="Long">L</option>
+                                        <option description="Float">F</option>
+                                        <option description="Double">E</option>
+                                        <option description="Date">D</option>
+                                        <option description="Data Table">T</option>
+                                        <option description="Color">C</option>
+                                        <option description="Data Block">A</option>
+                                      </selectionValues>
+                                      <defaultValue>I</defaultValue>
+                                    </field>
+                                    <field description="Description" name="description" nullable="true" type="S">
+                                      <validators contentType="base64">HFIeW15ccHtDbnRybH1dKl5eRGVzY3JpcHRpb24gbWF5IGNvbnRhaW4gb25seSBwcmludGFibGUgY2hhcmFjdGVycx0=</validators>
+                                      <defaultValue>
+                                        <nullValue/>
+                                      </defaultValue>
+                                    </field>
+                                    <field description="Default" name="defaultValue" nullable="true" type="S">
+                                      <defaultValue>
+                                        <nullValue/>
+                                      </defaultValue>
+                                    </field>
+                                    <field description="Read-only" name="readonly" type="B">
+                                      <defaultValue>0</defaultValue>
+                                    </field>
+                                    <field description="Nullable" name="nullable" type="B">
+                                      <defaultValue>0</defaultValue>
+                                    </field>
+                                    <field description="Key" name="key" type="B">
+                                      <defaultValue>0</defaultValue>
+                                    </field>
+                                    <field description="Selection Values" name="selvals" type="T">
+                                      <defaultValue>
+                                        <table>
+                                          <format maxRecords="2147483647" reorderable="true">
+                                            <fields>
+                                              <field description="Value" keyfield="true" name="value" nullable="true" type="S">
+                                                <defaultValue>
+                                                  <nullValue/>
+                                                </defaultValue>
+                                              </field>
+                                              <field description="Description" name="description" type="S">
+                                                <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                                                <defaultValue/>
+                                              </field>
+                                            </fields>
+                                            <validators contentType="base64">HEseHQ==</validators>
+                                          </format>
+                                        </table>
+                                      </defaultValue>
+                                    </field>
+                                    <field description="Extendable Selection Values" name="extselvals" type="B">
+                                      <defaultValue>0</defaultValue>
+                                    </field>
+                                    <field advanced="true" description="Hidden" name="hidden" type="B">
+                                      <defaultValue>0</defaultValue>
+                                    </field>
+                                    <field advanced="true" description="Inline" name="inline" type="B">
+                                      <defaultValue>0</defaultValue>
+                                    </field>
+                                    <field advanced="true" description="Encrypted" name="encrypted" type="B">
+                                      <defaultValue>0</defaultValue>
+                                    </field>
+                                    <field description="Help" editor="textarea" name="help" nullable="true" type="S">
+                                      <validators contentType="base64">HFIeW15ccHtDbnRybH1dKl5eRGVzY3JpcHRpb24gbWF5IGNvbnRhaW4gb25seSBwcmludGFibGUgY2hhcmFjdGVycx0=</validators>
+                                      <defaultValue>
+                                        <nullValue/>
+                                      </defaultValue>
+                                    </field>
+                                    <field description="Editor/Viewer" extendableSelectionValues="true" name="editor" nullable="true" type="S">
+                                      <selectionValues>
+                                        <option description="Default">
+                                          <nullValue/>
+                                        </option>
+                                        <option description="List">list</option>
+                                        <option description="Date">date</option>
+                                        <option description="Time">time</option>
+                                        <option description="Bar">bar</option>
+                                        <option description="Bytes">bytes</option>
+                                        <option description="Class Instance">instance</option>
+                                        <option description="Time Period">period</option>
+                                        <option description="Foreign Class Instance">foreignInstance</option>
+                                        <option description="Expression">expression</option>
+                                        <option description="Function Selector">functionselector</option>
+                                        <option description="Password">password</option>
+                                        <option description="Text Editor">text</option>
+                                        <option description="HTML">html</option>
+                                        <option description="Text Area">textarea</option>
+                                        <option description="Embedded Text Area">etextarea</option>
+                                        <option description="Context">context</option>
+                                        <option description="Context Mask">contextmask</option>
+                                        <option description="Font">font</option>
+                                        <option description="IP Address">ip</option>
+                                        <option description="Box">box</option>
+                                        <option description="Image">image</option>
+                                        <option description="Sound">sound</option>
+                                        <option description="Hex">hex</option>
+                                        <option description="Reference">reference</option>
+                                        <option description="Activator">activator</option>
+                                        <option description="Code Editor">code</option>
+                                        <option description="Spinner">spinner</option>
+                                        <option description="Event Level">eventLevel</option>
+                                      </selectionValues>
+                                      <defaultValue>
+                                        <nullValue/>
+                                      </defaultValue>
+                                    </field>
+                                    <field description="Editor Options" name="editorOptions" nullable="true" type="T">
+                                      <defaultValue>
+                                        <nullValue/>
+                                      </defaultValue>
+                                    </field>
+                                    <field description="Validators" name="validators" nullable="true" type="T">
+                                      <defaultValue>
+                                        <table>
+                                          <format maxRecords="2147483647" reorderable="true">
+                                            <fields>
+                                              <field description="Type" name="validator" nullable="true" type="S">
+                                                <selectionValues>
+                                                  <option description="Default">
+                                                    <nullValue/>
+                                                  </option>
+                                                  <option description="ID Validator">I</option>
+                                                  <option description="Limits Validator">L</option>
+                                                  <option description="Non-Null Validator">N</option>
+                                                  <option description="Regex Validator">R</option>
+                                                  <option description="Expression Validator">E</option>
+                                                </selectionValues>
+                                                <defaultValue>
+                                                  <nullValue/>
+                                                </defaultValue>
+                                              </field>
+                                              <field description="Options" name="options" type="S">
+                                                <defaultValue/>
+                                              </field>
+                                            </fields>
+                                          </format>
+                                        </table>
+                                      </defaultValue>
+                                    </field>
+                                    <field description="Group" name="group" nullable="true" type="S">
+                                      <defaultValue>
+                                        <nullValue/>
+                                      </defaultValue>
+                                    </field>
+                                  </fields>
+                                  <bindings>
+                                    <binding>
+                                      <reference>editorOptions</reference>
+                                      <expression>callFunction(&quot;utilities&quot;, &quot;editorOptions&quot;, {type}, {editor}, {editorOptions})</expression>
+                                    </binding>
+                                    <binding>
+                                      <reference>editor#choices</reference>
+                                      <expression>{utilities:editors(&apos;{type}&apos;)}</expression>
+                                    </binding>
+                                  </bindings>
+                                  <validators contentType="base64">HEseHQ==</validators>
+                                </format>
+                                <records>
+                                  <record>
+                                    <value name="name">Username</value>
+                                    <value name="type">S</value>
+                                    <value name="editorOptions">
+                                      <table>
+                                        <format maxRecords="1" minRecords="1">
+                                          <fields>
+                                            <field description="Editor Options" name="options" type="S">
+                                              <defaultValue/>
+                                            </field>
+                                          </fields>
+                                        </format>
+                                        <records>
+                                          <record/>
+                                        </records>
+                                      </table>
+                                    </value>
+                                  </record>
+                                  <record>
+                                    <value name="name">Password</value>
+                                    <value name="type">S</value>
+                                    <value name="editorOptions">
+                                      <table>
+                                        <format maxRecords="1" minRecords="1">
+                                          <fields>
+                                            <field description="Editor Options" name="options" type="S">
+                                              <defaultValue/>
+                                            </field>
+                                          </fields>
+                                        </format>
+                                        <records>
+                                          <record/>
+                                        </records>
+                                      </table>
+                                    </value>
+                                  </record>
+                                  <record>
+                                    <value name="name">EmailID</value>
+                                    <value name="type">S</value>
+                                    <value name="editorOptions">
+                                      <table>
+                                        <format maxRecords="1" minRecords="1">
+                                          <fields>
+                                            <field description="Editor Options" name="options" type="S">
+                                              <defaultValue/>
+                                            </field>
+                                          </fields>
+                                        </format>
+                                        <records>
+                                          <record/>
+                                        </records>
+                                      </table>
+                                    </value>
+                                  </record>
+                                  <record>
+                                    <value name="name">MobileNo</value>
+                                    <value name="type">S</value>
+                                    <value name="editorOptions">
+                                      <table>
+                                        <format maxRecords="1" minRecords="1">
+                                          <fields>
+                                            <field description="Editor Options" name="options" type="S">
+                                              <defaultValue/>
+                                            </field>
+                                          </fields>
+                                        </format>
+                                        <records>
+                                          <record/>
+                                        </records>
+                                      </table>
+                                    </value>
+                                  </record>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                         </records>
                       </table>
                     </value>
@@ -10745,6 +11040,398 @@ text-align: center;</value>
                     <value name="resizableColumn">0</value>
                     <value name="confirmActionDelete">0</value>
                     <value name="confirmActionAdd">0</value>
+                  </record>
+                </records>
+              </table>
+            </value>
+          </record>
+          <record>
+            <value name="name">label20</value>
+            <value name="type">label</value>
+            <value name="parameters">
+              <table>
+                <format maxRecords="1" minRecords="1">
+                  <fields>
+                    <field description="Name" name="name" nullable="true" type="S">
+                      <validators contentType="base64">HFIeXHcrXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Column" name="gridx" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Row" name="gridy" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Column Span" name="gridWidth" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Row Span" name="gridHeight" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Content Overflow" name="overflow" type="S">
+                      <selectionValues>
+                        <option description="Auto">auto</option>
+                        <option description="Hidden">hidden</option>
+                        <option description="Scroll">scroll</option>
+                        <option description="Unset">unset</option>
+                        <option description="Visible">visible</option>
+                      </selectionValues>
+                      <defaultValue>auto</defaultValue>
+                    </field>
+                    <field description="Visible" name="visible" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Custom Classes" name="customClasses" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Element CSS Style" editor="code" name="style" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Breakpoints" name="gridBreakpoints" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="visibleChildren" name="visibleChildren" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Container Style" editor="code" name="containerStyle" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Text" name="text" nullable="true" type="S">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                  </fields>
+                </format>
+                <records>
+                  <record>
+                    <value name="name">label20</value>
+                    <value name="gridx">2</value>
+                    <value name="gridy">2</value>
+                    <value name="style"/>
+                    <value name="gridBreakpoints">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Breakpoint" name="breakpoint" nullable="true" type="S">
+                              <defaultValue>default</defaultValue>
+                            </field>
+                            <field description="Style" name="style" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                            <field description="Container Style" name="containerStyle" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
+                            <value name="containerStyle">gridx:2;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
+text-align: left;&#xd;
+font: normal normal normal 10px/16px Poppins;&#xd;
+letter-spacing: 0.33px;&#xd;
+color: #D8D9DA;&#xd;
+opacity: 1;&#xd;
+background: transparent;;</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="visibleChildren">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field name="path" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                      </table>
+                    </value>
+                    <value name="containerStyle">color: var(--unnamed-color-d8d9da);&#xd;
+text-align: left;&#xd;
+font: normal normal normal 10px/16px Poppins;&#xd;
+letter-spacing: 0.33px;&#xd;
+color: #D8D9DA;&#xd;
+opacity: 1;&#xd;
+background: transparent;</value>
+                    <value name="text">Password</value>
+                  </record>
+                </records>
+              </table>
+            </value>
+          </record>
+          <record>
+            <value name="name">textField1</value>
+            <value name="parameters">
+              <table>
+                <format maxRecords="1" minRecords="1">
+                  <fields>
+                    <field description="Name" name="name" nullable="true" type="S">
+                      <validators contentType="base64">HFIeXHcrXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Column" name="gridx" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Row" name="gridy" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Column Span" name="gridWidth" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Row Span" name="gridHeight" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Content Overflow" name="overflow" type="S">
+                      <selectionValues>
+                        <option description="Auto">auto</option>
+                        <option description="Hidden">hidden</option>
+                        <option description="Scroll">scroll</option>
+                        <option description="Unset">unset</option>
+                        <option description="Visible">visible</option>
+                      </selectionValues>
+                      <defaultValue>auto</defaultValue>
+                    </field>
+                    <field description="Visible" name="visible" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Custom Classes" name="customClasses" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Element CSS Style" editor="code" name="style" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Breakpoints" name="gridBreakpoints" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="visibleChildren" name="visibleChildren" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Container Style" editor="code" name="containerStyle" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Text" name="text" nullable="true" type="S">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Placeholder" name="placeholder" nullable="true" type="S">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Input Mask" name="inputMask" nullable="true" type="S">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Left Icon" name="leftIcon" nullable="true" type="A">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Right Icon" name="rightIcon" nullable="true" type="A">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Use Key Up" name="useKeyUp" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Key Up Delay" editor="period" name="keyUpDelay" type="L">
+                      <editorOptions>0 1</editorOptions>
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Maximum Length" name="maxLength" type="I">
+                      <defaultValue>255</defaultValue>
+                    </field>
+                    <field description="Validators" name="validators" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Valid by Default" name="componentValid" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Disabled" name="disabled" type="B">
+                      <group>default</group>
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Input Type" name="inputType" type="S">
+                      <selectionValues>
+                        <option description="Search">Search</option>
+                        <option description="Text">text</option>
+                        <option description="Password">Password</option>
+                      </selectionValues>
+                      <defaultValue>text</defaultValue>
+                    </field>
+                    <field description="Use Clear Icon" name="addClearIcon" nullable="true" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Icon Container Style" editor="code" name="iconsStyle" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>false</defaultValue>
+                    </field>
+                  </fields>
+                </format>
+                <records>
+                  <record>
+                    <value name="name">textField1</value>
+                    <value name="gridx">2</value>
+                    <value name="gridy">3</value>
+                    <value name="style">background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+backdrop-filter: blur(10px);&#xd;
+-webkit-backdrop-filter: blur(10px);&#xd;
+text-align: left;&#xd;
+font: normal normal normal 10px/16px Poppins;&#xd;
+letter-spacing: 0.33px;&#xd;
+color: #D8D9DA;</value>
+                    <value name="gridBreakpoints">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Breakpoint" name="breakpoint" nullable="true" type="S">
+                              <defaultValue>default</defaultValue>
+                            </field>
+                            <field description="Style" name="style" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                            <field description="Container Style" name="containerStyle" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="breakpoint">fullHD</value>
+                            <value name="style">style:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+backdrop-filter: blur(10px);&#xd;
+-webkit-backdrop-filter: blur(10px);&#xd;
+text-align: left;&#xd;
+font: normal normal normal 10px/16px Poppins;&#xd;
+letter-spacing: 0.33px;&#xd;
+color: #D8D9DA;;</value>
+                            <value name="containerStyle">gridx:2;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+backdrop-filter: blur(10px);&#xd;
+-webkit-backdrop-filter: blur(10px);&#xd;
+height: 33px;;</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="visibleChildren">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field name="path" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                      </table>
+                    </value>
+                    <value name="containerStyle">background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+backdrop-filter: blur(10px);&#xd;
+-webkit-backdrop-filter: blur(10px);&#xd;
+height: 33px;</value>
+                    <value name="text"/>
+                    <value name="placeholder"/>
+                    <value name="inputMask"/>
+                    <value name="leftIcon">
+                      <data>
+                        <nullValue/>
+                      </data>
+                    </value>
+                    <value name="rightIcon">
+                      <data>
+                        <nullValue/>
+                      </data>
+                    </value>
+                    <value name="keyUpDelay">700</value>
+                    <value name="validators">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Type" name="validatorType" type="S">
+                              <selectionValues>
+                                <option description="Non-Null Validator">nonNull</option>
+                                <option description="Limits Validator">limits</option>
+                                <option description="Regex Validator">regex</option>
+                              </selectionValues>
+                              <defaultValue>nonNull</defaultValue>
+                            </field>
+                            <field description="Options" name="options" type="S">
+                              <defaultValue/>
+                            </field>
+                            <field description="Message" name="message" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                      </table>
+                    </value>
+                    <value name="iconsStyle"/>
                   </record>
                 </records>
               </table>

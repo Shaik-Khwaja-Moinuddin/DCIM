@@ -535,20 +535,13 @@
                           <record>
                             <value name="bindingId">7950552935585681408</value>
                             <value name="target">form/dataTableEditor0:dataTable</value>
-                            <value name="expression">
+                            <value name="expression">{users.Aditya.models.DCIM_ManageRoles:activeUsers}
 
-addColumns(removeColumns({:connections},&quot;login&quot;,&quot;type&quot;,&quot;date&quot;,&quot;address&quot;,&quot;eventsQueued&quot;,&quot;eventsDiscarded&quot;,&quot;contextLocks&quot;),&quot;&lt;Status&gt;&lt;S&gt;&quot;,&quot;Active&quot;)
+//subtable({users.Aditya.models.DCIM_ManageRoles:activeUsers},&quot;name&quot;,&quot;status&quot;)
 
-
-//{:connections}
-
-//table(&quot;&lt;&lt;RoleID&gt;&lt;S&gt;&gt;&lt;&lt;ROLENAME&gt;&lt;S&gt;&gt;&lt;&lt;DESCRIPTION&gt;&lt;S&gt;&gt;&lt;&lt;STAUS&gt;&lt;S&gt;&gt;&lt;&lt;ACTION&gt;&lt;S&gt;&gt;&quot;)
-//addColumns(removeColumns({form/dataTableEditor1:dataTable},&apos;5&apos;),
-//&quot;&lt;Timestamp&gt;&lt;S&gt;&quot;,&quot;formatDate(dateAdd(now(),-(random()*1000),&apos;minute&apos;),&apos;yyyy-MM-dd hh:mm:ss&apos;,&apos;IST&apos;)&quot;)
-
-
-
-//join({:connections},table(&quot;&lt;&lt;status&gt;&lt;S&gt;&gt;&quot;,&apos;Active&apos;))</value>
+//callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call user_list()&quot;)</value>
+                            <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
                           </record>
                         </records>
                       </table>
