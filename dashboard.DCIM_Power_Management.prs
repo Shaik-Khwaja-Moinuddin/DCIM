@@ -535,16 +535,18 @@
                           <record>
                             <value name="bindingId">1222589790258470912</value>
                             <value name="target">form/dataTableEditor1:dataTable</value>
-                            <value name="expression">aggregate({users.Aditya.models.Power_Management:input},
-&quot;set({env/previous},{col},{row},{status}==1?&apos;#F3B700&apos;:{status}==2?&apos;#6DB464&apos;:{status}==3?&apos;#D8D9DA&apos;:{status}==4?&apos;#41D3E3&apos;:&apos;#000000&apos;)&quot;,{users.Aditya.models.Power_Management:layout})</value>
+                            <value name="expression">aggregate({users.Aditya.models.power_management_KPIs:map({form/comboBox3:currentOptions$value})},
+&quot;set({env/previous},{placement_cn},{placement_rn},{stat}==&apos;High&apos;?&apos;#F3B700&apos;:{stat}==&apos;Normal&apos;?&apos;#6DB464&apos;:{stat}==&apos;Outage Area&apos;?&apos;#D8D9DA&apos;:{stat}==&apos;4&apos;?&apos;#41D3E3&apos;:&apos;#000000&apos;)&quot;,{users.Aditya.models.Power_Management:layout})</value>
                             <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">442608568590180352</value>
                             <value name="target">form/dataTableEditor2:dataTable</value>
-                            <value name="expression">aggregate({users.Aditya.models.Power_Management:input},
-&quot;set({env/previous},{col},{row},{rack_name})&quot;,{users.Aditya.models.Power_Management:layout_txt})</value>
+                            <value name="expression">aggregate({users.Aditya.models.power_management_KPIs:map({form/comboBox3:currentOptions$value})},
+&quot;set({env/previous},{placement_cn},{placement_rn},{rack_id})&quot;,{users.Aditya.models.Power_Management:layout_txt})</value>
                             <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">7021699103185113088</value>
@@ -632,14 +634,31 @@ table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,
                           <record>
                             <value name="bindingId">2107709218160076800</value>
                             <value name="target">form/dataTableEditor0:dataTable</value>
-                            <value name="expression">{users.Aditya.models.power_management_KPIs:device_list()}</value>
+                            <value name="expression">{users.Aditya.models.power_management_KPIs:device_list({form/comboBox3:currentOptions$value})}
+
+</value>
                             <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">3173342735207264256</value>
-                            <value name="target">form/treeSelect0:treeData</value>
-                            <value name="expression">{users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()}</value>
+                            <value name="target">form/comboBox5:options</value>
+                            <value name="expression">addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Building&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{key}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)</value>
                             <value name="onstartup">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">91125415483394048</value>
+                            <value name="target">form/comboBox4:options</value>
+                            <value name="expression">addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Lab&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{key}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)</value>
+                            <value name="activator">form/comboBox5:currentOptions</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">5216005031479570432</value>
+                            <value name="target">form/comboBox3:options</value>
+                            <value name="expression">addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Floor&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{key}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)</value>
+                            <value name="activator">form/comboBox4:currentOptions</value>
+                            <value name="onevent">1</value>
                           </record>
                         </records>
                       </table>
@@ -669,6 +688,15 @@ height: 1200px;</value>
                           </record>
                           <record>
                             <value name="path">comboBox2</value>
+                          </record>
+                          <record>
+                            <value name="path">comboBox3</value>
+                          </record>
+                          <record>
+                            <value name="path">comboBox4</value>
+                          </record>
+                          <record>
+                            <value name="path">comboBox5</value>
                           </record>
                           <record>
                             <value name="path">dataTableEditor0</value>
@@ -822,9 +850,6 @@ height: 1200px;</value>
                           </record>
                           <record>
                             <value name="path">textField0</value>
-                          </record>
-                          <record>
-                            <value name="path">treeSelect0</value>
                           </record>
                         </records>
                       </table>
@@ -1751,7 +1776,13 @@ background: transparent;</value>
                             <value name="childContexts">comboBox1</value>
                           </record>
                           <record>
-                            <value name="childContexts">treeSelect0</value>
+                            <value name="childContexts">comboBox3</value>
+                          </record>
+                          <record>
+                            <value name="childContexts">comboBox4</value>
+                          </record>
+                          <record>
+                            <value name="childContexts">comboBox5</value>
                           </record>
                         </records>
                       </table>
@@ -6764,11 +6795,11 @@ opacity: 1;</value>
                         </format>
                         <records>
                           <record>
-                            <value name="series">Capacity</value>
+                            <value name="series">Design</value>
                             <value name="color">#5C427A</value>
                           </record>
                           <record>
-                            <value name="series">Planned</value>
+                            <value name="series">Actual</value>
                             <value name="color">#41D3E3</value>
                           </record>
                         </records>
@@ -6795,7 +6826,7 @@ opacity: 1;</value>
                     <value name="leftLabelFontSize">13.2</value>
                     <value name="bottomLabelEnable">1</value>
                     <value name="bottomLabelOffset">40</value>
-                    <value name="bottomLabelValue">Labs</value>
+                    <value name="bottomLabelValue">Racks</value>
                     <value name="bottomLabelFill">White</value>
                     <value name="bottomLabelFontSize">13.2</value>
                     <value name="axisLabelShiftY">10</value>
@@ -7033,13 +7064,13 @@ opacity: 1;</value>
                             <value name="series">{series}</value>
                             <value name="category">{category}</value>
                             <value name="value">{value}</value>
-                            <value name="group">{category}</value>
+                            <value name="group">{series}</value>
                           </record>
                         </records>
                       </table>
                     </value>
-                    <value name="renderAsStack">1</value>
-                    <value name="columnWidthRatio">0.1</value>
+                    <value name="renderAsGroup">1</value>
+                    <value name="columnWidthRatio">0.3</value>
                     <value name="gridLineStyleOpacityX">0.0</value>
                     <value name="gridLineStyleOpacityY">0.0</value>
                   </record>
@@ -8227,6 +8258,8 @@ opacity: 1;
                         </records>
                       </table>
                     </value>
+                    <value name="disableDots">1</value>
+                    <value name="dotSize">0</value>
                     <value name="compressRatios">
                       <table>
                         <format maxRecords="2147483647">
@@ -12328,7 +12361,50 @@ background: transparent;
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
-                            <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;;</value>
+                            <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
+
+.component-system-button.round.round,.svg {
+    visibility: hidden;
+  display: none;
+}
+border: 1px solid #FFFFFF1A;
+
+ 
+
+.ant-table {background:transparent!important}
+.ant-table-row {background:transparent!important}.ant-table-tbody &gt; tr.ant-table-row &gt;
+td:nth-child(n) {color:#FFFFFF;background:transparent!important}    background: transparent;
+
+ 
+
+.ant-table-header .ant-table-thead tr &gt; th { background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
+
+ 
+
+ 
+
+}
+
+ 
+
+.gbOxvM .ant-table-header .ant-table-thead .ant-table-cell:hover {
+    background:#141619;
+}
+
+ 
+
+.data-table-column-title .data-table-column-description {
+    color: #fafafa;
+}
+
+ 
+
+.ant-table-tbody&gt;tr.ant-table-placeholder:hover&gt;td {
+    background: #0B0C0E;
+
+ 
+
+};</value>
                           </record>
                         </records>
                       </table>
@@ -12344,7 +12420,50 @@ background: transparent;
                         </format>
                       </table>
                     </value>
-                    <value name="containerStyle">background: transparent;</value>
+                    <value name="containerStyle">background: transparent;
+
+.component-system-button.round.round,.svg {
+    visibility: hidden;
+  display: none;
+}
+border: 1px solid #FFFFFF1A;
+
+ 
+
+.ant-table {background:transparent!important}
+.ant-table-row {background:transparent!important}.ant-table-tbody &gt; tr.ant-table-row &gt;
+td:nth-child(n) {color:#FFFFFF;background:transparent!important}    background: transparent;
+
+ 
+
+.ant-table-header .ant-table-thead tr &gt; th { background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
+
+ 
+
+ 
+
+}
+
+ 
+
+.gbOxvM .ant-table-header .ant-table-thead .ant-table-cell:hover {
+    background:#141619;
+}
+
+ 
+
+.data-table-column-title .data-table-column-description {
+    color: #fafafa;
+}
+
+ 
+
+.ant-table-tbody&gt;tr.ant-table-placeholder:hover&gt;td {
+    background: #0B0C0E;
+
+ 
+
+}</value>
                     <value name="additionalActionSettings">
                       <table>
                         <format maxRecords="2147483647">
@@ -13593,8 +13712,8 @@ background: transparent;
     display: grid;
 }
 
-width:4000px;
-height: 2000px;
+width:1200px;
+height: 500px;
 
 .ant-table-body{
 overflow: hidden!important;
@@ -13629,8 +13748,8 @@ overflow: hidden!important;
     display: grid;
 }
 
-width:4000px;
-height: 2000px;
+width:1200px;
+height: 500px;
 
 .ant-table-body{
 overflow: hidden!important;
@@ -15484,8 +15603,8 @@ opacity: 1;</value>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:
-width:4000px;
-height: 2000px;
+width:1200px;
+height: 500px;
 .ant-table-row {background:transparent !important}
 background:transparent;
 z-index: 1;
@@ -15523,8 +15642,8 @@ overflow: hidden!important;
                       </table>
                     </value>
                     <value name="containerStyle">
-width:4000px;
-height: 2000px;
+width:1200px;
+height: 500px;
 .ant-table-row {background:transparent !important}
 background:transparent;
 z-index: 1;
@@ -15977,8 +16096,8 @@ overflow: hidden!important;
             </value>
           </record>
           <record>
-            <value name="name">treeSelect0</value>
-            <value name="type">treeSelect</value>
+            <value name="name">comboBox3</value>
+            <value name="type">comboBox</value>
             <value name="parameters">
               <table>
                 <format maxRecords="1" minRecords="1">
@@ -16045,66 +16164,83 @@ overflow: hidden!important;
                         <nullValue/>
                       </defaultValue>
                     </field>
-                    <field description="Tree Data" name="treeData" type="T">
-                      <defaultValue>
-                        <table>
-                          <format maxRecords="2147483647"/>
-                        </table>
-                      </defaultValue>
-                    </field>
-                    <field description="Placeholder" name="placeholder" type="S">
-                      <defaultValue/>
-                    </field>
-                    <field description="Search Placeholder" name="searchPlaceholder" type="S">
-                      <defaultValue/>
-                    </field>
-                    <field description="Show Search" name="showSearch" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
-                    <field description="Tree Checkable" name="treeCheckable" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
-                    <field description="Multiple Selection" name="multiple" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
-                    <field description="Expand All by Default" name="treeDefaultExpandAll" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
-                    <field description="Disabled" name="disabled" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
-                    <field description="Expanded Nodes" name="expandedNodes" type="T">
-                      <defaultValue>
-                        <table>
-                          <format maxRecords="2147483647"/>
-                        </table>
-                      </defaultValue>
-                    </field>
-                    <field description="Checked Nodes" name="checkedNodes" type="T">
-                      <defaultValue>
-                        <table>
-                          <format maxRecords="2147483647"/>
-                        </table>
-                      </defaultValue>
-                    </field>
-                    <field description="Dropdown Style" editor="code" name="dropdownStyle" nullable="true" type="S">
-                      <editorOptions>scss</editorOptions>
+                    <field description="Placeholder" name="placeholder" nullable="true" type="S">
                       <defaultValue>
                         <nullValue/>
                       </defaultValue>
+                    </field>
+                    <field description="Select size" name="selectSize" type="S">
+                      <selectionValues>
+                        <option description="Small Size">small</option>
+                        <option description="Default size">default</option>
+                        <option description="Large size">large</option>
+                      </selectionValues>
+                      <defaultValue>default</defaultValue>
+                    </field>
+                    <field description="Confirmation required" name="confirmationRequired" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Confirmation message" name="confirmationMessage" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Multiple Selection" name="multi" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Maximum Tag Count" name="maxTagCount" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Placeholder for Hidden Tags" name="maxTagPlaceholder" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Searchable" name="searchable" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Editable" name="editableOption" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Options" name="options" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Selected Options" name="currentOptions" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Always Show Placeholder" name="alwaysShowPlaceholder" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Allow Clearing" name="allowClear" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Show Arrow" name="showArrow" type="B">
+                      <group>default</group>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Disabled" name="disabled" type="B">
+                      <group>default</group>
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Dropdown horizontal offset" name="dropdownOffsetX" type="E">
+                      <defaultValue>0.0</defaultValue>
+                    </field>
+                    <field description="Dropdown vertical offset" name="dropdownOffsetY" type="E">
+                      <defaultValue>0.0</defaultValue>
                     </field>
                   </fields>
                 </format>
                 <records>
                   <record>
-                    <value name="name">treeSelect0</value>
+                    <value name="name">comboBox3</value>
                     <value name="gridx">6</value>
                     <value name="gridy">1</value>
                     <value name="overflow">visible</value>
-                    <value name="style">text-align: left;&#xd;
-font: normal normal normal 10px/16px Poppins;&#xd;
-color: #D8D9DA;&#xd;
-background-color: #141619;</value>
+                    <value name="style">color: #D8D9DA;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -16127,27 +16263,11 @@ background-color: #141619;</value>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="style">style:text-align: left;&#xd;
-font: normal normal normal 10px/16px Poppins;&#xd;
-color: #D8D9DA;&#xd;
-background-color: #141619;;</value>
-                            <value name="containerStyle">gridx:6;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:z-index: 2;
-background: transparent;
-
-background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;
-background: #141619 0% 0% no-repeat padding-box;
-border: 1px solid #FFFFFF1A;
-border-radius: 2px;
-opacity: 1;
-
-.ant-select-tree-list-holder{
-  background: #141619 0% 0% no-repeat padding-box;
-  color: white;
-}
-
-
-.ant-select-tree .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected{
-  background: none;
+                            <value name="style">style:color: #D8D9DA;;</value>
+                            <value name="containerStyle">gridx:6;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
+z-index: 5;&#xd;
+.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
+    background: #2C2C2E;&#xd;
 };</value>
                           </record>
                         </records>
@@ -16164,97 +16284,541 @@ opacity: 1;
                         </format>
                       </table>
                     </value>
-                    <value name="containerStyle">z-index: 2;
-background: transparent;
-
-background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;
-background: #141619 0% 0% no-repeat padding-box;
-border: 1px solid #FFFFFF1A;
-border-radius: 2px;
-opacity: 1;
-
-.ant-select-tree-list-holder{
-  background: #141619 0% 0% no-repeat padding-box;
-  color: white;
-}
-
-
-.ant-select-tree .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected{
-  background: none;
+                    <value name="containerStyle">background: transparent;&#xd;
+z-index: 5;&#xd;
+.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
+    background: #2C2C2E;&#xd;
 }</value>
-                    <value name="treeData">
+                    <value name="placeholder"/>
+                    <value name="multi">0</value>
+                    <value name="maxTagCount">10</value>
+                    <value name="options">
                       <table>
                         <format maxRecords="2147483647">
                           <fields>
-                            <field description="Key" keyfield="true" name="key" type="S">
+                            <field description="Value" keyfield="true" name="value" type="S">
                               <defaultValue/>
                             </field>
-                            <field description="Title" name="title" type="S">
+                            <field description="Label" name="label" type="S">
                               <defaultValue/>
                             </field>
-                            <field description="Disabled" name="disabled" type="B">
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="Parent Key" name="parent" type="S">
-                              <defaultValue/>
-                            </field>
-                          </fields>
-                          <validators contentType="base64">HEseHQ==</validators>
-                        </format>
-                        <records>
-                          <record>
-                            <value name="key">1</value>
-                            <value name="title">Building 01</value>
-                          </record>
-                          <record>
-                            <value name="key">2</value>
-                            <value name="title">Lab 01</value>
-                            <value name="parent">1</value>
-                          </record>
-                          <record>
-                            <value name="key">3</value>
-                            <value name="title">Floor 01</value>
-                            <value name="parent">2</value>
-                          </record>
-                        </records>
-                      </table>
-                    </value>
-                    <value name="expandedNodes">
-                      <table>
-                        <format maxRecords="2147483647">
-                          <fields>
-                            <field description="Key" name="key" type="S">
+                            <field description="Tooltip" name="tooltip" type="S">
                               <defaultValue/>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
-                            <value name="key">2</value>
-                          </record>
-                          <record>
-                            <value name="key">1</value>
+                            <value name="value">B01-L01-F01</value>
+                            <value name="label">2nd Floor</value>
                           </record>
                         </records>
                       </table>
                     </value>
-                    <value name="checkedNodes">
+                    <value name="currentOptions">
                       <table>
                         <format maxRecords="2147483647">
                           <fields>
-                            <field description="Key" name="key" type="S">
+                            <field description="Value" keyfield="true" name="value" type="S">
                               <defaultValue/>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
-                            <value name="key">1</value>
+                            <value name="value">B01-L01-F01</value>
                           </record>
                         </records>
                       </table>
                     </value>
-                    <value name="dropdownStyle"/>
+                    <value name="allowClear">0</value>
+                    <value name="dropdownOffsetY">4.0</value>
+                  </record>
+                </records>
+              </table>
+            </value>
+          </record>
+          <record>
+            <value name="name">comboBox4</value>
+            <value name="type">comboBox</value>
+            <value name="parameters">
+              <table>
+                <format maxRecords="1" minRecords="1">
+                  <fields>
+                    <field description="Name" name="name" nullable="true" type="S">
+                      <validators contentType="base64">HFIeXHcrXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Column" name="gridx" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Row" name="gridy" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Column Span" name="gridWidth" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Row Span" name="gridHeight" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Content Overflow" name="overflow" type="S">
+                      <selectionValues>
+                        <option description="Auto">auto</option>
+                        <option description="Hidden">hidden</option>
+                        <option description="Scroll">scroll</option>
+                        <option description="Unset">unset</option>
+                        <option description="Visible">visible</option>
+                      </selectionValues>
+                      <defaultValue>auto</defaultValue>
+                    </field>
+                    <field description="Visible" name="visible" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Custom Classes" name="customClasses" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Element CSS Style" editor="code" name="style" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Breakpoints" name="gridBreakpoints" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="visibleChildren" name="visibleChildren" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Container Style" editor="code" name="containerStyle" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Placeholder" name="placeholder" nullable="true" type="S">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Select size" name="selectSize" type="S">
+                      <selectionValues>
+                        <option description="Small Size">small</option>
+                        <option description="Default size">default</option>
+                        <option description="Large size">large</option>
+                      </selectionValues>
+                      <defaultValue>default</defaultValue>
+                    </field>
+                    <field description="Confirmation required" name="confirmationRequired" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Confirmation message" name="confirmationMessage" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Multiple Selection" name="multi" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Maximum Tag Count" name="maxTagCount" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Placeholder for Hidden Tags" name="maxTagPlaceholder" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Searchable" name="searchable" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Editable" name="editableOption" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Options" name="options" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Selected Options" name="currentOptions" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Always Show Placeholder" name="alwaysShowPlaceholder" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Allow Clearing" name="allowClear" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Show Arrow" name="showArrow" type="B">
+                      <group>default</group>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Disabled" name="disabled" type="B">
+                      <group>default</group>
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Dropdown horizontal offset" name="dropdownOffsetX" type="E">
+                      <defaultValue>0.0</defaultValue>
+                    </field>
+                    <field description="Dropdown vertical offset" name="dropdownOffsetY" type="E">
+                      <defaultValue>0.0</defaultValue>
+                    </field>
+                  </fields>
+                </format>
+                <records>
+                  <record>
+                    <value name="name">comboBox4</value>
+                    <value name="gridx">5</value>
+                    <value name="gridy">1</value>
+                    <value name="overflow">visible</value>
+                    <value name="style">color: #D8D9DA;</value>
+                    <value name="gridBreakpoints">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Breakpoint" name="breakpoint" nullable="true" type="S">
+                              <defaultValue>default</defaultValue>
+                            </field>
+                            <field description="Style" name="style" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                            <field description="Container Style" name="containerStyle" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="breakpoint">fullHD</value>
+                            <value name="style">style:color: #D8D9DA;;</value>
+                            <value name="containerStyle">gridx:5;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
+z-index: 5;&#xd;
+.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
+    background: #2C2C2E;&#xd;
+};</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="visibleChildren">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field name="path" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                      </table>
+                    </value>
+                    <value name="containerStyle">background: transparent;&#xd;
+z-index: 5;&#xd;
+.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
+    background: #2C2C2E;&#xd;
+}</value>
+                    <value name="placeholder"/>
+                    <value name="multi">0</value>
+                    <value name="maxTagCount">10</value>
+                    <value name="options">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Value" keyfield="true" name="value" type="S">
+                              <defaultValue/>
+                            </field>
+                            <field description="Label" name="label" type="S">
+                              <defaultValue/>
+                            </field>
+                            <field description="Tooltip" name="tooltip" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="value">B01-L01</value>
+                            <value name="label">SDX</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="currentOptions">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Value" keyfield="true" name="value" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="value">B01-L01</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="allowClear">0</value>
+                    <value name="dropdownOffsetY">4.0</value>
+                  </record>
+                </records>
+              </table>
+            </value>
+          </record>
+          <record>
+            <value name="name">comboBox5</value>
+            <value name="type">comboBox</value>
+            <value name="parameters">
+              <table>
+                <format maxRecords="1" minRecords="1">
+                  <fields>
+                    <field description="Name" name="name" nullable="true" type="S">
+                      <validators contentType="base64">HFIeXHcrXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Column" name="gridx" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Row" name="gridy" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Column Span" name="gridWidth" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Row Span" name="gridHeight" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Content Overflow" name="overflow" type="S">
+                      <selectionValues>
+                        <option description="Auto">auto</option>
+                        <option description="Hidden">hidden</option>
+                        <option description="Scroll">scroll</option>
+                        <option description="Unset">unset</option>
+                        <option description="Visible">visible</option>
+                      </selectionValues>
+                      <defaultValue>auto</defaultValue>
+                    </field>
+                    <field description="Visible" name="visible" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Custom Classes" name="customClasses" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Element CSS Style" editor="code" name="style" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Breakpoints" name="gridBreakpoints" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="visibleChildren" name="visibleChildren" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Container Style" editor="code" name="containerStyle" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Placeholder" name="placeholder" nullable="true" type="S">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Select size" name="selectSize" type="S">
+                      <selectionValues>
+                        <option description="Small Size">small</option>
+                        <option description="Default size">default</option>
+                        <option description="Large size">large</option>
+                      </selectionValues>
+                      <defaultValue>default</defaultValue>
+                    </field>
+                    <field description="Confirmation required" name="confirmationRequired" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Confirmation message" name="confirmationMessage" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Multiple Selection" name="multi" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Maximum Tag Count" name="maxTagCount" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Placeholder for Hidden Tags" name="maxTagPlaceholder" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Searchable" name="searchable" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Editable" name="editableOption" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Options" name="options" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Selected Options" name="currentOptions" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Always Show Placeholder" name="alwaysShowPlaceholder" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Allow Clearing" name="allowClear" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Show Arrow" name="showArrow" type="B">
+                      <group>default</group>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Disabled" name="disabled" type="B">
+                      <group>default</group>
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Dropdown horizontal offset" name="dropdownOffsetX" type="E">
+                      <defaultValue>0.0</defaultValue>
+                    </field>
+                    <field description="Dropdown vertical offset" name="dropdownOffsetY" type="E">
+                      <defaultValue>0.0</defaultValue>
+                    </field>
+                  </fields>
+                </format>
+                <records>
+                  <record>
+                    <value name="name">comboBox5</value>
+                    <value name="gridx">4</value>
+                    <value name="gridy">1</value>
+                    <value name="overflow">visible</value>
+                    <value name="style">color: #D8D9DA;</value>
+                    <value name="gridBreakpoints">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Breakpoint" name="breakpoint" nullable="true" type="S">
+                              <defaultValue>default</defaultValue>
+                            </field>
+                            <field description="Style" name="style" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                            <field description="Container Style" name="containerStyle" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="breakpoint">fullHD</value>
+                            <value name="style">style:color: #D8D9DA;;</value>
+                            <value name="containerStyle">gridx:4;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
+z-index: 5;&#xd;
+.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
+    background: #2C2C2E;&#xd;
+};</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="visibleChildren">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field name="path" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                      </table>
+                    </value>
+                    <value name="containerStyle">background: transparent;&#xd;
+z-index: 5;&#xd;
+.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
+    background: #2C2C2E;&#xd;
+}</value>
+                    <value name="placeholder"/>
+                    <value name="multi">0</value>
+                    <value name="maxTagCount">10</value>
+                    <value name="options">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Value" keyfield="true" name="value" type="S">
+                              <defaultValue/>
+                            </field>
+                            <field description="Label" name="label" type="S">
+                              <defaultValue/>
+                            </field>
+                            <field description="Tooltip" name="tooltip" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="value">B01</value>
+                            <value name="label">Tower_10</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="currentOptions">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Value" keyfield="true" name="value" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="value">B01</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="allowClear">0</value>
+                    <value name="dropdownOffsetY">4.0</value>
                   </record>
                 </records>
               </table>

@@ -1966,10 +1966,14 @@ height: 1000px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -2248,10 +2252,14 @@ height: 1000px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -2495,16 +2503,21 @@ border-right: 1px solid #5C427A;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -2652,10 +2665,14 @@ color: #D8D9DA;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -2800,16 +2817,21 @@ border-bottom-left-radius: 2px;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:2;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -2949,16 +2971,21 @@ border-bottom:2px solid #FFFFFF1A;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -3106,10 +3133,14 @@ color: #D8D9DA;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -3254,16 +3285,21 @@ border-bottom-left-radius: 2px;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:4;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);
 text-align: left;
 font: normal normal 600 12px/18px Poppins;
@@ -3401,16 +3437,21 @@ border-bottom:2px solid #FFFFFF1A;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:5;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -3540,16 +3581,21 @@ padding-top:5px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);
 text-align: left;
 font: normal normal 600 12px/18px Poppins;
@@ -3687,16 +3733,21 @@ border-bottom:2px solid #FFFFFF1A;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:10;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);
 text-align: left;
 font: normal normal 600 12px/18px Poppins;
@@ -3852,10 +3903,14 @@ color: #D8D9DA;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -4001,16 +4056,21 @@ border-bottom-left-radius: 2px;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:9;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -4158,10 +4218,14 @@ color: #D8D9DA;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -4349,10 +4413,14 @@ opacity: 1;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -4552,10 +4620,14 @@ opacity: 1;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -4800,10 +4872,14 @@ padding-right: 20px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -4996,16 +5072,21 @@ padding-right: 20px;;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:
 border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
@@ -5147,16 +5228,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:
 border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
@@ -5388,10 +5474,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -5657,10 +5747,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -5926,10 +6020,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -6206,10 +6304,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -6486,10 +6588,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -6766,10 +6872,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -6956,16 +7066,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:padding-top:10px;
 background: transparent;
 color: var(--unnamed-color-d8d9da);
@@ -7094,10 +7209,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -7242,16 +7361,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:padding-top:10px;
 background: transparent;
 color: var(--unnamed-color-d8d9da);
@@ -7380,10 +7504,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -7526,16 +7654,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:padding-top:10px;
 background: transparent;
 color: var(--unnamed-color-d8d9da);
@@ -7664,10 +7797,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -7812,16 +7949,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:padding-top:10px;
 background: transparent;
 color: var(--unnamed-color-d8d9da);
@@ -7950,10 +8092,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -8187,10 +8333,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -8471,10 +8621,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -8752,10 +8906,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -9029,10 +9187,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -9229,16 +9391,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 7px;&#xd;
@@ -9396,16 +9563,21 @@ padding-top: 20px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 7px;&#xd;
@@ -9560,16 +9732,21 @@ padding-top: 20px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 7px;&#xd;
@@ -9710,16 +9887,21 @@ padding-bottom: 20px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
 text-align: center;
@@ -9863,16 +10045,21 @@ padding-top: 10px;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
 text-align: center;
@@ -10014,16 +10201,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
 text-align: center;
@@ -10255,10 +10447,14 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -10528,10 +10724,14 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -10801,10 +11001,14 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -11081,10 +11285,14 @@ text-align: center;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -11369,16 +11577,21 @@ backdrop-filter: blur(10px);
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 border: 1px solid var(--unnamed-color-5c427a);
 background:#2B9706 0% 0% no-repeat padding-box;
@@ -11647,16 +11860,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:1;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 background: transparent;
 border: 1px solid var(--unnamed-color-5c427a);
@@ -11927,10 +12145,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -12212,10 +12434,14 @@ text-align: center;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -12493,10 +12719,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -12776,16 +13006,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
@@ -13060,16 +13295,21 @@ text-align: center;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 background: transparent;
 border: 1px solid var(--unnamed-color-5c427a);
@@ -13340,16 +13580,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:1;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 background: transparent;
 background: transparent;
@@ -13532,10 +13777,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -13683,16 +13932,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -13834,16 +14088,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -13983,16 +14242,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -14134,16 +14398,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -14283,16 +14552,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -14434,16 +14708,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -14583,16 +14862,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -14734,16 +15018,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -14883,16 +15172,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -15034,16 +15328,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -15185,16 +15484,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -15334,16 +15638,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -15483,16 +15792,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -15634,16 +15948,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -15783,16 +16102,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -15934,16 +16258,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -16083,16 +16412,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 7px;
@@ -16324,10 +16658,14 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -16520,10 +16858,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -16670,10 +17012,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -16816,16 +17162,21 @@ padding-top:20px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridy:1;gridx:1;gridHeight:1;gridWidth:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 12px/18px Poppins;&#xd;
@@ -17044,16 +17395,21 @@ padding-left: 20px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;;</value>
                           </record>
                         </records>
@@ -17335,10 +17691,14 @@ background: #18191B 0% 0% no-repeat padding-box;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -17632,10 +17992,14 @@ background: #18191B 0% 0% no-repeat padding-box;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -17902,10 +18266,14 @@ background: #18191B 0% 0% no-repeat padding-box;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -18190,10 +18558,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -18391,16 +18763,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:2;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -18542,16 +18919,21 @@ padding-left: 10px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -18681,16 +19063,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -18821,16 +19208,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:2;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -18972,16 +19364,21 @@ padding-left: 10px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -19111,16 +19508,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -19341,10 +19743,14 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -19528,16 +19934,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -19675,16 +20086,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -19822,16 +20238,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -19969,16 +20390,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:4;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -20206,10 +20632,14 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -20490,10 +20920,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -20782,10 +21216,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -20983,16 +21421,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -21134,16 +21577,21 @@ padding-left: 10px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -21339,10 +21787,14 @@ color:#ffffff;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -21564,16 +22016,21 @@ height: 33px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 12px/18px Poppins;&#xd;
@@ -21703,16 +22160,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 12px/18px Poppins;&#xd;
@@ -21842,16 +22304,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 12px/18px Poppins;&#xd;
@@ -21981,16 +22448,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:4;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 12px/18px Poppins;&#xd;
@@ -22120,16 +22592,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:4;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 12px/18px Poppins;&#xd;
@@ -22259,16 +22736,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:5;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 12px/18px Poppins;&#xd;
@@ -22398,16 +22880,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:5;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 12px/18px Poppins;&#xd;
@@ -22627,10 +23114,14 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -22849,10 +23340,14 @@ height: 64px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -23045,10 +23540,14 @@ height: 64px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -23290,10 +23789,14 @@ background: transparent;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -23549,16 +24052,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:4;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -23697,16 +24205,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -23837,16 +24350,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:4;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -23977,16 +24495,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -24117,16 +24640,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -24257,16 +24785,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -24397,16 +24930,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:4;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -24537,16 +25075,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:4;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -24677,16 +25220,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:4;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -24817,16 +25365,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:4;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -24957,16 +25510,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:4;gridy:4;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -25097,16 +25655,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:5;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 opacity: 1;&#xd;
 backdrop-filter: blur(10px);&#xd;
@@ -25243,16 +25806,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:5;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -25383,16 +25951,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:5;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -25523,16 +26096,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:4;gridy:5;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -25663,16 +26241,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -25803,16 +26386,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -25943,16 +26531,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -26083,16 +26676,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:4;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal 600 12px/18px Poppins;&#xd;
@@ -26312,10 +26910,14 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -26533,16 +27135,21 @@ opacity: 1;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:2;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -26680,16 +27287,21 @@ padding-top: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: var(--unnamed-color-5c427a) 0% 0% no-repeat padding-box;&#xd;
 border: 2px solid var(--unnamed-color-5c427a);&#xd;
 background: #5C427A 0% 0% no-repeat padding-box;&#xd;
@@ -26829,16 +27441,21 @@ padding-top: 10px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:2;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: var(--unnamed-color-5c427a) 0% 0% no-repeat padding-box;&#xd;
 border: 2px solid var(--unnamed-color-5c427a);&#xd;
 background: #5C427A 0% 0% no-repeat padding-box;&#xd;
@@ -26978,16 +27595,21 @@ padding-top: 10px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 opacity: 1;&#xd;
 backdrop-filter: blur(10px);&#xd;
@@ -27123,16 +27745,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 opacity: 1;&#xd;
 backdrop-filter: blur(10px);&#xd;
@@ -27269,16 +27896,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:4;gridWidth:2;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -27406,16 +28038,21 @@ padding:10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:5;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 opacity: 1;&#xd;
 backdrop-filter: blur(10px);&#xd;
@@ -27551,16 +28188,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:5;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 opacity: 1;&#xd;
 backdrop-filter: blur(10px);&#xd;
@@ -27696,16 +28338,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 opacity: 1;&#xd;
 backdrop-filter: blur(10px);&#xd;
@@ -27841,16 +28488,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:6;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #0000001A 0% 0% no-repeat padding-box;&#xd;
 opacity: 1;&#xd;
 backdrop-filter: blur(10px);&#xd;
@@ -27987,16 +28639,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;</value>
                           </record>
                         </records>
@@ -28110,16 +28767,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:3;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
 font: normal normal normal 16px/25px Poppins;&#xd;
@@ -28411,16 +29073,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:0;gridy:1;gridWidth:1;gridHeight:6;overflow:auto;</value>
                           </record>
                         </records>
@@ -28957,16 +29624,21 @@ padding-left: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:7;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:border-radius: 10px;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -29162,10 +29834,14 @@ color:#ffffff;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -29509,16 +30185,21 @@ height: 33px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:4;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;</value>
                           </record>
                         </records>
@@ -30211,16 +30892,21 @@ height: 33px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:5;gridHeight:5;overflow:hidden;containerStyle:.ant-table {background:transparent!important}&#xd;
 .ant-table-row {background:transparent!important}&#xd;
 .ant-table-tbody &gt; tr.ant-table-row &gt; td:nth-child(n) {color:#D8D9DA;background:transparent!important}    background: transparent;  border-radius:10px; &#xd;
@@ -30876,16 +31562,21 @@ height: 33px;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:2;gridy:11;gridWidth:2;gridHeight:1;overflow:auto;containerStyle:background:transparent;
 padding-right:20px;
 padding-top:5px;;</value>
@@ -31075,10 +31766,14 @@ color: #D8D9DA;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
