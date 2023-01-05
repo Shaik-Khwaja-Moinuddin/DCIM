@@ -881,7 +881,7 @@ table(&apos;&lt;&lt;1Y_save&gt;&lt;S&gt;&gt;&lt;&lt;5Y_save&gt;&lt;S&gt;&gt;&lt;
                           <record>
                             <value name="bindingId">8073534343531280384</value>
                             <value name="target">form/dataTableEditor1:dataTable</value>
-                            <value name="expression">addColumns(table(&apos;&lt;&lt;factor&gt;&lt;S&gt;&gt;&lt;&lt;current&gt;&lt;S&gt;&gt;&lt;&lt;desired&gt;&lt;S&gt;&gt;&apos;,&apos;Total Input Power&apos;,0, 0,&apos;Annual Electricity Energy&apos;,0,0+&apos; Kwh&apos;,&apos;Annual Electricicty Cost&apos;,0,0,&apos;Annual CO2 Footprint&apos;,0, 0),&apos;&lt;changes&gt;&lt;T&gt;&apos;,&quot;table(&apos;&lt;&lt;elec_cost_save_per_yr&gt;&lt;S&gt;&gt;&lt;&lt;reduc_co2e_per_yr&gt;&lt;F&gt;&gt;&lt;&lt;15yr_elec_cost_savings&gt;&lt;S&gt;&gt;&lt;&lt;15yr_co2e_reduction&gt;&lt;F&gt;&gt;&apos;,0,0,0)&quot;)
+                            <value name="expression">addColumns(table(&apos;&lt;&lt;factor&gt;&lt;S&gt;&gt;&lt;&lt;current&gt;&lt;S&gt;&gt;&lt;&lt;desired&gt;&lt;S&gt;&gt;&apos;,&apos;Total Input Power&apos;,0, 0,&apos;Annual Electricity Energy&apos;,0,0+&apos; Kwh&apos;,&apos;Annual Electricity Cost&apos;,0,0,&apos;Annual CO2 Footprint&apos;,0, 0),&apos;&lt;changes&gt;&lt;T&gt;&apos;,&quot;table(&apos;&lt;&lt;elec_cost_save_per_yr&gt;&lt;S&gt;&gt;&lt;&lt;reduc_co2e_per_yr&gt;&lt;F&gt;&gt;&lt;&lt;15yr_elec_cost_savings&gt;&lt;S&gt;&gt;&lt;&lt;15yr_co2e_reduction&gt;&lt;F&gt;&gt;&apos;,0,0,0)&quot;)
 
 </value>
                             <value name="activator">form/button3:mouseClicked@</value>
@@ -905,7 +905,7 @@ table(&apos;&lt;&lt;1Y_save&gt;&lt;S&gt;&gt;&lt;&lt;5Y_save&gt;&lt;S&gt;&gt;&lt;
                           <record>
                             <value name="bindingId">4634491450796333056</value>
                             <value name="target">form/dataTableEditor2:dataTable</value>
-                            <value name="expression">removeColumns(addColumns(table(&apos;&lt;&lt;factor&gt;&lt;S&gt;&gt;&lt;&lt;current&gt;&lt;S&gt;&gt;&lt;&lt;desired&gt;&lt;S&gt;&gt;&apos;,&apos;Total Input Power&apos;,0, 0,&apos;Annual Electricity Energy&apos;,0,0+&apos; Kwh&apos;,&apos;Annual Electricicty Cost&apos;,0,0,&apos;Annual CO2 Footprint&apos;,0, 0),&apos;&lt;changes&gt;&lt;T&gt;&apos;,&quot;table(&apos;&lt;&lt;elec_cost_save_per_yr&gt;&lt;S&gt;&gt;&lt;&lt;reduc_co2e_per_yr&gt;&lt;F&gt;&gt;&lt;&lt;15yr_elec_cost_savings&gt;&lt;S&gt;&gt;&lt;&lt;15yr_co2e_reduction&gt;&lt;F&gt;&gt;&apos;,0,0,0)&quot;),&quot;changes&quot;)</value>
+                            <value name="expression">removeColumns(addColumns(table(&apos;&lt;&lt;factor&gt;&lt;S&gt;&gt;&lt;&lt;current&gt;&lt;S&gt;&gt;&lt;&lt;desired&gt;&lt;S&gt;&gt;&apos;,&apos;Total Input Power&apos;,0, 0,&apos;Annual Electricity Energy&apos;,0,0+&apos; Kwh&apos;,&apos;Annual Electricity Cost&apos;,0,0,&apos;Annual CO2 Footprint&apos;,0, 0),&apos;&lt;changes&gt;&lt;T&gt;&apos;,&quot;table(&apos;&lt;&lt;elec_cost_save_per_yr&gt;&lt;S&gt;&gt;&lt;&lt;reduc_co2e_per_yr&gt;&lt;F&gt;&gt;&lt;&lt;15yr_elec_cost_savings&gt;&lt;S&gt;&gt;&lt;&lt;15yr_co2e_reduction&gt;&lt;F&gt;&gt;&apos;,0,0,0)&quot;),&quot;changes&quot;)</value>
                             <value name="onstartup">1</value>
                           </record>
                         </records>
@@ -17356,7 +17356,7 @@ padding-left: 20px;</value>
                     <value name="style">
 background: transparent;
 background: #18191B 0% 0% no-repeat padding-box;
-height: 490px;</value>
+height: 520px;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -17378,7 +17378,7 @@ height: 490px;</value>
                             <value name="style">rowHeight:20;gap:3px;maxColumns:12;maxRows:2;style:
 background: transparent;
 background: #18191B 0% 0% no-repeat padding-box;
-height: 490px;;</value>
+height: 520px;;</value>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:1;gridy:3;gridWidth:1;gridHeight:2;overflow:visible;containerStyle:background: #18191B 0% 0% no-repeat padding-box;
 //margin-left: 100px;
 ;</value>
@@ -17470,7 +17470,7 @@ height: 490px;;</value>
                         </format>
                         <records>
                           <record>
-                            <value name="template">200</value>
+                            <value name="template">250</value>
                             <value name="unit">px</value>
                           </record>
                           <record/>
@@ -23650,7 +23650,7 @@ border-radius: 7px 7px 0px 0px;&#xd;
 opacity: 1;&#xd;
 padding-left: 10px;&#xd;
 //padding-top: 10px;</value>
-                    <value name="text">Comparision</value>
+                    <value name="text">Comparison</value>
                   </record>
                 </records>
               </table>

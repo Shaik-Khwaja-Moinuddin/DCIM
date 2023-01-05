@@ -658,7 +658,7 @@ table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,
                           <record>
                             <value name="bindingId">5216005031479570432</value>
                             <value name="target">form/comboBox3:options</value>
-                            <value name="expression">addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Floor&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{title}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)</value>
+                            <value name="expression">addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Floor&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{key}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)</value>
                             <value name="activator">form/comboBox4:currentOptions</value>
                             <value name="onevent">1</value>
                           </record>
