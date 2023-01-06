@@ -551,85 +551,79 @@
                           <record>
                             <value name="bindingId">7021699103185113088</value>
                             <value name="target">form/lineChart0:sourceData</value>
-                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:PUE_vs_DCiE}</value>
+                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:PUE_vs_DCiE({form/comboBox3:currentOptions$value})}</value>
                             <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">352024634769612800</value>
                             <value name="target">form/pieChart0:sourceData</value>
-                            <value name="expression">table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,&apos;Active&apos;,{users.Aditya.models.Dashboard_KPIs:Device_Status$Active},&apos;Inactive&apos;,{users.Aditya.models.Dashboard_KPIs:Device_Status$In_Active})</value>
-                            <value name="onstartup">1</value>
+                            <value name="expression">table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,&apos;Active&apos;,cell({users.Aditya.models.Dashboard_KPIs:Device_Status({form/comboBox3:currentOptions$value})},&quot;Active&quot;),&apos;Inactive&apos;,cell({users.Aditya.models.Dashboard_KPIs:Device_Status({form/comboBox3:currentOptions$value})},&quot;In_Active&quot;))
+
+</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">6520286921365839872</value>
                             <value name="target">form/barChart0:sourceData</value>
-                            <value name="expression">{users.Aditya.models.power_management_KPIs:power_consumption_trend}
+                            <value name="expression">{users.Aditya.models.power_management_KPIs:power_consumption({form/comboBox3:currentOptions$value})}
 
 /*table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,&apos;series&apos;,{users.Aditya.models.power_management_KPIs:power_consumption_trend$series},&apos;category&apos;,{users.Aditya.models.power_management_KPIs:power_consumption_trend$category})*/</value>
-                            <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">7767567584284391424</value>
                             <value name="target">form/pieChart1:sourceData</value>
-                            <value name="expression">table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,&apos;Servers&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Servers},&apos;Cooling System&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Cooling_System},&apos;Rack&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Rack},&apos;IT Devices&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$IT_Devices},&apos;Lighting&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Lighting})
+                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:category_wise_consumption_pie({form/comboBox3:currentOptions$value},{form/label45:text$text})}
 
-
-/*
-table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,&apos;Servers&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Servers},&apos;CoolingSystem&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Cooling_System},&apos;Rack&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Rack},&apos;ITDevice&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$IT_Device},&apos;Lighting&apos;,{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$_Lighting})
-*/
-/*
-{users.Aditya.models.Dashboard_KPIs:category_wise_consumption}
-*/</value>
-                            <value name="onstartup">1</value>
+</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">6183976045231943680</value>
                             <value name="target">form/barChart1:sourceData</value>
-                            <value name="expression">{users.Aditya.models.power_management_KPIs:planned_vs_capacity_chart}</value>
-                            <value name="onstartup">1</value>
+                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:all_rack_eng_con({form/comboBox3:currentOptions$value})}</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">5818913541517514752</value>
                             <value name="target">form/pieChart2:sourceData</value>
-                            <value name="expression">table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,&apos;avg_outage_time&apos;,{users.Aditya.models.power_management_KPIs:energy_outage$avg_outage_time},&apos;avg_restore_time&apos;,{users.Aditya.models.power_management_KPIs:energy_outage$avg_restore_time})
+                            <value name="expression">table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,&apos;avg_outage_time&apos;,cell({users.Aditya.models.power_management_KPIs:energy_outage({form/comboBox3:currentOptions$value})},&quot;avg_outage_time&quot;),&apos;avg_restore_time&apos;,cell({users.Aditya.models.power_management_KPIs:energy_outage({form/comboBox3:currentOptions$value})},&quot;avg_restore_time&quot;))
 
-/*
-{users.Aditya.models.power_management_KPIs:energy_outage}
-*/
-
-</value>
-                            <value name="onstartup">1</value>
+/*table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,&apos;avg_outage_time&apos;,cell({users.Aditya.models.power_management_KPIs:energy_outage(&quot;Ground&quot;)},&quot;avg_outage_time&quot;),&apos;avg_restore_time&apos;,cell({users.Aditya.models.power_management_KPIs:energy_outage(&quot;Ground&quot;)},&quot;avg_restore_time&quot;))*/</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">4980536313657913344</value>
                             <value name="target">form/label12:text</value>
-                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:Alarm_Status$Unattended_Alarms}
-
-
+                            <value name="expression">cell({users.Aditya.models.Dashboard_KPIs:Alarm_Status({form/comboBox3:currentOptions$value})},&quot;Unattended_Alarms&quot;)
 
 /*
 {users.Aditya.models.Dashboard_KPIs:Alarm_Status}
 
 {users.Aditya.models.Dashboard_KPIs:Alarm_Status$Closed_Alarms}
 
+cell({users.Aditya.models.Dashboard_KPIs:Alarm_Status(&quot;Ground&quot;)},&quot;Unattended_Alarms&quot;)
+
 
 {users.Aditya.models.Dashboard_KPIs:Alarm_Status$Open_Alarms}
 
 {users.Aditya.models.Dashboard_KPIs:Alarm_Status$Unattended_Alarms}
 */</value>
-                            <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">2450637318481281024</value>
                             <value name="target">form/label13:text</value>
-                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:Alarm_Status$Open_Alarms}</value>
-                            <value name="onstartup">1</value>
+                            <value name="expression">cell({users.Aditya.models.Dashboard_KPIs:Alarm_Status({form/comboBox3:currentOptions$value})},&quot;Open_Alarms&quot;)</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">713099120335511552</value>
                             <value name="target">form/label14:text</value>
-                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:Alarm_Status$Closed_Alarms}</value>
-                            <value name="onstartup">1</value>
+                            <value name="expression">cell({users.Aditya.models.Dashboard_KPIs:Alarm_Status({form/comboBox3:currentOptions$value})},&quot;Closed_Alarms&quot;)
+</value>
+                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">2107709218160076800</value>
@@ -643,63 +637,76 @@ table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,
                           <record>
                             <value name="bindingId">3173342735207264256</value>
                             <value name="target">form/comboBox5:options</value>
-                            <value name="expression">addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Building&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{key}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)</value>
+                            <value name="expression">{users.Aditya.models.DCIM_Asset_Device_Management:building()}
+
+
+
+
+//addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Building&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{key}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)
+
+</value>
                             <value name="onstartup">1</value>
-                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">91125415483394048</value>
                             <value name="target">form/comboBox4:options</value>
-                            <value name="expression">addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Lab&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{title}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)</value>
-                            <value name="activator">form/comboBox5:currentOptions</value>
-                            <value name="onstartup">1</value>
+                            <value name="expression">{users.Aditya.models.DCIM_Asset_Device_Management:lab({form/comboBox5:currentOptions$value})}
+
+
+</value>
                             <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">5216005031479570432</value>
                             <value name="target">form/comboBox3:options</value>
-                            <value name="expression">addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Floor&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{key}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)</value>
-                            <value name="activator">form/comboBox4:currentOptions</value>
+                            <value name="expression">{users.Aditya.models.DCIM_Asset_Device_Management:floor({form/comboBox5:currentOptions$value},{form/comboBox4:currentOptions$value})}</value>
                             <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">2873913895257778176</value>
                             <value name="target">form/label33:text</value>
-                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Servers}+&apos;%&apos;
+                            <value name="expression">cell(filter({users.Aditya.models.Dashboard_KPIs:category_wise_consumption_pie({form/comboBox3:currentOptions$value},{form/label45:text$text})},&quot;{series}==&apos;Server&apos;&quot;),&quot;value&quot;)+&apos;%&apos;
 
+
+//cell(filter({users.Aditya.models.Dashboard_KPIs:category_wise_consumption_pie(&quot;Ground&quot;,&quot;72&quot;)},&quot;{series}==&apos;Server&apos;&quot;),&quot;value&quot;)
 
 /*
 {users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Cooling_System}{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Rack}{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$IT_Devices}{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Lighting}
-*/</value>
-                            <value name="onstartup">1</value>
+*/
+
+</value>
                             <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">5777446091783514112</value>
                             <value name="target">form/label34:text</value>
-                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Cooling_System}+&apos;%&apos;</value>
-                            <value name="onstartup">1</value>
+                            <value name="expression">cell(filter({users.Aditya.models.Dashboard_KPIs:category_wise_consumption_pie({form/comboBox3:currentOptions$value},{form/label45:text$text})},&quot;{series}==&apos;Cooling System&apos;&quot;),&quot;value&quot;)+&apos;%&apos;
+
+
+//cell(filter({users.Aditya.models.Dashboard_KPIs:category_wise_consumption_pie(&quot;Ground&quot;,&quot;72&quot;)},&quot;{series}==&apos;Cooling System&apos;&quot;),&quot;value&quot;)</value>
                             <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">7248195747927693312</value>
                             <value name="target">form/label35:text</value>
-                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Rack}+&apos;%&apos;</value>
-                            <value name="onstartup">1</value>
+                            <value name="expression">cell(filter({users.Aditya.models.Dashboard_KPIs:category_wise_consumption_pie({form/comboBox3:currentOptions$value},{form/label45:text$text})},&quot;{series}==&apos;Rack&apos;&quot;),&quot;value&quot;)+&apos;%&apos;
+</value>
                             <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">4868172280983879680</value>
                             <value name="target">form/label36:text</value>
-                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$IT_Devices}+&apos;%&apos;</value>
-                            <value name="onstartup">1</value>
+                            <value name="expression">cell(filter({users.Aditya.models.Dashboard_KPIs:category_wise_consumption_pie({form/comboBox3:currentOptions$value},{form/label45:text$text})},&quot;{series}==&apos;IT Devices&apos;&quot;),&quot;value&quot;)+&apos;%&apos;
+
+
+//cell(filter({users.Aditya.models.Dashboard_KPIs:category_wise_consumption_pie(&quot;Ground&quot;,&quot;72&quot;)},&quot;{series}==&apos;Server&apos;&quot;),&quot;value&quot;)</value>
                             <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">8835037054183985152</value>
                             <value name="target">form/label37:text</value>
-                            <value name="expression">{users.Aditya.models.Dashboard_KPIs:category_wise_consumption$Lighting}+&apos;%&apos;</value>
-                            <value name="onstartup">1</value>
+                            <value name="expression">cell(filter({users.Aditya.models.Dashboard_KPIs:category_wise_consumption_pie({form/comboBox3:currentOptions$value},{form/label45:text$text})},&quot;{series}==&apos;Lighting&apos;&quot;),&quot;value&quot;)+&apos;%&apos;
+</value>
                             <value name="onevent">1</value>
                           </record>
                           <record>
@@ -717,20 +724,17 @@ table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,
 
 //{users.Aditya.models.power_management_KPIs:device()}</value>
                             <value name="activator">form/comboBox6:currentOptions</value>
-                            <value name="onstartup">1</value>
-                            <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">5831589945334067200</value>
                             <value name="target">form/comboBox6:options</value>
-                            <value name="expression">addColumns(filter({users.Aditya.models.DCIM_Asset_Device_Management:Custom_tree_data()},&quot;{nodestyleid}==&apos;Rack&apos;&quot;),&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{title}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{title}&quot;)
+                            <value name="expression">addColumns({users.Aditya.models.power_management_KPIs:rack({form/comboBox5:currentOptions$value},{form/comboBox4:currentOptions$value},{form/comboBox3:currentOptions$value})},&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{rack_name}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{rack_name}&quot;)
 
 
+/*addColumns({users.Aditya.models.power_management_KPIs:rack(&quot;Tower - 07&quot;,&quot;DC2&quot;,&quot;2nd Floor&quot;)},&quot;&lt;value&gt;&lt;S&gt;&quot;,&quot;{rack_name}&quot;,&quot;&lt;label&gt;&lt;S&gt;&quot;,&quot;{rack_name}&quot;)*/
 
 
 /*addColumns(callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call  get_rack(&apos;&quot;+{form/comboBox5:currentOptions$value}+&quot;&apos;,&apos;&quot;+{form/comboBox4:currentOptions$value}+&quot;&apos;,&apos;&quot;+{form/comboBox3:currentOptions$value}+&quot;&apos;)&quot;),&apos;&lt;value&gt;&lt;S&gt;&apos;,&quot;{rack_name}&quot;,&apos;&lt;label&gt;&lt;S&gt;&apos;,&quot;{rack_name}&quot;)*/</value>
-                            <value name="activator">form/comboBox3:currentOptions</value>
-                            <value name="onstartup">1</value>
                             <value name="onevent">1</value>
                           </record>
                           <record>
@@ -738,6 +742,16 @@ table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;E&gt;&gt;&apos;,
                             <value name="target">form/lineChart1:sourceData</value>
                             <value name="expression">{users.Aditya.models.power_management_KPIs:device_pow_consumption({form/comboBox6:currentOptions$value},{form/comboBox7:currentOptions$value})}</value>
                             <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">8200865505503209472</value>
+                            <value name="target">form/label45:text</value>
+                            <value name="expression">cell({users.Aditya.models.Dashboard_KPIs:power_consumption({form/comboBox3:currentOptions$value})},&quot;actual_consumption&quot;)
+
+
+
+//cell({users.Aditya.models.Dashboard_KPIs:power_consumption(&quot;Ground&quot;)},&quot;actual_consumption&quot;)</value>
                             <value name="onevent">1</value>
                           </record>
                         </records>
@@ -918,6 +932,9 @@ height: 1200px;</value>
                           </record>
                           <record>
                             <value name="path">label44</value>
+                          </record>
+                          <record>
+                            <value name="path">label45</value>
                           </record>
                           <record>
                             <value name="path">label5</value>
@@ -2707,8 +2724,7 @@ opacity: 1;</value>
                     <value name="gridx">7</value>
                     <value name="gridy">1</value>
                     <value name="overflow">visible</value>
-                    <value name="style">background: transparent;
-color: white;</value>
+                    <value name="style">background: transparent;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -2727,21 +2743,21 @@ color: white;</value>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="style">style:background: transparent;
-color: white;;</value>
-                            <value name="containerStyle">gridx:7;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;
-padding-top: 3px;
-color: var(--unnamed-color-d8d9da);
-text-align: left;
-font: normal normal normal 10px/16px Poppins;
-letter-spacing: 0px;
-color: #D8D9DA;
-text-transform: capitalize;
-z-index: 1;
-background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;
-border: 1px solid #FFFFFF1A;
-border-radius: 2px;
-opacity: 1;;</value>
+                            <value name="style">style:background: transparent;;</value>
+                            <value name="containerStyle">gridx:7;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
+z-index: 5;&#xd;
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };;</value>
                           </record>
                         </records>
                       </table>
@@ -2757,19 +2773,20 @@ opacity: 1;;</value>
                         </format>
                       </table>
                     </value>
-                    <value name="containerStyle">background: transparent;
-padding-top: 3px;
-color: var(--unnamed-color-d8d9da);
-text-align: left;
-font: normal normal normal 10px/16px Poppins;
-letter-spacing: 0px;
-color: #D8D9DA;
-text-transform: capitalize;
-z-index: 1;
-background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;
-border: 1px solid #FFFFFF1A;
-border-radius: 2px;
-opacity: 1;</value>
+                    <value name="containerStyle">background: transparent;&#xd;
+z-index: 5;&#xd;
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };</value>
                     <value name="placeholder"/>
                     <value name="multi">0</value>
                     <value name="maxTagCount">10</value>
@@ -6420,7 +6437,7 @@ letter-spacing: 0px;&#xd;
 color: #D8D9DA;&#xd;
 text-transform: capitalize;&#xd;
 opacity: 1;</value>
-                    <value name="text">Actual Vs Planned Capacity</value>
+                    <value name="text">Design Vs Actual Capacity</value>
                   </record>
                 </records>
               </table>
@@ -6892,7 +6909,7 @@ opacity: 1;</value>
                     </value>
                     <value name="leftLabelEnable">1</value>
                     <value name="leftLabelOffset">40</value>
-                    <value name="leftLabelValue">Watts</value>
+                    <value name="leftLabelValue">Watt</value>
                     <value name="leftLabelFill">White</value>
                     <value name="leftLabelFontSize">13.2</value>
                     <value name="bottomLabelEnable">1</value>
@@ -14390,6 +14407,9 @@ overflow: hidden!important;
                           <record>
                             <value name="childContexts">label43</value>
                           </record>
+                          <record>
+                            <value name="childContexts">label45</value>
+                          </record>
                         </records>
                       </table>
                     </value>
@@ -16170,7 +16190,7 @@ overflow: hidden!important;
                     <value name="gridx">6</value>
                     <value name="gridy">1</value>
                     <value name="overflow">visible</value>
-                    <value name="style">color: #D8D9DA;</value>
+                    <value name="style">background: transparent;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -16189,12 +16209,21 @@ overflow: hidden!important;
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="style">style:color: #D8D9DA;;</value>
+                            <value name="style">style:background: transparent;;</value>
                             <value name="containerStyle">gridx:6;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
 z-index: 5;&#xd;
-.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
-    background: #2C2C2E;&#xd;
-};</value>
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };;</value>
                           </record>
                         </records>
                       </table>
@@ -16212,9 +16241,18 @@ z-index: 5;&#xd;
                     </value>
                     <value name="containerStyle">background: transparent;&#xd;
 z-index: 5;&#xd;
-.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
-    background: #2C2C2E;&#xd;
-}</value>
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };</value>
                     <value name="placeholder"/>
                     <value name="multi">0</value>
                     <value name="maxTagCount">10</value>
@@ -16404,7 +16442,7 @@ z-index: 5;&#xd;
                     <value name="gridx">5</value>
                     <value name="gridy">1</value>
                     <value name="overflow">visible</value>
-                    <value name="style">color: #D8D9DA;</value>
+                    <value name="style">background: transparent;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -16423,12 +16461,21 @@ z-index: 5;&#xd;
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="style">style:color: #D8D9DA;;</value>
+                            <value name="style">style:background: transparent;;</value>
                             <value name="containerStyle">gridx:5;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
 z-index: 5;&#xd;
-.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
-    background: #2C2C2E;&#xd;
-};</value>
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };;</value>
                           </record>
                         </records>
                       </table>
@@ -16446,9 +16493,18 @@ z-index: 5;&#xd;
                     </value>
                     <value name="containerStyle">background: transparent;&#xd;
 z-index: 5;&#xd;
-.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
-    background: #2C2C2E;&#xd;
-}</value>
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };</value>
                     <value name="placeholder"/>
                     <value name="multi">0</value>
                     <value name="maxTagCount">10</value>
@@ -16638,7 +16694,7 @@ z-index: 5;&#xd;
                     <value name="gridx">4</value>
                     <value name="gridy">1</value>
                     <value name="overflow">visible</value>
-                    <value name="style">color: #D8D9DA;</value>
+                    <value name="style">background: transparent;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -16657,12 +16713,21 @@ z-index: 5;&#xd;
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="style">style:color: #D8D9DA;;</value>
+                            <value name="style">style:background: transparent;;</value>
                             <value name="containerStyle">gridx:4;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
 z-index: 5;&#xd;
-.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
-    background: #2C2C2E;&#xd;
-};</value>
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };;</value>
                           </record>
                         </records>
                       </table>
@@ -16680,9 +16745,18 @@ z-index: 5;&#xd;
                     </value>
                     <value name="containerStyle">background: transparent;&#xd;
 z-index: 5;&#xd;
-.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
-    background: #2C2C2E;&#xd;
-}</value>
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };</value>
                     <value name="placeholder"/>
                     <value name="multi">0</value>
                     <value name="maxTagCount">10</value>
@@ -22194,10 +22268,10 @@ opacity: 1;</value>
                 <records>
                   <record>
                     <value name="name">comboBox6</value>
-                    <value name="gridx">3</value>
+                    <value name="gridx">4</value>
                     <value name="gridy">1</value>
                     <value name="overflow">visible</value>
-                    <value name="style">color: #D8D9DA;</value>
+                    <value name="style">background: transparent;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -22216,12 +22290,19 @@ opacity: 1;</value>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="style">style:color: #D8D9DA;;</value>
-                            <value name="containerStyle">gridx:3;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
-z-index: 4;&#xd;
-.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
-    background: #2C2C2E;&#xd;
-};</value>
+                            <value name="style">style:background: transparent;;</value>
+                            <value name="containerStyle">gridx:4;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };;</value>
                           </record>
                         </records>
                       </table>
@@ -22238,10 +22319,17 @@ z-index: 4;&#xd;
                       </table>
                     </value>
                     <value name="containerStyle">background: transparent;&#xd;
-z-index: 4;&#xd;
-.ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
-    background: #2C2C2E;&#xd;
-}</value>
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white; };</value>
                     <value name="placeholder"/>
                     <value name="multi">0</value>
                     <value name="maxTagCount">10</value>
@@ -22422,9 +22510,10 @@ z-index: 4;&#xd;
                 <records>
                   <record>
                     <value name="name">comboBox7</value>
-                    <value name="gridx">4</value>
+                    <value name="gridx">3</value>
                     <value name="gridy">1</value>
                     <value name="overflow">visible</value>
+                    <value name="visible">0</value>
                     <value name="style">color: #D8D9DA;</value>
                     <value name="gridBreakpoints">
                       <table>
@@ -22445,7 +22534,7 @@ z-index: 4;&#xd;
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style">style:color: #D8D9DA;;</value>
-                            <value name="containerStyle">gridx:4;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: transparent;&#xd;
+                            <value name="containerStyle">gridy:1;gridx:3;gridHeight:1;gridWidth:1;overflow:visible;containerStyle:background: transparent;&#xd;
 z-index: 4;&#xd;
 .ant-select,.rc-virtual-list-holder,.rc-virtual-list-holder {&#xd;
     background: #2C2C2E;&#xd;
@@ -22503,6 +22592,130 @@ z-index: 4;&#xd;
                     </value>
                     <value name="allowClear">0</value>
                     <value name="dropdownOffsetY">4.0</value>
+                  </record>
+                </records>
+              </table>
+            </value>
+          </record>
+          <record>
+            <value name="name">label45</value>
+            <value name="type">label</value>
+            <value name="parameters">
+              <table>
+                <format maxRecords="1" minRecords="1">
+                  <fields>
+                    <field description="Name" name="name" nullable="true" type="S">
+                      <validators contentType="base64">HFIeXHcrXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Column" name="gridx" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Row" name="gridy" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Column Span" name="gridWidth" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Row Span" name="gridHeight" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Content Overflow" name="overflow" type="S">
+                      <selectionValues>
+                        <option description="Auto">auto</option>
+                        <option description="Hidden">hidden</option>
+                        <option description="Scroll">scroll</option>
+                        <option description="Unset">unset</option>
+                        <option description="Visible">visible</option>
+                      </selectionValues>
+                      <defaultValue>auto</defaultValue>
+                    </field>
+                    <field description="Visible" name="visible" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Custom Classes" name="customClasses" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Element CSS Style" editor="code" name="style" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Breakpoints" name="gridBreakpoints" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="visibleChildren" name="visibleChildren" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Container Style" editor="code" name="containerStyle" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Text" name="text" nullable="true" type="S">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                  </fields>
+                </format>
+                <records>
+                  <record>
+                    <value name="name">label45</value>
+                    <value name="gridx">2</value>
+                    <value name="gridy">7</value>
+                    <value name="visible">0</value>
+                    <value name="style"/>
+                    <value name="gridBreakpoints">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Breakpoint" name="breakpoint" nullable="true" type="S">
+                              <defaultValue>default</defaultValue>
+                            </field>
+                            <field description="Style" name="style" nullable="true" type="S">
+                              <defaultValue/>
+                            </field>
+                            <field description="Container Style" name="containerStyle" nullable="true" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="breakpoint">fullHD</value>
+                            <value name="containerStyle">gridx:2;gridy:7;gridWidth:1;gridHeight:1;overflow:auto;</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="visibleChildren">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field name="path" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                      </table>
+                    </value>
+                    <value name="containerStyle"/>
+                    <value name="text">label</value>
                   </record>
                 </records>
               </table>

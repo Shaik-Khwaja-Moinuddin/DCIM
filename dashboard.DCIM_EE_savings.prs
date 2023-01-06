@@ -21380,7 +21380,9 @@ padding-left: 10px;</value>
                     <value name="gridWidth">2</value>
                     <value name="overflow">visible</value>
                     <value name="style">background:transparent;
-color:#ffffff;</value>
+border: 0;
+
+//color:#ffffff;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -21400,12 +21402,30 @@ color:#ffffff;</value>
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style">style:background:transparent;
-color:#ffffff;;</value>
+border: 0;
+
+//color:#ffffff;;</value>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:2;gridHeight:1;overflow:visible;containerStyle:z-index: 10;&#xd;
-background:transparent;&#xd;
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white}&#xd;
 height: 33px;&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+/*border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+&#xd;
 .ant-select .rc-virtual-list-holder, .rc-virtual-list-holder {&#xd;
    &#xd;
     background: #18191B;&#xd;
@@ -21415,9 +21435,8 @@ height: 33px;&#xd;
     background-color: #18191B;&#xd;
   &#xd;
     color: #104661;&#xd;
-&#xd;
 }&#xd;
-.ant-select-selector:hover {background:#18191B ;};</value>
+.ant-select-selector:hover {background:#18191B ;}*/;</value>
                           </record>
                         </records>
                       </table>
@@ -21434,10 +21453,26 @@ height: 33px;&#xd;
                       </table>
                     </value>
                     <value name="containerStyle">z-index: 10;&#xd;
-background:transparent;&#xd;
+background: transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white}&#xd;
 height: 33px;&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+/*border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+&#xd;
 .ant-select .rc-virtual-list-holder, .rc-virtual-list-holder {&#xd;
    &#xd;
     background: #18191B;&#xd;
@@ -21447,9 +21482,8 @@ height: 33px;&#xd;
     background-color: #18191B;&#xd;
   &#xd;
     color: #104661;&#xd;
-&#xd;
 }&#xd;
-.ant-select-selector:hover {background:#18191B ;}</value>
+.ant-select-selector:hover {background:#18191B ;}*/</value>
                     <value name="placeholder"/>
                     <value name="multi">0</value>
                     <value name="maxTagCount">10</value>
@@ -29211,8 +29245,7 @@ padding-top:5px;</value>
                     <value name="gridy">8</value>
                     <value name="overflow">visible</value>
                     <value name="style">background:transparent;&#xd;
-&#xd;
-color:#ffffff;</value>
+border: 0;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -29232,11 +29265,34 @@ color:#ffffff;</value>
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style">style:background:transparent;&#xd;
-&#xd;
-color:#ffffff;;</value>
+border: 0;;</value>
                             <value name="containerStyle">gridx:2;gridy:8;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:z-index: 10;&#xd;
 background:transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+color: #FFFFFF;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white}&#xd;
+&#xd;
+&#xd;
+height: 33px;&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+/*border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 2px;&#xd;
 height: 33px;&#xd;
 .ant-select .rc-virtual-list-holder, .rc-virtual-list-holder {&#xd;
@@ -29250,7 +29306,7 @@ height: 33px;&#xd;
     color: #104661;&#xd;
 &#xd;
 }&#xd;
-.ant-select-selector:hover {background:#18191B ;};</value>
+.ant-select-selector:hover {background:#18191B ;}*/;</value>
                           </record>
                         </records>
                       </table>
@@ -29268,7 +29324,31 @@ height: 33px;&#xd;
                     </value>
                     <value name="containerStyle">z-index: 10;&#xd;
 background:transparent;&#xd;
+padding-top: 3px;&#xd;
+background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
+background: #141619 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+background: transparent linear-gradient(140deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+border: 1px solid #FFFFFF1A;&#xd;
+border-radius: 2px;&#xd;
+opacity: 1;&#xd;
+color: #FFFFFF;&#xd;
+.ant-select.ant-select-single .ant-select-selection-item { color: white}&#xd;
+&#xd;
+&#xd;
+height: 33px;&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+/*border: 1px solid #FFFFFF1A;&#xd;
 border-radius: 2px;&#xd;
 height: 33px;&#xd;
 .ant-select .rc-virtual-list-holder, .rc-virtual-list-holder {&#xd;
@@ -29282,7 +29362,7 @@ height: 33px;&#xd;
     color: #104661;&#xd;
 &#xd;
 }&#xd;
-.ant-select-selector:hover {background:#18191B ;}</value>
+.ant-select-selector:hover {background:#18191B ;}*/</value>
                     <value name="placeholder"/>
                     <value name="multi">0</value>
                     <value name="maxTagCount">10</value>
