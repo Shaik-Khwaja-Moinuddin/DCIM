@@ -1,0 +1,538 @@
+<properties>
+  <properties class="linked-hash-map">
+    <entry>
+      <string>replication</string>
+      <table>
+        <format maxRecords="43" minRecords="43">
+          <fields>
+            <field description="Property" keyfield="true" name="variable" readonly="true" type="S">
+              <help>Name of the variable to apply the replication rule to.</help>
+              <defaultValue/>
+            </field>
+            <field description="Description" name="description" readonly="true" type="S">
+              <help>Description of the Property</help>
+              <defaultValue/>
+            </field>
+            <field description="Auto-replication" name="replicate" type="B">
+              <help>Use automatic replication for this variable</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Use Common Table" name="useMaster" type="B">
+              <help>Use a master value for this property. This setting may be enabled only if Auto-replication is disabled for this property and Current Common Table with Master Value is not empty.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Current Common Table with Master Value" name="master" readonly="true" type="S">
+              <help>Description and location of the Common Table that may be used as a master value of a property. This is a read-only field.</help>
+              <defaultValue/>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>useMaster#enabled</reference>
+              <expression>{replicate} == false &amp;&amp; {master} != &apos;&apos;</expression>
+            </binding>
+          </bindings>
+        </format>
+        <records>
+          <record>
+            <value name="variable">templates</value>
+            <value name="description">Templates</value>
+          </record>
+          <record>
+            <value name="variable">connectionProperties</value>
+            <value name="description">Connection Properties</value>
+          </record>
+          <record>
+            <value name="variable">performanceTesting</value>
+            <value name="description">Performance Testing</value>
+          </record>
+          <record>
+            <value name="variable">genericProperties</value>
+            <value name="description">Generic Device Properties</value>
+          </record>
+          <record>
+            <value name="variable">managedVariables</value>
+            <value name="description">Variables</value>
+          </record>
+          <record>
+            <value name="variable">managedFunctions</value>
+            <value name="description">Functions</value>
+          </record>
+          <record>
+            <value name="variable">managedEvents</value>
+            <value name="description">Events</value>
+          </record>
+          <record>
+            <value name="variable">statisticsProperties</value>
+            <value name="description">Statistics Channels</value>
+          </record>
+          <record>
+            <value name="variable">granulator</value>
+            <value name="description">Granulation</value>
+          </record>
+          <record>
+            <value name="variable">location</value>
+            <value name="description">Location</value>
+          </record>
+          <record>
+            <value name="variable">settingSyncOptions</value>
+            <value name="description">Device Setting Synchronization Options</value>
+          </record>
+          <record>
+            <value name="variable">normal</value>
+            <value name="description">Normal Setting</value>
+          </record>
+          <record>
+            <value name="variable">readonly</value>
+            <value name="description">Read-Only Setting</value>
+          </record>
+          <record>
+            <value name="variable">selvals</value>
+            <value name="description">Setting With Selection Values</value>
+          </record>
+          <record>
+            <value name="variable">eselvals</value>
+            <value name="description">Setting With Extendable Selection Values</value>
+          </record>
+          <record>
+            <value name="variable">nullable</value>
+            <value name="description">Nullable Setting</value>
+          </record>
+          <record>
+            <value name="variable">string</value>
+            <value name="description">String Setting</value>
+          </record>
+          <record>
+            <value name="variable">int</value>
+            <value name="description">Integer Setting</value>
+          </record>
+          <record>
+            <value name="variable">boolean</value>
+            <value name="description">Boolean Setting</value>
+          </record>
+          <record>
+            <value name="variable">float</value>
+            <value name="description">Floating Point Setting</value>
+          </record>
+          <record>
+            <value name="variable">date</value>
+            <value name="description">Date/Time Setting</value>
+          </record>
+          <record>
+            <value name="variable">table</value>
+            <value name="description">Tabular Setting</value>
+          </record>
+          <record>
+            <value name="variable">track</value>
+            <value name="description">Track</value>
+          </record>
+          <record>
+            <value name="variable">position</value>
+            <value name="description">Position</value>
+          </record>
+          <record>
+            <value name="variable">sawtoothSettings</value>
+            <value name="description">Sawtooth Wave Settings</value>
+          </record>
+          <record>
+            <value name="variable">triangleSettings</value>
+            <value name="description">Triangle Wave Settings</value>
+          </record>
+          <record>
+            <value name="variable">squareSettings</value>
+            <value name="description">Square Wave Settings</value>
+          </record>
+          <record>
+            <value name="variable">sineSettings</value>
+            <value name="description">Sine Wave Settings</value>
+          </record>
+          <record>
+            <value name="variable">randomSettings</value>
+            <value name="description">Random Value Settings</value>
+          </record>
+          <record>
+            <value name="variable">shouldGenerateError</value>
+            <value name="description">Should Generate Error</value>
+          </record>
+          <record>
+            <value name="variable">errorGenerator</value>
+            <value name="description">Error Generator</value>
+          </record>
+          <record>
+            <value name="variable">ccmConfigurationManagement</value>
+            <value name="description">Configuration and Compliance Management</value>
+          </record>
+          <record>
+            <value name="variable">ccmCompliancePolicies</value>
+            <value name="description">Compliance Policies</value>
+          </record>
+          <record>
+            <value name="variable">configurations</value>
+            <value name="description">Configurations</value>
+          </record>
+          <record>
+            <value name="variable">conn_device</value>
+            <value name="description">conn_device</value>
+          </record>
+          <record>
+            <value name="variable">Energy_consumption</value>
+            <value name="description">Energy_consumption</value>
+          </record>
+          <record>
+            <value name="variable">fromCore</value>
+            <value name="description">From Core</value>
+          </record>
+          <record>
+            <value name="variable">toCore</value>
+            <value name="description">To Core</value>
+          </record>
+          <record>
+            <value name="variable">fromServer</value>
+            <value name="description">From Server</value>
+          </record>
+          <record>
+            <value name="variable">toServer</value>
+            <value name="description">To Server</value>
+          </record>
+          <record>
+            <value name="variable">custom_assetEvents</value>
+            <value name="description">Asset Events</value>
+          </record>
+          <record>
+            <value name="variable">custom_assetLocation</value>
+            <value name="description">Asset Location</value>
+          </record>
+          <record>
+            <value name="variable">custom_assetInformation</value>
+            <value name="description">Asset Information</value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>childInfo</string>
+      <table>
+        <format maxRecords="1" minRecords="1">
+          <fields>
+            <field description="Group Name" name="name" type="S">
+              <validators contentType="base64">HEweMSA1MB0cUh5cdyteXk5hbWUgbWF5IGNvbnRhaW4gb25seSBMYXRpbiBsZXR0ZXJzLCBkaWdpdHMsIGFuZCB1bmRlcnNjb3Jlcx0=</validators>
+              <help>Name of the object and corresponding system context, required to refer to this object from other parts of the system. It should satisfy the context naming conventions. WARNING: changing name will corrupt all references to the object.</help>
+              <defaultValue/>
+            </field>
+            <field description="Group Description" name="description" notReplicated="true" type="S">
+              <validators contentType="base64">HEweMCAxMDAdHFIeW15ccHtDbnRybH1dKl5eRGVzY3JpcHRpb24gbWF5IGNvbnRhaW4gb25seSBwcmludGFibGUgY2hhcmFjdGVycx0=</validators>
+              <help>Textual description of the group. This is also a description of the group context.</help>
+              <defaultValue/>
+            </field>
+            <field description="Enable Auto-replication" name="autoReplication" type="B">
+              <help>Enables auto-replication for this group.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Hide Members From Primary Location" name="hideMembers" type="B">
+              <help>If this flag is enabled, group member contexts are shown inside the group, but not shown under their parent context. This is a mapping feature that affects only the visual representation of the server context tree, e.g. in System Tree.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Show Member Count" name="showMemberCount" type="B">
+              <help>Enables displaying the group member count. If this flag is enabled, the group member count will be displayed in parentheses after the group description string.</help>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Validity Expression" editor="expression" name="validityExpression" type="S">
+              <editorOptions contentType="base64">HEYeHBxjb250ZXh0HRxTHRxGHk4dHEEeGh0cRB5EZWZhdWx0IENvbnRleHQdHRwcdGFibGUdHFQdHEYeTh0cQR4aHRxEHkRlZmF1bHQgVGFibGUdHRwccmVmZXJlbmNlcx0cVB0cRh5OHRxBHhxGHhwccmVmZXJlbmNlHRxTHRxBHh0cRB5SZWZlcmVuY2UdHRwcZGVzY3JpcHRpb24dHFMdHEEeHRxEHkRlc2NyaXB0aW9uHR0dHRxEHlJlZmVyZW5jZXMdHRwcZXhwZWN0ZWRSZXN1bHQdHFMdHEYeTh0cQR4aHRxEHkV4cGVjdGVkIFJlc3VsdB0dHBxjb250ZXh0RGVzY3JpcHRpb24dHFMdHEYeTh0cQR4aHRxEHkRlZmF1bHQgQ29udGV4dCBEZXNjcmlwdGlvbh0dHBx0YWJsZURlc2NyaXB0aW9uHRxTHRxGHk4dHEEeGh0cRB5EZWZhdWx0IFRhYmxlIERlc2NyaXB0aW9uHR0cTR4xHRxYHjEdHRxSHhwaHRwaHRwcUh4cLjojdHlwZR0cQ29udGV4dCBUeXBlHR0cUh4cLjodHENvbnRleHQgUGF0aB0dHRwaHRwaHRwaHR0=</editorOptions>
+              <help>Determines which contexts may be automatically added to the group. </help>
+              <group>Dynamic Grouping</group>
+              <defaultValue/>
+            </field>
+            <field description="Validity Update Rules" name="validityListeners" type="T">
+              <help>A list of context masks and event names. If event specified by Event field of this table occurs in any of context matching to the mask specified by Mask field in the same record, Validity Expression will be recalculated for this context. This feature is used for automatically adding/removing a certain context from a group if some changes occur in it.</help>
+              <group>Dynamic Grouping</group>
+              <defaultValue>
+                <table>
+                  <format maxRecords="2147483647">
+                    <fields>
+                      <field description="Context Mask" editor="contextmask" icon="fi_context" keyfield="true" name="mask" type="S">
+                        <help>Mask of contexts to monitor events in&#xd;
+</help>
+                        <defaultValue/>
+                      </field>
+                      <field description="Event" extendableSelectionValues="true" icon="fi_event" keyfield="true" name="event" type="S">
+                        <help>Name of Event to listen for</help>
+                        <defaultValue/>
+                      </field>
+                      <field description="Target Expression" editor="expression" icon="fi_expression" name="expression" nullable="true" type="S">
+                        <help>If specified, points to a context those validity should be checked. If Target Expression is not specified (what is suitable in most cases), the system checks validity of context in that Event has occurred.</help>
+                        <defaultValue>
+                          <nullValue/>
+                        </defaultValue>
+                      </field>
+                    </fields>
+                    <bindings>
+                      <binding>
+                        <reference>event#choices</reference>
+                        <expression>{utilities:eventsByMask(&apos;{mask}&apos;)}</expression>
+                      </binding>
+                    </bindings>
+                    <validators contentType="base64">HEseHQ==</validators>
+                  </format>
+                </table>
+              </defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>replication$#enabled</reference>
+              <expression>{autoReplication}</expression>
+            </binding>
+          </bindings>
+        </format>
+        <records>
+          <record>
+            <value name="name">PDU_RC01_10</value>
+            <value name="description">PDU_RC01_10</value>
+            <value name="hideMembers">1</value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>topology</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Link Status" name="status" type="I">
+              <selectionValues>
+                <option description="User-defined">0</option>
+                <option description="Auto-discovered">1</option>
+                <option description="Deleted">2</option>
+              </selectionValues>
+              <help>It is used to define a link status. The links in the auto-discovered status are created during the topology discovery. Such links will be automatically edited and deleted during the subsequent discovery cycles. The links in the user-defined status are deemed as manually added or overridden. Such links are visible on a topology map, but never edited/deleted during the discovery process. And finally, the links in the deleted status are neither shown on a topology map nor edited/deleted during the autodiscovery process. This status helps hide links and protect them from automatic changes.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Link Type" extendableSelectionValues="true" name="type" type="S">
+              <selectionValues>
+                <option description="Custom">custom</option>
+                <option description="Network">network</option>
+                <option description="Level 2">l2</option>
+                <option description="Level 3">l3</option>
+              </selectionValues>
+              <help>Link type: OSI Level 2, Level 3. Generic Network type includes L2 and L3 links. Custom link type is used in non-standard topology.</help>
+              <defaultValue>network</defaultValue>
+            </field>
+            <field description="Target" editor="contextmask" name="target" type="S">
+              <help>The context (device or group) on the other side of the link.</help>
+              <defaultValue/>
+            </field>
+            <field description="Source Interface" name="sourceInterface" nullable="true" type="I">
+              <help>The unique network interface index (Interface Index for SNMP devices) of a source context (device or group)</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Target Interface" name="targetInterface" nullable="true" type="I">
+              <help>The unique network interface index (Interface Index for SNMP devices) of a target context (device or group)</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Source Interface ID" name="sourceInterfaceId" nullable="true" type="S">
+              <help>L3 link identifier of a source context (device or group)</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Target Interface ID" name="targetInterfaceId" nullable="true" type="S">
+              <help>L3 Link identifier of a target context (device or group)</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Source Type" name="sourceType" nullable="true" type="S">
+              <help>The source context (device or group) type, defines the context icon on a topology map (possible values: router, server, printer, etc.).</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Target Type" name="targetType" nullable="true" type="S">
+              <help>Target context type (device or group), defines the context icon on a topology map (possible values: router, server, printer, etc.).</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Source Link Description" name="sourceDescription" nullable="true" type="S">
+              <help>Custom L3 link description of a source context (device or group)</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Target Link Description" name="targetDescription" nullable="true" type="S">
+              <help>Custom L3 Link description of a target context (device or group)</help>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Description" name="description" type="S">
+              <help>Link Description</help>
+              <defaultValue/>
+            </field>
+            <field hidden="true" name="linkId" type="S">
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+      </table>
+    </entry>
+    <entry>
+      <string>location</string>
+      <table>
+        <format maxRecords="1" minRecords="1">
+          <fields>
+            <field description="Latitude" name="latitude" nullable="true" type="E">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Longitude" name="longitude" nullable="true" type="E">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record/>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>groupStatus</string>
+      <table>
+        <format maxRecords="1" minRecords="1">
+          <fields>
+            <field description="Enable Custom Status" name="enabled" type="B">
+              <help>Flag that controls whether custom status is enabled for a group.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Member Status Variable" name="variable" type="S">
+              <help>Variable of group members that will be used to calculate status of each member.</help>
+              <defaultValue/>
+            </field>
+            <field description="Member Status Expression" editor="expression" name="expression" type="S">
+              <help>This expression will be evaluated for every group member to find out a status value (String) for this member. This value will be than looked up in the Status Table setting.</help>
+              <defaultValue/>
+            </field>
+            <field description="Status Table" name="statuses" type="T">
+              <help>The lookup table used to calculate aggregate status of the group.</help>
+              <defaultValue>
+                <table>
+                  <format maxRecords="2147483647" reorderable="true">
+                    <fields>
+                      <field description="Member Status Expression Result" keyfield="true" name="status" type="S">
+                        <help>Result of Member Status Expression evaluation</help>
+                        <defaultValue/>
+                      </field>
+                      <field description="Color" name="color" type="I">
+                        <selectionValues>
+                          <option description="Dark Grey">100</option>
+                          <option description="Dark Green">101</option>
+                          <option description="Dark Yellow">102</option>
+                          <option description="Dark Red">103</option>
+                          <option description="Dark Magenta">104</option>
+                          <option description="Dark Blue">105</option>
+                          <option description="Light Grey">110</option>
+                          <option description="Light Green">111</option>
+                          <option description="Light Yellow">112</option>
+                          <option description="Light Red">113</option>
+                          <option description="Light Magenta">114</option>
+                          <option description="Light Blue">115</option>
+                        </selectionValues>
+                        <help>A color that will be used to mark the group with such status (there are twelve predefined group status colors).</help>
+                        <defaultValue>100</defaultValue>
+                      </field>
+                      <field description="Description" name="description" type="S">
+                        <help>Description of this status</help>
+                        <defaultValue/>
+                      </field>
+                    </fields>
+                    <validators contentType="base64">HEseHQ==</validators>
+                  </format>
+                </table>
+              </defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>variable#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+            <binding>
+              <reference>expression#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+            <binding>
+              <reference>statuses#enabled</reference>
+              <expression>{enabled}</expression>
+            </binding>
+          </bindings>
+        </format>
+        <records>
+          <record>
+            <value name="enabled">1</value>
+            <value name="variable">contextStatus</value>
+            <value name="expression">({status} % 10 != 2 &amp;&amp; ({status} - {status} % 10) == 40 ? 1 : ({status} % 10 == 1 || {status} % 10 == 2 ? 3 : 2))</value>
+            <value name="statuses">
+              <table>
+                <format maxRecords="2147483647" reorderable="true">
+                  <fields>
+                    <field description="Member Status Expression Result" keyfield="true" name="status" type="S">
+                      <help>Result of Member Status Expression evaluation</help>
+                      <defaultValue/>
+                    </field>
+                    <field description="Color" name="color" type="I">
+                      <selectionValues>
+                        <option description="Dark Grey">100</option>
+                        <option description="Dark Green">101</option>
+                        <option description="Dark Yellow">102</option>
+                        <option description="Dark Red">103</option>
+                        <option description="Dark Magenta">104</option>
+                        <option description="Dark Blue">105</option>
+                        <option description="Light Grey">110</option>
+                        <option description="Light Green">111</option>
+                        <option description="Light Yellow">112</option>
+                        <option description="Light Red">113</option>
+                        <option description="Light Magenta">114</option>
+                        <option description="Light Blue">115</option>
+                      </selectionValues>
+                      <help>A color that will be used to mark the group with such status (there are twelve predefined group status colors).</help>
+                      <defaultValue>100</defaultValue>
+                    </field>
+                    <field description="Description" name="description" type="S">
+                      <help>Description of this status</help>
+                      <defaultValue/>
+                    </field>
+                  </fields>
+                  <validators contentType="base64">HEseHQ==</validators>
+                </format>
+                <records>
+                  <record>
+                    <value name="status">1</value>
+                    <value name="color">103</value>
+                    <value name="description">Error</value>
+                  </record>
+                  <record>
+                    <value name="status">2</value>
+                    <value name="color">102</value>
+                    <value name="description">Offline</value>
+                  </record>
+                  <record>
+                    <value name="status">3</value>
+                    <value name="color">101</value>
+                    <value name="description">Normal</value>
+                  </record>
+                </records>
+              </table>
+            </value>
+          </record>
+        </records>
+      </table>
+    </entry>
+  </properties>
+</properties>

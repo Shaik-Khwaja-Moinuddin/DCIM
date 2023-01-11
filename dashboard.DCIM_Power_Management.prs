@@ -729,7 +729,12 @@ cell({users.Aditya.models.Dashboard_KPIs:Alarm_Status(&quot;Ground&quot;)},&quot
                           <record>
                             <value name="bindingId">8360377955623170048</value>
                             <value name="target">form/lineChart2:sourceData</value>
-                            <value name="expression">{users.Aditya.models.power_management_KPIs:Outage_trends({form/comboBox3:currentOptions$value})}</value>
+                            <value name="expression">{users.Aditya.models.power_management_KPIs:Outage_trends({form/comboBox3:currentOptions$value})}
+
+
+
+
+//{users.Aditya.models.power_management_KPIs:Outage_trends(&quot;B01-F01-L01&quot;)}</value>
                             <value name="activator">form/comboBox3:currentOptions</value>
                             <value name="onstartup">1</value>
                             <value name="onevent">1</value>
@@ -2892,8 +2897,8 @@ opacity: 1;&#xd;
                         </format>
                         <records>
                           <record>
-                            <value name="value">By Weeks</value>
-                            <value name="label">By Weeks</value>
+                            <value name="value">Last 7 days</value>
+                            <value name="label">Last 7 days</value>
                           </record>
                         </records>
                       </table>
@@ -2909,7 +2914,7 @@ opacity: 1;&#xd;
                         </format>
                         <records>
                           <record>
-                            <value name="value">By Weeks</value>
+                            <value name="value">Last 7 days</value>
                           </record>
                         </records>
                       </table>
@@ -5503,7 +5508,7 @@ letter-spacing: 0px;&#xd;
 color: #D8D9DA;&#xd;
 text-transform: capitalize;&#xd;
 opacity: 1;</value>
-                    <value name="text">Total Category Wise Consuption</value>
+                    <value name="text">Total Category Wise Load</value>
                   </record>
                 </records>
               </table>
@@ -13546,24 +13551,26 @@ td:nth-child(n) {color:#FFFFFF;background:transparent!important}    background: 
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="containerStyle">gridx:1;gridy:1;gridWidth:2;gridHeight:1;overflow:hidden;containerStyle:.ant-table-tbody &gt; tr &gt;th, td {padding:0px !important};
-.rc-color-picker-trigger {height:40px;}
-.rc-color-picker-wrap {
-    display: flex;
-}
-.ant-table-body{
-overflow: hidden!important;
-}
-
-.ant-table-header{
-  visibility: hidden;
-  height: 0px;
-}
-
-
-//pointer-events: none;
-
-;</value>
+                            <value name="containerStyle">gridx:1;gridy:1;gridWidth:2;gridHeight:1;overflow:hidden;containerStyle:.ant-table-tbody &gt; tr &gt;th, td {padding:0px !important};&#xd;
+.rc-color-picker-trigger {height:53px}&#xd;
+.rc-color-picker-wrap {&#xd;
+    display: flex;&#xd;
+}&#xd;
+height:500px;&#xd;
+width:980px;&#xd;
+&#xd;
+ &#xd;
+&#xd;
+.ant-table-body{&#xd;
+overflow: hidden!important;&#xd;
+}&#xd;
+&#xd;
+ &#xd;
+&#xd;
+.ant-table-header{&#xd;
+  visibility: hidden;&#xd;
+  height: 0px;&#xd;
+};</value>
                           </record>
                         </records>
                       </table>
@@ -13579,24 +13586,26 @@ overflow: hidden!important;
                         </format>
                       </table>
                     </value>
-                    <value name="containerStyle">.ant-table-tbody &gt; tr &gt;th, td {padding:0px !important};
-.rc-color-picker-trigger {height:40px;}
-.rc-color-picker-wrap {
-    display: flex;
-}
-.ant-table-body{
-overflow: hidden!important;
-}
-
-.ant-table-header{
-  visibility: hidden;
-  height: 0px;
-}
-
-
-//pointer-events: none;
-
-</value>
+                    <value name="containerStyle">.ant-table-tbody &gt; tr &gt;th, td {padding:0px !important};&#xd;
+.rc-color-picker-trigger {height:53px}&#xd;
+.rc-color-picker-wrap {&#xd;
+    display: flex;&#xd;
+}&#xd;
+height:500px;&#xd;
+width:980px;&#xd;
+&#xd;
+ &#xd;
+&#xd;
+.ant-table-body{&#xd;
+overflow: hidden!important;&#xd;
+}&#xd;
+&#xd;
+ &#xd;
+&#xd;
+.ant-table-header{&#xd;
+  visibility: hidden;&#xd;
+  height: 0px;&#xd;
+}</value>
                     <value name="additionalActionSettings">
                       <table>
                         <format maxRecords="2147483647">
@@ -15430,28 +15439,30 @@ opacity: 1;</value>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="containerStyle">gridx:1;gridy:1;gridWidth:2;gridHeight:1;overflow:hidden;containerStyle:
-.ant-table-row {background:transparent !important}
-background:transparent;
-z-index: 1;
-
-.ant-table-tbody &gt; tr.ant-table-row &gt; td {
-font: bold normal normal 12px/14px shapesans;
-color: #000000;
-}
-.width-calculation-wrapper {
-   width:50px;
-   height:30px;
-	}
-.ant-table-body{	
-overflow: hidden!important;
-}
-.ant-table-header{
-  visibility: hidden;
-  height: 0px;
-}
-
-//pointer-events: none;;</value>
+                            <value name="containerStyle">gridx:1;gridy:1;gridWidth:2;gridHeight:1;overflow:hidden;containerStyle:height:500px;&#xd;
+width:980px;&#xd;
+.ant-table-row {background:transparent !important}&#xd;
+background:transparent;&#xd;
+z-index: 1;&#xd;
+&#xd;
+ &#xd;
+&#xd;
+&#xd;
+.ant-table-tbody &gt; tr.ant-table-row &gt; td {&#xd;
+font: bold normal normal 12px/14px shapesans;&#xd;
+color: #ffffff;&#xd;
+}&#xd;
+.width-calculation-wrapper {&#xd;
+   width:30px;&#xd;
+   height:45px;&#xd;
+    }&#xd;
+.ant-table-body{    &#xd;
+overflow: hidden!important;&#xd;
+}&#xd;
+.ant-table-header{&#xd;
+  visibility: hidden;&#xd;
+  height: 0px;&#xd;
+};</value>
                           </record>
                         </records>
                       </table>
@@ -15467,28 +15478,30 @@ overflow: hidden!important;
                         </format>
                       </table>
                     </value>
-                    <value name="containerStyle">
-.ant-table-row {background:transparent !important}
-background:transparent;
-z-index: 1;
-
-.ant-table-tbody &gt; tr.ant-table-row &gt; td {
-font: bold normal normal 12px/14px shapesans;
-color: #000000;
-}
-.width-calculation-wrapper {
-   width:50px;
-   height:30px;
-	}
-.ant-table-body{	
-overflow: hidden!important;
-}
-.ant-table-header{
-  visibility: hidden;
-  height: 0px;
-}
-
-//pointer-events: none;</value>
+                    <value name="containerStyle">height:500px;&#xd;
+width:980px;&#xd;
+.ant-table-row {background:transparent !important}&#xd;
+background:transparent;&#xd;
+z-index: 1;&#xd;
+&#xd;
+ &#xd;
+&#xd;
+&#xd;
+.ant-table-tbody &gt; tr.ant-table-row &gt; td {&#xd;
+font: bold normal normal 12px/14px shapesans;&#xd;
+color: #ffffff;&#xd;
+}&#xd;
+.width-calculation-wrapper {&#xd;
+   width:30px;&#xd;
+   height:45px;&#xd;
+    }&#xd;
+.ant-table-body{    &#xd;
+overflow: hidden!important;&#xd;
+}&#xd;
+.ant-table-header{&#xd;
+  visibility: hidden;&#xd;
+  height: 0px;&#xd;
+}</value>
                     <value name="additionalActionSettings">
                       <table>
                         <format maxRecords="2147483647">
@@ -19854,7 +19867,7 @@ opacity: 1;</value>
                     <value name="leftLabelFontSize">13.2</value>
                     <value name="bottomLabelEnable">1</value>
                     <value name="bottomLabelOffset">40</value>
-                    <value name="bottomLabelValue">Last one Hours</value>
+                    <value name="bottomLabelValue">Hourly</value>
                     <value name="bottomLabelFill">white</value>
                     <value name="bottomLabelFontSize">13.2</value>
                     <value name="axisLabelShiftY">10</value>
@@ -22009,7 +22022,7 @@ font: normal normal normal 12px/18px Poppins;
 letter-spacing: 0px;
 color: #D8D9DA;
 opacity: 1;</value>
-                    <value name="text">Device Power Consumption Trends</value>
+                    <value name="text">Device Power Consumption Trends (Last 12 Hours)</value>
                   </record>
                 </records>
               </table>

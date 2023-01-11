@@ -594,7 +594,7 @@
                           <record>
                             <value name="bindingId">4511578271830921216</value>
                             <value name="target">form/dataTableEditor0:dataTable</value>
-                            <value name="expression">addColumns({users.Aditya.models.DCIM_Alarms_List:Alarms_List()},&quot;&lt;VALIDATE&gt;&lt;S&gt;&quot;,&quot;&apos;Click to  Validate&apos;&quot;)</value>
+                            <value name="expression">addColumns({users.Aditya.models.DCIM_Alarms_List:Alarms_List()},&quot;&lt;VALIDATE&gt;&lt;S&gt;&quot;,&apos;{status}==&quot;Valid&quot;?&quot;-&quot;:&quot;Click to Validate&quot;&apos;)</value>
                             <value name="onstartup">1</value>
                           </record>
                           <record>
@@ -764,14 +764,19 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                           <record>
                             <value name="bindingId">2466149188207224832</value>
                             <value name="target">form/label54:text</value>
-                            <value name="expression">{form/comboBox9:currentOptions$value}==&quot;Temperature&quot;?&quot;°C&quot;:&quot;kWh&quot;
+                            <value name="expression">{form/comboBox9:currentOptions$value}==&quot;Temperature&quot;?&quot;°C&quot;:{form/comboBox9:currentOptions$value}==&quot;Humidity&quot;?&quot;%(Relative)&quot;:&quot;kWh&quot;
+
+
+
+
+
 </value>
                             <value name="onevent">1</value>
                           </record>
                           <record>
                             <value name="bindingId">8871620222784184320</value>
                             <value name="target">form/label55:text</value>
-                            <value name="expression">{form/comboBox9:currentOptions$value}==&quot;Temperature&quot;?&quot;°C&quot;:&quot;kWh&quot;
+                            <value name="expression">{form/comboBox9:currentOptions$value}==&quot;Temperature&quot;?&quot;°C&quot;:{form/comboBox9:currentOptions$value}==&quot;Humidity&quot;?&quot;%(Relative)&quot;:&quot;kWh&quot;
 </value>
                             <value name="onevent">1</value>
                           </record>
@@ -4269,7 +4274,15 @@ td:nth-child(n) {color:#D8D9DA;background:transparent!important}    background: 
 .ant-table-tbody&gt;tr.ant-table-placeholder:hover&gt;td {&#xd;
   background: none;&#xd;
 }&#xd;
-;</value>
+.ant-table-header .ant-table-thead tr &gt; th { pointer-events: none; background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}&#xd;
+&#xd;
+}&#xd;
+.toolbar-import-button{&#xd;
+  display: none;&#xd;
+}&#xd;
+.toolbar-reset-button{&#xd;
+  display: none;&#xd;
+};</value>
                           </record>
                         </records>
                       </table>
@@ -4311,7 +4324,15 @@ td:nth-child(n) {color:#D8D9DA;background:transparent!important}    background: 
 .ant-table-tbody&gt;tr.ant-table-placeholder:hover&gt;td {&#xd;
   background: none;&#xd;
 }&#xd;
-</value>
+.ant-table-header .ant-table-thead tr &gt; th { pointer-events: none; background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}&#xd;
+&#xd;
+}&#xd;
+.toolbar-import-button{&#xd;
+  display: none;&#xd;
+}&#xd;
+.toolbar-reset-button{&#xd;
+  display: none;&#xd;
+}</value>
                     <value name="additionalActionSettings">
                       <table>
                         <format maxRecords="2147483647">
@@ -9870,7 +9891,8 @@ opacity: 1;&#xd;
                     <value name="gridx">1</value>
                     <value name="gridy">1</value>
                     <value name="overflow">hidden</value>
-                    <value name="style">background: transparent;</value>
+                    <value name="style">background: transparent;
+color: #D8D9DA;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -9889,7 +9911,8 @@ opacity: 1;&#xd;
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="style">style:background: transparent;;</value>
+                            <value name="style">style:background: transparent;
+color: #D8D9DA;;</value>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: transparent;;</value>
                           </record>
                         </records>
@@ -14997,13 +15020,20 @@ padding-top: 10px;</value>
                     <value name="gridx">1</value>
                     <value name="gridy">2</value>
                     <value name="overflow">hidden</value>
-                    <value name="style">background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
-border: 1px solid #FFFFFF1A;&#xd;
-border-radius: 2px;&#xd;
-opacity: 1;&#xd;
-backdrop-filter: blur(10px);&#xd;
--webkit-backdrop-filter: blur(10px);&#xd;
-color: #D8D9DA;</value>
+                    <value name="style">background: #a0a0a0;&#xd;
+color: #0000aa;&#xd;
+.iLlEVY.iLlEVY {&#xd;
+    background: transparent;&#xd;
+    color: rgb(255, 255, 255);&#xd;
+    background-color: #808080;&#xd;
+}&#xd;
+// background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+// border: 1px solid #FFFFFF1A;&#xd;
+// border-radius: 2px;&#xd;
+// opacity: 1;&#xd;
+// backdrop-filter: blur(10px);&#xd;
+// -webkit-backdrop-filter: blur(10px);&#xd;
+// color: #D8D9DA;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -15022,21 +15052,32 @@ color: #D8D9DA;</value>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="style">style:background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
-border: 1px solid #FFFFFF1A;&#xd;
-border-radius: 2px;&#xd;
-opacity: 1;&#xd;
-backdrop-filter: blur(10px);&#xd;
--webkit-backdrop-filter: blur(10px);&#xd;
-color: #D8D9DA;;</value>
-                            <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: transparent;
-color: #D8D9DA;
+                            <value name="style">style:background: #a0a0a0;&#xd;
+color: #0000aa;&#xd;
+.iLlEVY.iLlEVY {&#xd;
+    background: transparent;&#xd;
+    color: rgb(255, 255, 255);&#xd;
+    background-color: #808080;&#xd;
+}&#xd;
+// background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;&#xd;
+// border: 1px solid #FFFFFF1A;&#xd;
+// border-radius: 2px;&#xd;
+// opacity: 1;&#xd;
+// backdrop-filter: blur(10px);&#xd;
+// -webkit-backdrop-filter: blur(10px);&#xd;
+// color: #D8D9DA;;</value>
+                            <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:color: #D8D9DA;
   background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 2px;
 opacity: 1;
 backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);;</value>
+-webkit-backdrop-filter: blur(10px);
+.iLlEVY.iLlEVY {
+    background: transparent;
+    color: rgb(255, 255, 255);
+    background-color: #808080;
+};</value>
                           </record>
                         </records>
                       </table>
@@ -15052,14 +15093,18 @@ backdrop-filter: blur(10px);
                         </format>
                       </table>
                     </value>
-                    <value name="containerStyle">background: transparent;
-color: #D8D9DA;
+                    <value name="containerStyle">color: #D8D9DA;
   background: transparent linear-gradient(90deg, #FFFFFF1A 0%, #DADADA1A 5%, #CECECE00 28%, #B5B5B500 73%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;
 border: 1px solid #FFFFFF1A;
 border-radius: 2px;
 opacity: 1;
 backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);</value>
+-webkit-backdrop-filter: blur(10px);
+.iLlEVY.iLlEVY {
+    background: transparent;
+    color: rgb(255, 255, 255);
+    background-color: #808080;
+}</value>
                     <value name="text"/>
                     <value name="placeholder"/>
                   </record>
@@ -20788,7 +20833,8 @@ opacity: 1;}</value>
                     <value name="gridx">1</value>
                     <value name="gridy">1</value>
                     <value name="overflow">hidden</value>
-                    <value name="style">background: transparent;</value>
+                    <value name="style">background: transparent;
+color: #D8D9DA;</value>
                     <value name="gridBreakpoints">
                       <table>
                         <format maxRecords="2147483647">
@@ -20807,7 +20853,8 @@ opacity: 1;}</value>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
-                            <value name="style">style:background: transparent;;</value>
+                            <value name="style">style:background: transparent;
+color: #D8D9DA;;</value>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: transparent;;</value>
                           </record>
                         </records>
