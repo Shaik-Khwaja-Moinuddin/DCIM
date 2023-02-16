@@ -309,18 +309,18 @@
                     </field>
                     <field description="Control Protocol" extendableSelectionValues="true" name="controlProtocol" type="S">
                       <selectionValues>
-                        <option description="Telnet">Telnet</option>
-                        <option description="SSH">SSH</option>
                         <option description="SNMP">SNMP</option>
+                        <option description="SSH">SSH</option>
+                        <option description="Telnet">Telnet</option>
                       </selectionValues>
                       <defaultValue>Telnet</defaultValue>
                     </field>
                     <field description="Transport Protocol" extendableSelectionValues="true" name="transportProtocol" type="S">
                       <selectionValues>
+                        <option description="SCP">SCP</option>
                         <option description="Shell">Shell</option>
                         <option description="FTP">FTP</option>
                         <option description="TFTP">TFTP</option>
-                        <option description="SCP">SCP</option>
                       </selectionValues>
                       <defaultValue>Shell</defaultValue>
                     </field>
@@ -356,8 +356,8 @@
                     </field>
                     <field description="End of Line Delimiter" name="eolDelimiter" type="S">
                       <selectionValues>
-                        <option description="CR+LF">\r\n</option>
                         <option description="LF">\n</option>
+                        <option description="CR+LF">\r\n</option>
                       </selectionValues>
                       <help>Use &apos;CR+LF&apos; value for &apos;SSH&apos; Control Protocol and &apos;LF&apos; for others protocols.</help>
                       <defaultValue>\r\n</defaultValue>
@@ -402,18 +402,18 @@
                     </field>
                     <field description="Control Protocol" extendableSelectionValues="true" name="controlProtocol" type="S">
                       <selectionValues>
-                        <option description="Telnet">Telnet</option>
-                        <option description="SSH">SSH</option>
                         <option description="SNMP">SNMP</option>
+                        <option description="SSH">SSH</option>
+                        <option description="Telnet">Telnet</option>
                       </selectionValues>
                       <defaultValue>Telnet</defaultValue>
                     </field>
                     <field description="Transport Protocol" extendableSelectionValues="true" name="transportProtocol" type="S">
                       <selectionValues>
+                        <option description="SCP">SCP</option>
                         <option description="Shell">Shell</option>
                         <option description="FTP">FTP</option>
                         <option description="TFTP">TFTP</option>
-                        <option description="SCP">SCP</option>
                       </selectionValues>
                       <defaultValue>Shell</defaultValue>
                     </field>
@@ -449,8 +449,8 @@
                     </field>
                     <field description="End of Line Delimiter" name="eolDelimiter" type="S">
                       <selectionValues>
-                        <option description="CR+LF">\r\n</option>
                         <option description="LF">\n</option>
+                        <option description="CR+LF">\r\n</option>
                       </selectionValues>
                       <help>Use &apos;CR+LF&apos; value for &apos;SSH&apos; Control Protocol and &apos;LF&apos; for others protocols.</help>
                       <defaultValue>\r\n</defaultValue>
@@ -846,19 +846,19 @@
                 <option description="GMT+01:00, Africa/Brazzaville">Africa/Brazzaville</option>
                 <option description="GMT+02:00, Africa/Bujumbura">Africa/Bujumbura</option>
                 <option description="GMT+02:00, Africa/Cairo">Africa/Cairo</option>
-                <option description="GMT+00:00, Africa/Casablanca">Africa/Casablanca</option>
+                <option description="GMT+00:00, Africa/Casablanca, with DST">Africa/Casablanca</option>
                 <option description="GMT+01:00, Africa/Ceuta, with DST">Africa/Ceuta</option>
                 <option description="GMT+00:00, Africa/Conakry">Africa/Conakry</option>
                 <option description="GMT+00:00, Africa/Dakar">Africa/Dakar</option>
                 <option description="GMT+03:00, Africa/Dar_es_Salaam">Africa/Dar_es_Salaam</option>
                 <option description="GMT+03:00, Africa/Djibouti">Africa/Djibouti</option>
                 <option description="GMT+01:00, Africa/Douala">Africa/Douala</option>
-                <option description="GMT+00:00, Africa/El_Aaiun">Africa/El_Aaiun</option>
+                <option description="GMT+00:00, Africa/El_Aaiun, with DST">Africa/El_Aaiun</option>
                 <option description="GMT+00:00, Africa/Freetown">Africa/Freetown</option>
                 <option description="GMT+02:00, Africa/Gaborone">Africa/Gaborone</option>
                 <option description="GMT+02:00, Africa/Harare">Africa/Harare</option>
                 <option description="GMT+02:00, Africa/Johannesburg">Africa/Johannesburg</option>
-                <option description="GMT+02:00, Africa/Juba">Africa/Juba</option>
+                <option description="GMT+03:00, Africa/Juba">Africa/Juba</option>
                 <option description="GMT+03:00, Africa/Kampala">Africa/Kampala</option>
                 <option description="GMT+02:00, Africa/Khartoum">Africa/Khartoum</option>
                 <option description="GMT+02:00, Africa/Kigali">Africa/Kigali</option>
@@ -881,7 +881,7 @@
                 <option description="GMT+00:00, Africa/Nouakchott">Africa/Nouakchott</option>
                 <option description="GMT+00:00, Africa/Ouagadougou">Africa/Ouagadougou</option>
                 <option description="GMT+01:00, Africa/Porto-Novo">Africa/Porto-Novo</option>
-                <option description="GMT+00:00, Africa/Sao_Tome">Africa/Sao_Tome</option>
+                <option description="GMT+01:00, Africa/Sao_Tome">Africa/Sao_Tome</option>
                 <option description="GMT+00:00, Africa/Timbuktu">Africa/Timbuktu</option>
                 <option description="GMT+02:00, Africa/Tripoli">Africa/Tripoli</option>
                 <option description="GMT+01:00, Africa/Tunis">Africa/Tunis</option>
@@ -919,7 +919,7 @@
                 <option description="GMT-07:00, America/Boise, with DST">America/Boise</option>
                 <option description="GMT-03:00, America/Buenos_Aires">America/Buenos_Aires</option>
                 <option description="GMT-07:00, America/Cambridge_Bay, with DST">America/Cambridge_Bay</option>
-                <option description="GMT-04:00, America/Campo_Grande">America/Campo_Grande</option>
+                <option description="GMT-04:00, America/Campo_Grande, with DST">America/Campo_Grande</option>
                 <option description="GMT-05:00, America/Cancun">America/Cancun</option>
                 <option description="GMT-04:00, America/Caracas">America/Caracas</option>
                 <option description="GMT-03:00, America/Catamarca">America/Catamarca</option>
@@ -931,10 +931,10 @@
                 <option description="GMT-03:00, America/Cordoba">America/Cordoba</option>
                 <option description="GMT-06:00, America/Costa_Rica">America/Costa_Rica</option>
                 <option description="GMT-07:00, America/Creston">America/Creston</option>
-                <option description="GMT-04:00, America/Cuiaba">America/Cuiaba</option>
+                <option description="GMT-04:00, America/Cuiaba, with DST">America/Cuiaba</option>
                 <option description="GMT-04:00, America/Curacao">America/Curacao</option>
                 <option description="GMT+00:00, America/Danmarkshavn">America/Danmarkshavn</option>
-                <option description="GMT-07:00, America/Dawson">America/Dawson</option>
+                <option description="GMT-08:00, America/Dawson, with DST">America/Dawson</option>
                 <option description="GMT-07:00, America/Dawson_Creek">America/Dawson_Creek</option>
                 <option description="GMT-07:00, America/Denver, with DST">America/Denver</option>
                 <option description="GMT-05:00, America/Detroit, with DST">America/Detroit</option>
@@ -1007,7 +1007,6 @@
                 <option description="GMT-06:00, America/North_Dakota/Beulah, with DST">America/North_Dakota/Beulah</option>
                 <option description="GMT-06:00, America/North_Dakota/Center, with DST">America/North_Dakota/Center</option>
                 <option description="GMT-06:00, America/North_Dakota/New_Salem, with DST">America/North_Dakota/New_Salem</option>
-                <option description="GMT-03:00, America/Nuuk, with DST">America/Nuuk</option>
                 <option description="GMT-07:00, America/Ojinaga, with DST">America/Ojinaga</option>
                 <option description="GMT-05:00, America/Panama">America/Panama</option>
                 <option description="GMT-05:00, America/Pangnirtung, with DST">America/Pangnirtung</option>
@@ -1030,7 +1029,7 @@
                 <option description="GMT-03:00, America/Santarem">America/Santarem</option>
                 <option description="GMT-04:00, America/Santiago, with DST">America/Santiago</option>
                 <option description="GMT-04:00, America/Santo_Domingo">America/Santo_Domingo</option>
-                <option description="GMT-03:00, America/Sao_Paulo">America/Sao_Paulo</option>
+                <option description="GMT-03:00, America/Sao_Paulo, with DST">America/Sao_Paulo</option>
                 <option description="GMT-01:00, America/Scoresbysund, with DST">America/Scoresbysund</option>
                 <option description="GMT-07:00, America/Shiprock, with DST">America/Shiprock</option>
                 <option description="GMT-09:00, America/Sitka, with DST">America/Sitka</option>
@@ -1049,14 +1048,14 @@
                 <option description="GMT-04:00, America/Tortola">America/Tortola</option>
                 <option description="GMT-08:00, America/Vancouver, with DST">America/Vancouver</option>
                 <option description="GMT-04:00, America/Virgin">America/Virgin</option>
-                <option description="GMT-07:00, America/Whitehorse">America/Whitehorse</option>
+                <option description="GMT-08:00, America/Whitehorse, with DST">America/Whitehorse</option>
                 <option description="GMT-06:00, America/Winnipeg, with DST">America/Winnipeg</option>
                 <option description="GMT-09:00, America/Yakutat, with DST">America/Yakutat</option>
                 <option description="GMT-07:00, America/Yellowknife, with DST">America/Yellowknife</option>
-                <option description="GMT+11:00, Antarctica/Casey">Antarctica/Casey</option>
+                <option description="GMT+08:00, Antarctica/Casey">Antarctica/Casey</option>
                 <option description="GMT+07:00, Antarctica/Davis">Antarctica/Davis</option>
                 <option description="GMT+10:00, Antarctica/DumontDUrville">Antarctica/DumontDUrville</option>
-                <option description="GMT+10:00, Antarctica/Macquarie, with DST">Antarctica/Macquarie</option>
+                <option description="GMT+11:00, Antarctica/Macquarie">Antarctica/Macquarie</option>
                 <option description="GMT+05:00, Antarctica/Mawson">Antarctica/Mawson</option>
                 <option description="GMT+12:00, Antarctica/McMurdo, with DST">Antarctica/McMurdo</option>
                 <option description="GMT-03:00, Antarctica/Palmer">Antarctica/Palmer</option>
@@ -1134,8 +1133,7 @@
                 <option description="GMT+07:00, Asia/Pontianak">Asia/Pontianak</option>
                 <option description="GMT+09:00, Asia/Pyongyang">Asia/Pyongyang</option>
                 <option description="GMT+03:00, Asia/Qatar">Asia/Qatar</option>
-                <option description="GMT+06:00, Asia/Qostanay">Asia/Qostanay</option>
-                <option description="GMT+05:00, Asia/Qyzylorda">Asia/Qyzylorda</option>
+                <option description="GMT+06:00, Asia/Qyzylorda">Asia/Qyzylorda</option>
                 <option description="GMT+06:30, Asia/Rangoon">Asia/Rangoon</option>
                 <option description="GMT+03:00, Asia/Riyadh">Asia/Riyadh</option>
                 <option description="GMT+07:00, Asia/Saigon">Asia/Saigon</option>
@@ -1202,7 +1200,7 @@
                 <option description="GMT+09:30, Australia/Yancowinna, with DST">Australia/Yancowinna</option>
                 <option description="GMT-05:00, Brazil/Acre">Brazil/Acre</option>
                 <option description="GMT-02:00, Brazil/DeNoronha">Brazil/DeNoronha</option>
-                <option description="GMT-03:00, Brazil/East">Brazil/East</option>
+                <option description="GMT-03:00, Brazil/East, with DST">Brazil/East</option>
                 <option description="GMT-04:00, Brazil/West">Brazil/West</option>
                 <option description="GMT+01:00, CET, with DST">CET</option>
                 <option description="GMT-06:00, CST6CDT, with DST">CST6CDT</option>
@@ -1213,7 +1211,7 @@
                 <option description="GMT-03:30, Canada/Newfoundland, with DST">Canada/Newfoundland</option>
                 <option description="GMT-08:00, Canada/Pacific, with DST">Canada/Pacific</option>
                 <option description="GMT-06:00, Canada/Saskatchewan">Canada/Saskatchewan</option>
-                <option description="GMT-07:00, Canada/Yukon">Canada/Yukon</option>
+                <option description="GMT-08:00, Canada/Yukon, with DST">Canada/Yukon</option>
                 <option description="GMT-04:00, Chile/Continental, with DST">Chile/Continental</option>
                 <option description="GMT-06:00, Chile/EasterIsland, with DST">Chile/EasterIsland</option>
                 <option description="GMT-05:00, Cuba, with DST">Cuba</option>
@@ -1353,7 +1351,7 @@
                 <option description="GMT-07:00, Navajo, with DST">Navajo</option>
                 <option description="GMT+08:00, PRC">PRC</option>
                 <option description="GMT-08:00, PST8PDT, with DST">PST8PDT</option>
-                <option description="GMT+13:00, Pacific/Apia">Pacific/Apia</option>
+                <option description="GMT+13:00, Pacific/Apia, with DST">Pacific/Apia</option>
                 <option description="GMT+12:00, Pacific/Auckland, with DST">Pacific/Auckland</option>
                 <option description="GMT+11:00, Pacific/Bougainville">Pacific/Bougainville</option>
                 <option description="GMT+12:45, Pacific/Chatham, with DST">Pacific/Chatham</option>
@@ -1370,7 +1368,6 @@
                 <option description="GMT+10:00, Pacific/Guam">Pacific/Guam</option>
                 <option description="GMT-10:00, Pacific/Honolulu">Pacific/Honolulu</option>
                 <option description="GMT-10:00, Pacific/Johnston">Pacific/Johnston</option>
-                <option description="GMT+13:00, Pacific/Kanton">Pacific/Kanton</option>
                 <option description="GMT+14:00, Pacific/Kiritimati">Pacific/Kiritimati</option>
                 <option description="GMT+11:00, Pacific/Kosrae">Pacific/Kosrae</option>
                 <option description="GMT+12:00, Pacific/Kwajalein">Pacific/Kwajalein</option>
@@ -1379,7 +1376,7 @@
                 <option description="GMT-11:00, Pacific/Midway">Pacific/Midway</option>
                 <option description="GMT+12:00, Pacific/Nauru">Pacific/Nauru</option>
                 <option description="GMT-11:00, Pacific/Niue">Pacific/Niue</option>
-                <option description="GMT+11:00, Pacific/Norfolk, with DST">Pacific/Norfolk</option>
+                <option description="GMT+11:00, Pacific/Norfolk">Pacific/Norfolk</option>
                 <option description="GMT+11:00, Pacific/Noumea">Pacific/Noumea</option>
                 <option description="GMT-11:00, Pacific/Pago_Pago">Pacific/Pago_Pago</option>
                 <option description="GMT+09:00, Pacific/Palau">Pacific/Palau</option>
@@ -1427,6 +1424,7 @@
                 <option description="GMT-05:00, US/Michigan, with DST">US/Michigan</option>
                 <option description="GMT-07:00, US/Mountain, with DST">US/Mountain</option>
                 <option description="GMT-08:00, US/Pacific, with DST">US/Pacific</option>
+                <option description="GMT-08:00, US/Pacific-New, with DST">US/Pacific-New</option>
                 <option description="GMT-11:00, US/Samoa">US/Samoa</option>
                 <option description="GMT+00:00, UTC">UTC</option>
                 <option description="GMT+00:00, Universal">Universal</option>
@@ -1441,7 +1439,7 @@
                 <option description="GMT-03:00, AGT">AGT</option>
                 <option description="GMT+02:00, ART">ART</option>
                 <option description="GMT-09:00, AST, with DST">AST</option>
-                <option description="GMT-03:00, BET">BET</option>
+                <option description="GMT-03:00, BET, with DST">BET</option>
                 <option description="GMT+06:00, BST">BST</option>
                 <option description="GMT+02:00, CAT">CAT</option>
                 <option description="GMT-03:30, CNT, with DST">CNT</option>
@@ -1452,7 +1450,7 @@
                 <option description="GMT-05:00, IET, with DST">IET</option>
                 <option description="GMT+05:30, IST">IST</option>
                 <option description="GMT+09:00, JST">JST</option>
-                <option description="GMT+13:00, MIT">MIT</option>
+                <option description="GMT+13:00, MIT, with DST">MIT</option>
                 <option description="GMT+04:00, NET">NET</option>
                 <option description="GMT+12:00, NST, with DST">NST</option>
                 <option description="GMT+05:00, PLT">PLT</option>
@@ -1937,32 +1935,6 @@
             </field>
           </fields>
         </format>
-      </table>
-    </entry>
-    <entry>
-      <string>groupMembership</string>
-      <table>
-        <format maxRecords="2147483647">
-          <fields>
-            <field description="Location" name="location" type="I">
-              <selectionValues>
-                <option description="Local">0</option>
-                <option description="Remote">1</option>
-              </selectionValues>
-              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
-              <defaultValue>0</defaultValue>
-            </field>
-            <field description="Group" editor="context" name="group" type="S">
-              <help>Full path of group context that holds current context</help>
-              <defaultValue/>
-            </field>
-          </fields>
-        </format>
-        <records>
-          <record>
-            <value name="group">users.%.devgroups.HVAC</value>
-          </record>
-        </records>
       </table>
     </entry>
     <entry>

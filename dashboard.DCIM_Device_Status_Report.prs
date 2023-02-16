@@ -273,7 +273,6 @@
                 <option description="Class Data Table Editor">classDataTableEditor</option>
                 <option description="Subdashboard">subdashboard</option>
                 <option description="Event Log">eventLog</option>
-                <option description="Slider">slider</option>
               </selectionValues>
               <help>This field defines the element type.</help>
               <defaultValue>textField</defaultValue>
@@ -302,31 +301,6 @@
               <table>
                 <format maxRecords="1" minRecords="1">
                   <fields>
-                    <field description="Bindings" name="bindings" type="T">
-                      <defaultValue>
-                        <table>
-                          <format maxRecords="2147483647"/>
-                        </table>
-                      </defaultValue>
-                    </field>
-                    <field description="Startup Bindings Concurrency" name="startupBindingsConcurrency" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
-                    <field description="Normal Concurrent Bindings" extendableSelectionValues="true" name="normalConcurrentBindings" type="I">
-                      <selectionValues>
-                        <option description="Disabled">0</option>
-                      </selectionValues>
-                      <defaultValue>5</defaultValue>
-                    </field>
-                    <field description="Maximum Concurrent Bindings" extendableSelectionValues="true" name="maximumConcurrentBindings" type="I">
-                      <selectionValues>
-                        <option description="Disabled">0</option>
-                      </selectionValues>
-                      <defaultValue>100</defaultValue>
-                    </field>
-                    <field description="Maximum Unprocessed Binding Queue Length" name="maximumBindingQueueLength" type="I">
-                      <defaultValue>1000</defaultValue>
-                    </field>
                     <field description="Layout Width" name="layoutWidth" type="I">
                       <defaultValue>0</defaultValue>
                     </field>
@@ -425,6 +399,13 @@
                         <nullValue/>
                       </defaultValue>
                     </field>
+                    <field description="Bindings" name="bindings" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
                     <field description="Breakpoints" name="breakpoints" type="T">
                       <defaultValue>
                         <table>
@@ -449,6 +430,24 @@
                         </table>
                       </defaultValue>
                     </field>
+                    <field description="Startup Bindings Concurrency" name="startupBindingsConcurrency" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Normal Concurrent Bindings" extendableSelectionValues="true" name="normalConcurrentBindings" type="I">
+                      <selectionValues>
+                        <option description="Disabled">0</option>
+                      </selectionValues>
+                      <defaultValue>5</defaultValue>
+                    </field>
+                    <field description="Maximum Concurrent Bindings" extendableSelectionValues="true" name="maximumConcurrentBindings" type="I">
+                      <selectionValues>
+                        <option description="Disabled">0</option>
+                      </selectionValues>
+                      <defaultValue>100</defaultValue>
+                    </field>
+                    <field description="Maximum Unprocessed Binding Queue Length" name="maximumBindingQueueLength" type="I">
+                      <defaultValue>1000</defaultValue>
+                    </field>
                     <field description="state" name="state" type="S">
                       <selectionValues>
                         <option description="CREATED">CREATED</option>
@@ -463,99 +462,6 @@
                 </format>
                 <records>
                   <record>
-                    <value name="bindings">
-                      <table>
-                        <format maxRecords="2147483647" reorderable="true">
-                          <fields>
-                            <field hidden="true" keyfield="true" name="bindingId" notReplicated="true" nullable="true" type="L">
-                              <validators contentType="base64">HEweMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
-                              <defaultValue>
-                                <nullValue/>
-                              </defaultValue>
-                            </field>
-                            <field description="Target" editor="target" name="target" type="S">
-                              <help>A reference that points to where the evaluation result of a binding Expression will be applied/stored.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="Expression" editor="expression" name="expression" type="S">
-                              <help>An expression that is evaluated every time the binding is processed. Its evaluation result is stored in binding Target.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="Activator" editor="activator" name="activator" type="S">
-                              <help>A reference that points to some event or variable (property). Occurrence of this event or change of this variable (property) triggers processing of the binding. If activator is not specified and On Event flag is set, the binding will be processed when any component of its Expression changes.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="Condition" editor="expression" name="condition" type="S">
-                              <help>An expression that is evaluated upon binding activation. The evaluation result should be a boolean that indicates whether the binding should be processed or not.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="On Startup" name="onstartup" type="B">
-                              <help>When enabled, the binding is processed once the widget is launched.</help>
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="On Event" name="onevent" type="B">
-                              <help>When enabled, the binding is processed upon Activator event (or Activator state change, if activator is a property). If Activator is not specified, the binding is processed when any component of the Expression changes.</help>
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="Periodically" name="periodically" type="B">
-                              <help>When enabled, the binding will be processed periodically.</help>
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="Period" editor="period" name="period" type="L">
-                              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
-                              <help>Interval between periodical binding executions.</help>
-                              <defaultValue>60000</defaultValue>
-                            </field>
-                            <field advanced="true" description="Queue" name="queue" type="S">
-                              <validators contentType="base64">HFIeXHcqXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
-                              <help>Target operations of bindings in the same queue are guaranteed to be performed sequentially.</help>
-                              <defaultValue/>
-                            </field>
-                          </fields>
-                          <bindings>
-                            <binding>
-                              <reference>expression#options</reference>
-                              <expression>expressionEditorOptions({.:})</expression>
-                            </binding>
-                            <binding>
-                              <reference>activator#enabled</reference>
-                              <expression>{onevent}</expression>
-                            </binding>
-                            <binding>
-                              <reference>period#enabled</reference>
-                              <expression>{periodically}</expression>
-                            </binding>
-                            <binding>
-                              <reference>bindingId</reference>
-                              <expression>{bindingId}==null ? long(random()*9223372036854775807) : {bindingId}</expression>
-                            </binding>
-                          </bindings>
-                        </format>
-                        <records>
-                          <record>
-                            <value name="bindingId">7320479392039292928</value>
-                            <value name="target">form/dataTableEditor0:dataTable</value>
-                            <value name="expression">{users.Aditya.models.DCIM_Report:device_status()}</value>
-                            <value name="onstartup">1</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">2970866362714245120</value>
-                            <value name="target">form/dataTableEditor0:dataTable</value>
-                            <value name="expression">{users.Aditya.models.DCIM_Report:device_status({form/comboBox0:currentOptions$value})}
-
-/*
-
-{users.Aditya.models.DCIM_Report:device_status(&quot;B02&quot;)}
-
-*/</value>
-                            <value name="activator">form/comboBox0:currentOptions</value>
-                            <value name="onstartup">1</value>
-                            <value name="onevent">1</value>
-                          </record>
-                        </records>
-                      </table>
-                    </value>
                     <value name="layoutWidth">800</value>
                     <value name="layoutHeight">800</value>
                     <value name="style">background-color: #16171a;</value>
@@ -640,6 +546,97 @@
                       </table>
                     </value>
                     <value name="name"/>
+                    <value name="bindings">
+                      <table>
+                        <format maxRecords="2147483647" reorderable="true">
+                          <fields>
+                            <field hidden="true" keyfield="true" name="bindingId" notReplicated="true" nullable="true" type="L">
+                              <validators contentType="base64">HEweMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                            <field description="Target" editor="target" name="target" type="S">
+                              <help>A reference that points to where the evaluation result of a binding Expression will be applied/stored.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Expression" editor="expression" name="expression" type="S">
+                              <help>An expression that is evaluated every time the binding is processed. Its evaluation result is stored in binding Target.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Activator" editor="activator" name="activator" type="S">
+                              <help>A reference that points to some event or variable (property). Occurrence of this event or change of this variable (property) triggers processing of the binding. If activator is not specified and On Event flag is set, the binding will be processed when any component of its Expression changes.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Condition" editor="expression" name="condition" type="S">
+                              <help>An expression that is evaluated upon binding activation. The evaluation result should be a boolean that indicates whether the binding should be processed or not.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="On Startup" name="onstartup" type="B">
+                              <help>When enabled, the binding is processed once the widget is launched.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="On Event" name="onevent" type="B">
+                              <help>When enabled, the binding is processed upon Activator event (or Activator state change, if activator is a property). If Activator is not specified, the binding is processed when any component of the Expression changes.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="Periodically" name="periodically" type="B">
+                              <help>When enabled, the binding will be processed periodically.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="Period" editor="period" name="period" type="L">
+                              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                              <help>Interval between periodical binding executions.</help>
+                              <defaultValue>60000</defaultValue>
+                            </field>
+                            <field advanced="true" description="Queue" name="queue" type="S">
+                              <validators contentType="base64">HFIeXHcqXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                              <help>Target operations of bindings in the same queue are guaranteed to be performed sequentially.</help>
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                          <bindings>
+                            <binding>
+                              <reference>expression#options</reference>
+                              <expression>expressionEditorOptions({.:})</expression>
+                            </binding>
+                            <binding>
+                              <reference>activator#enabled</reference>
+                              <expression>{onevent}</expression>
+                            </binding>
+                            <binding>
+                              <reference>period#enabled</reference>
+                              <expression>{periodically}</expression>
+                            </binding>
+                            <binding>
+                              <reference>bindingId</reference>
+                              <expression>{bindingId}==null ? long(random()*9223372036854775807) : {bindingId}</expression>
+                            </binding>
+                          </bindings>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="bindingId">7320479392039292928</value>
+                            <value name="target">form/dataTableEditor0:dataTable</value>
+                            <value name="expression">{users.Aditya.models.DCIM_Report:device_status()}</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">2970866362714245120</value>
+                            <value name="target">form/dataTableEditor0:dataTable</value>
+                            <value name="expression">{users.Aditya.models.DCIM_Report:device_status({form/comboBox0:currentOptions$value})}
+
+/*
+
+{users.Aditya.models.DCIM_Report:device_status(&quot;B02&quot;)}
+
+*/</value>
+                            <value name="activator">form/comboBox0:currentOptions</value>
+                            <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
                     <value name="breakpoints">
                       <table>
                         <format maxRecords="2147483647" minRecords="1">
@@ -654,11 +651,11 @@
                             <field description="Value" extendableSelectionValues="true" name="value" type="S">
                               <selectionValues>
                                 <option description="Mobile">320</option>
-                                <option description="Tablet">800</option>
-                                <option description="Laptop">1366</option>
                                 <option description="Full HD">1920</option>
-                                <option description="QHD">2560</option>
+                                <option description="Laptop">1366</option>
+                                <option description="Tablet">800</option>
                                 <option description="Ultra HD">3840</option>
+                                <option description="QHD">2560</option>
                               </selectionValues>
                               <defaultValue>320</defaultValue>
                             </field>
@@ -690,11 +687,11 @@
                             <field description="Value" extendableSelectionValues="true" name="value" type="S">
                               <selectionValues>
                                 <option description="Mobile">320</option>
-                                <option description="Tablet">800</option>
-                                <option description="Laptop">1366</option>
                                 <option description="Full HD">1920</option>
-                                <option description="QHD">2560</option>
+                                <option description="Laptop">1366</option>
+                                <option description="Tablet">800</option>
                                 <option description="Ultra HD">3840</option>
+                                <option description="QHD">2560</option>
                               </selectionValues>
                               <defaultValue>320</defaultValue>
                             </field>
@@ -1662,7 +1659,7 @@ opacity: 1;</value>
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
-                            <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:.ant-table-header .ant-table-thead tr &gt; th { pointer-events: none; background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
+                            <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:.ant-table-header .ant-table-thead tr &gt; th {background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
 
  
 
@@ -1675,7 +1672,7 @@ td:nth-child(n) {color:#D8D9DA;background:transparent!important}    background: 
 .ant-table-cell{
 z-index: 0;
 }
-.data-table-column-title .data-table-column-description {
+.data-table-column-title .data-table-column-description {pointer-events: none;
 color: #fafafa;
 }
 .gbOxvM .ant-table-header .ant-table-thead .ant-table-cell:hover {
@@ -1687,26 +1684,11 @@ color: #fafafa;
 .toolbar-reset-button{
   display: none;
 }
-.ant-table-header .ant-table-thead tr &gt; th { pointer-events: none; background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
 
- 
-
+.ant-table-body .ant-table-tbody &gt; tr.ant-table-row &gt; td.sorted-column-cell {
+    border: none!important;
 }
-
-/*.ant-table-header .ant-table-thead tr &gt; th { background-color: #2a2b2d}
-.data-table-column-description{color:#ffffff;}
-background: transparent;
-.ant-table-placeholder{ background-color: #16171a;}
-.ant-table-body{ background-color: #16171a;}
-color:  white;
-.styled-header-elements__StyledCell-sc-mm9fj3-2,.jzuIfZ,.ant-table-cell,.without-custom-width,
-.data-table-column.DeviceName{background-color: #16171a; color: white;}
-
-.component-scroll-container{background-color: #16171a;}
-border-radius: 5px;
-.ant-table-row {background-color: #16171a;!important}
-.gbOxvM .ant-table-header .ant-table-thead .ant-table-cell:hover {
-    background-color: #16171a;}*/;</value>
+;</value>
                           </record>
                         </records>
                       </table>
@@ -1722,7 +1704,7 @@ border-radius: 5px;
                         </format>
                       </table>
                     </value>
-                    <value name="containerStyle">.ant-table-header .ant-table-thead tr &gt; th { pointer-events: none; background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
+                    <value name="containerStyle">.ant-table-header .ant-table-thead tr &gt; th {background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
 
  
 
@@ -1735,7 +1717,7 @@ td:nth-child(n) {color:#D8D9DA;background:transparent!important}    background: 
 .ant-table-cell{
 z-index: 0;
 }
-.data-table-column-title .data-table-column-description {
+.data-table-column-title .data-table-column-description {pointer-events: none;
 color: #fafafa;
 }
 .gbOxvM .ant-table-header .ant-table-thead .ant-table-cell:hover {
@@ -1747,26 +1729,11 @@ color: #fafafa;
 .toolbar-reset-button{
   display: none;
 }
-.ant-table-header .ant-table-thead tr &gt; th { pointer-events: none; background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
 
- 
-
+.ant-table-body .ant-table-tbody &gt; tr.ant-table-row &gt; td.sorted-column-cell {
+    border: none!important;
 }
-
-/*.ant-table-header .ant-table-thead tr &gt; th { background-color: #2a2b2d}
-.data-table-column-description{color:#ffffff;}
-background: transparent;
-.ant-table-placeholder{ background-color: #16171a;}
-.ant-table-body{ background-color: #16171a;}
-color:  white;
-.styled-header-elements__StyledCell-sc-mm9fj3-2,.jzuIfZ,.ant-table-cell,.without-custom-width,
-.data-table-column.DeviceName{background-color: #16171a; color: white;}
-
-.component-scroll-container{background-color: #16171a;}
-border-radius: 5px;
-.ant-table-row {background-color: #16171a;!important}
-.gbOxvM .ant-table-header .ant-table-thead .ant-table-cell:hover {
-    background-color: #16171a;}*/</value>
+</value>
                     <value name="additionalActionSettings">
                       <table>
                         <format maxRecords="2147483647">
@@ -1801,10 +1768,10 @@ border-radius: 5px;
                             <field description="Action" name="buttonAction" type="S">
                               <selectionValues>
                                 <option description=""/>
-                                <option description="Edit">edit</option>
-                                <option description="Delete">delete</option>
                                 <option description="Cancel">cancel</option>
+                                <option description="Edit">edit</option>
                                 <option description="Apply">apply</option>
+                                <option description="Delete">delete</option>
                               </selectionValues>
                               <defaultValue/>
                             </field>
@@ -1834,7 +1801,6 @@ border-radius: 5px;
                       </table>
                     </value>
                     <value name="showRowsPerPageSelector">1</value>
-                    <value name="fixedFormat">1</value>
                     <value name="format">
                       <table>
                         <format maxRecords="1" minRecords="1">
@@ -2445,32 +2411,32 @@ border-radius: 5px;
                             </field>
                             <field description="Header Text Behavior" name="headerTextBehavior" type="S">
                               <selectionValues>
+                                <option description="Word Wrap">wordWrap</option>
                                 <option description="Expand Column">expandColumn</option>
                                 <option description="Ellipsis">ellipsis</option>
-                                <option description="Word Wrap">wordWrap</option>
                               </selectionValues>
                               <defaultValue>expandColumn</defaultValue>
                             </field>
                             <field description="Word Break" name="wordBreak" type="S">
                               <selectionValues>
-                                <option description="Break All">break-all</option>
-                                <option description="Break Word">break-word</option>
                                 <option description="Don&apos;t Break">false</option>
+                                <option description="Break Word">break-word</option>
+                                <option description="Break All">break-all</option>
                               </selectionValues>
                               <defaultValue>false</defaultValue>
                             </field>
                             <field description="Cell Text Horizontal Alignment" name="textAlignHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
                             </field>
                             <field description="Header Text Horizontal Alignment" name="textAlignHeaderHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
@@ -2497,16 +2463,16 @@ border-radius: 5px;
                             <field description="Sorter Preset" name="sorterPreset" type="S">
                               <selectionValues>
                                 <option description="Ascending">ASC</option>
-                                <option description="Descending">DESC</option>
                                 <option description="Unset">unset</option>
+                                <option description="Descending">DESC</option>
                               </selectionValues>
                               <defaultValue>unset</defaultValue>
                             </field>
                             <field description="Filtering" name="filtering" type="S">
                               <selectionValues>
-                                <option description="None">none</option>
-                                <option description="Search">search</option>
                                 <option description="Filter">filter</option>
+                                <option description="Search">search</option>
+                                <option description="None">none</option>
                               </selectionValues>
                               <defaultValue>none</defaultValue>
                             </field>
@@ -2540,39 +2506,33 @@ border-radius: 5px;
                         <records>
                           <record>
                             <value name="name">sl_no</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">device_id</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">device_name</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">device_type</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">building</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">lab_name</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">floor</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">status</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">last_updated_on</value>
-                            <value name="sorter">0</value>
+                          </record>
+                          <record>
+                            <value name="name">sl_no</value>
                           </record>
                         </records>
                       </table>
@@ -2956,9 +2916,6 @@ border-radius: 5px;
                     <field description="Searchable" name="searchable" type="B">
                       <defaultValue>0</defaultValue>
                     </field>
-                    <field description="Editable" name="editableOption" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
                     <field description="Options" name="options" type="T">
                       <defaultValue>
                         <table>
@@ -3118,6 +3075,32 @@ opacity: 1;&#xd;
                 </records>
               </table>
             </value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.dashboards_groups.DCIM</value>
           </record>
         </records>
       </table>

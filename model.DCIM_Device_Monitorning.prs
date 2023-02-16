@@ -601,7 +601,7 @@
           <record>
             <value name="bindingId">5128118084276975616</value>
             <value name="target">.:Device_Warranty_Status</value>
-            <value name="expression">addRecords(clear({.:Device_Warranty_Status}),60,20)
+            <value name="expression">addRecords(clear({.:Device_Warranty_Status}),92,20)
 </value>
             <value name="onstartup">1</value>
             <value name="period">30000</value>
@@ -8296,6 +8296,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>

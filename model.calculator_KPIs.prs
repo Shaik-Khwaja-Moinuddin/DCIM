@@ -503,7 +503,7 @@
           <record>
             <value name="bindingId">7467950055827809280</value>
             <value name="target">.:region</value>
-            <value name="expression">table(&apos;&lt;&lt;region&gt;&lt;S&gt;&lt;A=&gt;&gt;&lt;&lt;currency&gt;&lt;S&gt;&lt;A=&gt;&gt;&lt;&lt;electricity_cost&gt;&lt;F&gt;&lt;A=0.0&gt;&gt;&lt;&lt;co2e_footprint&gt;&lt;F&gt;&lt;A=0.0&gt;&gt;&apos;,&apos;North America&apos;,&apos;USD&apos;,0.1,0.606,&apos;South America&apos;,&apos;USD&apos;,0.36,0.317,&apos;Europe&apos;,	&apos;EURO&apos;,19.12,0.051,&apos;Asia&apos;,&apos;AFN&apos;,6.08,0.469)
+            <value name="expression">table(&apos;&lt;&lt;region&gt;&lt;S&gt;&lt;A=&gt;&gt;&lt;&lt;currency&gt;&lt;S&gt;&lt;A=&gt;&gt;&lt;&lt;electricity_cost&gt;&lt;F&gt;&lt;A=0.0&gt;&gt;&lt;&lt;co2e_footprint&gt;&lt;F&gt;&lt;A=0.0&gt;&gt;&apos;,&apos;North America&apos;,&apos;USD&apos;,0.1,0.606,&apos;South America&apos;,&apos;USD&apos;,0.36,0.317,&apos;Europe&apos;,	&apos;EURO&apos;,19.12,0.051,&apos;Asia&apos;,&apos;INR&apos;,6.08,0.469)
 
 </value>
             <value name="onstartup">1</value>
@@ -2092,12 +2092,12 @@ table(&apos;&lt;&lt;1Y_save&gt;&lt;S&gt;&gt;&lt;&lt;5Y_save&gt;&lt;S&gt;&gt;&lt;
             </value>
             <value name="group">carbon_footprint</value>
             <value name="expresion">addColumns(table(&apos;&lt;&lt;factor&gt;&lt;S&gt;&gt;&lt;&lt;current&gt;&lt;S&gt;&gt;&lt;&lt;desired&gt;&lt;S&gt;&gt;&apos;,&apos;Total Input Power&apos;,formatNumber(st(&apos;c_input_power&apos;,{current_pue}*{current_IT_load}),&apos;#.##&apos;)+&apos; KW&apos;, st(&apos;d_input_power&apos;,{desired_pue}*{desired_IT_load})+&apos; KW&apos;,
-&apos;Annual Electricity Energy&apos;,st(&apos;c_AEE&apos;,formatNumber(ld(&apos;c_input_power&apos;)*24*365,&apos;#.###&apos;))+&apos; Kwh&apos;,st(&apos;d_AEE&apos;,formatNumber(ld(&apos;d_input_power&apos;)*24*365,&apos;#.##&apos;))+&apos; Kwh&apos;,
+&apos;Annual Electricity Energy&apos;,st(&apos;c_AEE&apos;,formatNumber(ld(&apos;c_input_power&apos;)*24*365,&apos;#.###&apos;))+&apos; KWh&apos;,st(&apos;d_AEE&apos;,formatNumber(ld(&apos;d_input_power&apos;)*24*365,&apos;#.##&apos;))+&apos; KWh&apos;,
 &apos;Annual Electricity Cost&apos;,st(&apos;c_AEC&apos;,formatNumber((ld(&apos;c_AEE&apos;)*cell(st(&apos;x&apos;,filter({.:region},&quot;{region}==&apos;&quot;+{region}+&quot;&apos;&quot;)),&apos;electricity_cost&apos;)),&apos;#.##&apos;))+&apos; &apos;+cell(ld(&apos;x&apos;),&apos;currency&apos;),
 st(&apos;d_AEC&apos;,formatNumber(ld(&apos;d_AEE&apos;)*cell(ld(&apos;x&apos;),&apos;electricity_cost&apos;),&apos;#.##&apos;))+&apos; &apos;+cell(ld(&apos;x&apos;),&apos;currency&apos;),
 &apos;Annual CO2 Footprint&apos;,st(&apos;c_co2e&apos;,formatNumber((ld(&apos;c_AEE&apos;)*cell(ld(&apos;x&apos;),&apos;co2e_footprint&apos;))/1000,&apos;#.##&apos;))+&apos; t&apos;, st(&apos;d_co2e&apos;,formatNumber((ld(&apos;d_AEE&apos;)*cell(ld(&apos;x&apos;),&apos;co2e_footprint&apos;))/1000,&apos;#.##&apos;))+&apos; t&apos;)
 ,
-&apos;&lt;changes&gt;&lt;T&gt;&apos;,&quot;table(&apos;&lt;&lt;elec_cost_save_per_yr&gt;&lt;S&gt;&gt;&lt;&lt;reduc_co2e_per_yr&gt;&lt;S&gt;&gt;&lt;&lt;15yr_elec_cost_savings&gt;&lt;S&gt;&gt;&lt;&lt;15yr_co2e_reduction&gt;&lt;S&gt;&gt;&apos;,st(&apos;elec_cost_save_per_yr&apos;,formatNumber(ld(&apos;c_AEC&apos;)-ld(&apos;d_AEC&apos;),&apos;#.##&apos;))+&apos; &apos;+cell(ld(&apos;x&apos;),&apos;currency&apos;),st(&apos;co2e_reduc_per_yr&apos;,ld(&apos;c_co2e&apos;)-ld(&apos;d_co2e&apos;))+&apos;t&apos;, formatNumber(ld(&apos;elec_cost_save_per_yr&apos;)*15,&apos;#.##&apos;)+&apos; &apos;+cell(ld(&apos;x&apos;),&apos;currency&apos;),ld(&apos;co2e_reduc_per_yr&apos;)*15+&apos;t&apos;)&quot;
+&apos;&lt;changes&gt;&lt;T&gt;&apos;,&quot;table(&apos;&lt;&lt;elec_cost_save_per_yr&gt;&lt;S&gt;&gt;&lt;&lt;reduc_co2e_per_yr&gt;&lt;S&gt;&gt;&lt;&lt;15yr_elec_cost_savings&gt;&lt;S&gt;&gt;&lt;&lt;15yr_co2e_reduction&gt;&lt;S&gt;&gt;&apos;,st(&apos;elec_cost_save_per_yr&apos;,formatNumber(ld(&apos;c_AEC&apos;)-ld(&apos;d_AEC&apos;),&apos;#.##&apos;))+&apos; &apos;+cell(ld(&apos;x&apos;),&apos;currency&apos;),st(&apos;co2e_reduc_per_yr&apos;,formatNumber(ld(&apos;c_co2e&apos;)-ld(&apos;d_co2e&apos;),&apos;#.##&apos;))+&apos; t&apos;, formatNumber(ld(&apos;elec_cost_save_per_yr&apos;)*15,&apos;#.##&apos;)+&apos; &apos;+cell(ld(&apos;x&apos;),&apos;currency&apos;),formatNumber(ld(&apos;co2e_reduc_per_yr&apos;)*15,&apos;#.##&apos;)+&apos; t&apos;)&quot;
 )
 </value>
           </record>
@@ -2690,6 +2690,32 @@ st(&apos;d_AEC&apos;,formatNumber(ld(&apos;d_AEE&apos;)*cell(ld(&apos;x&apos;),&
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>

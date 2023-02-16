@@ -2556,6 +2556,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
       </table>
     </entry>
     <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
       <string>ruleSets</string>
       <table>
         <format maxRecords="2147483647" reorderable="true">

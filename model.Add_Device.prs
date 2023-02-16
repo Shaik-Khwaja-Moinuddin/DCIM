@@ -1904,7 +1904,7 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">union(callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call insert_device(&apos;&quot;+{Device_No_Equipment_No}+&quot;&apos;,&apos;&quot;+{Device_Type}+&quot;&apos;,&apos;&quot;+{Device_Catagory}+&quot;&apos;,&apos;&quot;+{Device_Name}+&quot;&apos;,&apos;&quot;+{Organization}+&quot;&apos;,&apos;&quot;+{Building}+&quot;&apos;,&apos;&quot;+{Lab_Name}+&quot;&apos;,&apos;&quot;+{Floor}+&quot;&apos;,&apos;&quot;+{Racks}+&quot;&apos;,&apos;&quot;+{Server}+&quot;&apos;,&apos;&quot;+formatDate({Installation_Date},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;,&apos;&quot;+{Warranty_Type}+&quot;&apos;,&apos;&quot;+{Tag_No_Serial_No}+&quot;&apos;,&apos;&quot;+{Model}+&quot;&apos;,&apos;&quot;+{Make}+&quot;&apos;,&apos;&quot;+formatDate({Expiration_Details},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;,&apos;&quot;+{OEM}+&quot;&apos;,&apos;&quot;+{Asset_QR_Code}+&quot;&apos;,&apos;&quot;+formatDate({CAMC_Details},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;,&apos;&quot;+formatDate({EOL_Date},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;,&apos;&quot;+{Asset_Description}+&quot;&apos;)&quot;)
+            <value name="expresion">union(callFunction({users.admin.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call insert_device(&apos;&quot;+{Device_No_Equipment_No}+&quot;&apos;,&apos;&quot;+{Device_Type}+&quot;&apos;,&apos;&quot;+{Device_Catagory}+&quot;&apos;,&apos;&quot;+{Device_Name}+&quot;&apos;,&apos;&quot;+{Organization}+&quot;&apos;,&apos;&quot;+{Building}+&quot;&apos;,&apos;&quot;+{Lab_Name}+&quot;&apos;,&apos;&quot;+{Floor}+&quot;&apos;,&apos;&quot;+{Racks}+&quot;&apos;,&apos;&quot;+{Server}+&quot;&apos;,&apos;&quot;+formatDate({Installation_Date},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;,&apos;&quot;+{Warranty_Type}+&quot;&apos;,&apos;&quot;+{Tag_No_Serial_No}+&quot;&apos;,&apos;&quot;+{Model}+&quot;&apos;,&apos;&quot;+{Make}+&quot;&apos;,&apos;&quot;+formatDate({Expiration_Details},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;,&apos;&quot;+{OEM}+&quot;&apos;,&apos;&quot;+{Asset_QR_Code}+&quot;&apos;,&apos;&quot;+formatDate({CAMC_Details},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;,&apos;&quot;+formatDate({EOL_Date},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;,&apos;&quot;+{Asset_Description}+&quot;&apos;)&quot;)
 ,(setVariable({users.Aditya.models.Device_Images:}, &apos;Image_Details&apos;,addRecords({users.Aditya.models.Device_Images:Image_Details},{Device_No_Equipment_No},{Front_Image},{Back_Image}))==null?table():table()))
 
 </value>
@@ -2498,6 +2498,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>

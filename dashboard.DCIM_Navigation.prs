@@ -274,7 +274,6 @@
                 <option description="Class Data Table Editor">classDataTableEditor</option>
                 <option description="Subdashboard">subdashboard</option>
                 <option description="Event Log">eventLog</option>
-                <option description="Slider">slider</option>
               </selectionValues>
               <help>This field defines the element type.</help>
               <defaultValue>textField</defaultValue>
@@ -303,31 +302,6 @@
               <table>
                 <format maxRecords="1" minRecords="1">
                   <fields>
-                    <field description="Bindings" name="bindings" type="T">
-                      <defaultValue>
-                        <table>
-                          <format maxRecords="2147483647"/>
-                        </table>
-                      </defaultValue>
-                    </field>
-                    <field description="Startup Bindings Concurrency" name="startupBindingsConcurrency" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
-                    <field description="Normal Concurrent Bindings" extendableSelectionValues="true" name="normalConcurrentBindings" type="I">
-                      <selectionValues>
-                        <option description="Disabled">0</option>
-                      </selectionValues>
-                      <defaultValue>5</defaultValue>
-                    </field>
-                    <field description="Maximum Concurrent Bindings" extendableSelectionValues="true" name="maximumConcurrentBindings" type="I">
-                      <selectionValues>
-                        <option description="Disabled">0</option>
-                      </selectionValues>
-                      <defaultValue>100</defaultValue>
-                    </field>
-                    <field description="Maximum Unprocessed Binding Queue Length" name="maximumBindingQueueLength" type="I">
-                      <defaultValue>1000</defaultValue>
-                    </field>
                     <field description="Layout Width" name="layoutWidth" type="I">
                       <defaultValue>0</defaultValue>
                     </field>
@@ -426,6 +400,13 @@
                         <nullValue/>
                       </defaultValue>
                     </field>
+                    <field description="Bindings" name="bindings" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
                     <field description="Breakpoints" name="breakpoints" type="T">
                       <defaultValue>
                         <table>
@@ -450,6 +431,24 @@
                         </table>
                       </defaultValue>
                     </field>
+                    <field description="Startup Bindings Concurrency" name="startupBindingsConcurrency" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Normal Concurrent Bindings" extendableSelectionValues="true" name="normalConcurrentBindings" type="I">
+                      <selectionValues>
+                        <option description="Disabled">0</option>
+                      </selectionValues>
+                      <defaultValue>5</defaultValue>
+                    </field>
+                    <field description="Maximum Concurrent Bindings" extendableSelectionValues="true" name="maximumConcurrentBindings" type="I">
+                      <selectionValues>
+                        <option description="Disabled">0</option>
+                      </selectionValues>
+                      <defaultValue>100</defaultValue>
+                    </field>
+                    <field description="Maximum Unprocessed Binding Queue Length" name="maximumBindingQueueLength" type="I">
+                      <defaultValue>1000</defaultValue>
+                    </field>
                     <field description="state" name="state" type="S">
                       <selectionValues>
                         <option description="CREATED">CREATED</option>
@@ -464,175 +463,6 @@
                 </format>
                 <records>
                   <record>
-                    <value name="bindings">
-                      <table>
-                        <format maxRecords="2147483647" reorderable="true">
-                          <fields>
-                            <field hidden="true" keyfield="true" name="bindingId" notReplicated="true" nullable="true" type="L">
-                              <validators contentType="base64">HEweMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
-                              <defaultValue>
-                                <nullValue/>
-                              </defaultValue>
-                            </field>
-                            <field description="Target" editor="target" name="target" type="S">
-                              <help>A reference that points to where the evaluation result of a binding Expression will be applied/stored.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="Expression" editor="expression" name="expression" type="S">
-                              <help>An expression that is evaluated every time the binding is processed. Its evaluation result is stored in binding Target.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="Activator" editor="activator" name="activator" type="S">
-                              <help>A reference that points to some event or variable (property). Occurrence of this event or change of this variable (property) triggers processing of the binding. If activator is not specified and On Event flag is set, the binding will be processed when any component of its Expression changes.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="Condition" editor="expression" name="condition" type="S">
-                              <help>An expression that is evaluated upon binding activation. The evaluation result should be a boolean that indicates whether the binding should be processed or not.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="On Startup" name="onstartup" type="B">
-                              <help>When enabled, the binding is processed once the widget is launched.</help>
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="On Event" name="onevent" type="B">
-                              <help>When enabled, the binding is processed upon Activator event (or Activator state change, if activator is a property). If Activator is not specified, the binding is processed when any component of the Expression changes.</help>
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="Periodically" name="periodically" type="B">
-                              <help>When enabled, the binding will be processed periodically.</help>
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="Period" editor="period" name="period" type="L">
-                              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
-                              <help>Interval between periodical binding executions.</help>
-                              <defaultValue>60000</defaultValue>
-                            </field>
-                            <field advanced="true" description="Queue" name="queue" type="S">
-                              <validators contentType="base64">HFIeXHcqXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
-                              <help>Target operations of bindings in the same queue are guaranteed to be performed sequentially.</help>
-                              <defaultValue/>
-                            </field>
-                          </fields>
-                          <bindings>
-                            <binding>
-                              <reference>expression#options</reference>
-                              <expression>expressionEditorOptions({.:})</expression>
-                            </binding>
-                            <binding>
-                              <reference>activator#enabled</reference>
-                              <expression>{onevent}</expression>
-                            </binding>
-                            <binding>
-                              <reference>period#enabled</reference>
-                              <expression>{periodically}</expression>
-                            </binding>
-                            <binding>
-                              <reference>bindingId</reference>
-                              <expression>{bindingId}==null ? long(random()*9223372036854775807) : {bindingId}</expression>
-                            </binding>
-                          </bindings>
-                        </format>
-                        <records>
-                          <record>
-                            <value name="bindingId">6002509546161506304</value>
-                            <value name="target">form/label2:text</value>
-                            <value name="expression">cell(filter({form/menu0:menuItems}, &quot;{key}==&apos;&quot;+{form/menu0:selectedKeys$key}+&quot;&apos;&quot;),&quot;value&quot;)</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">7628150478441576448</value>
-                            <value name="target">form/label3:text</value>
-                            <value name="expression">(&apos;Last Updated On &apos; + formatDate(now(), &quot;dd-MM-yyyy hh:mm:ss a&quot;,&quot;IST&quot; ))</value>
-                            <value name="onstartup">1</value>
-                            <value name="periodically">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">3711600093697796096</value>
-                            <value name="target">form/image0:image</value>
-                            <value name="expression">fetchDataBlock(cell(filter({form/menu0:menuItems}, &quot;{key}==&apos;&quot;+{form/menu0:selectedKeys$key}+&quot;&apos;&quot;),&quot;image&quot;))</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">6171757580939591680</value>
-                            <value name="target">form/label0:text</value>
-                            <value name="expression">{form/label0:text$text}==0? &quot;1&quot;: {form/label0:text$text}==1? &quot;0&quot; :1</value>
-                            <value name="activator">form/panel1:mouseClicked@</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">2310442437919651840</value>
-                            <value name="target">form/subdashboard0:reference</value>
-                            <value name="expression">{form/menu0:selectedKeys$key}==1?{users.Yuvraj.dashboards.DCIM_MainDashboard_copy:}:
-{form/menu0:selectedKeys$key}==2?{users.Aditya.dashboards.DCIM_Floor_Management:}:
-{form/menu0:selectedKeys$key}==3?{users.Aditya.dashboards.DCIM_Rack_Space_Management:}:
-{form/menu0:selectedKeys$key}==4?{users.Aditya.dashboards.DCIM_assetdevicemanagement:}:
-{form/menu0:selectedKeys$key}==5?{users.Aditya.dashboards.DCIM_Power_Management:}:
-{form/menu0:selectedKeys$key}==6?{users.Aditya.dashboards.DCIM_UserManagement_Navigation:}:
-{form/menu0:selectedKeys$key}==8?{users.Aditya.dashboards.DCIM_Workflow:}:
-{form/menu0:selectedKeys$key}==7?{users.Yuvraj.dashboards.DCIM_Device_Monitoring:}:
-{form/menu0:selectedKeys$key}==9?{users.Aniketkumar.dashboards.DCIM_Alarms_Configurations:}:
-{form/menu0:selectedKeys$key}==10?{users.Aditya.dashboards.DCIM_Report:}:
-{form/menu0:selectedKeys$key}==11?{users.Aditya.dashboards.DCIM_EE_savings:}:{users.Yuvraj.dashboards.DCIM_MainDashboard_copy:}</value>
-                            <value name="onstartup">1</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">2058721954517809152</value>
-                            <value name="target">form/panel1:containerStyle</value>
-                            <value name="expression">{form/label0:text$text}==1?&quot;background: #0B0C0E;z-index: 1;width:300px;&quot;:&quot;background:transparent ;&quot;
-
-</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">8732127730055100416</value>
-                            <value name="target">form/subdashboard0:reference</value>
-                            <value name="expression">cell(callFunction({:},&apos;sessionGet&apos;,&apos;navigation_from_home&apos;))
-
-//callFunction({:},&apos;sessionSet&apos;,&apos;navigation_from_home&apos;,table(&quot;&lt;&lt;dashboard_name&gt;&lt;S&gt;&gt;&quot;,&apos;users.Aditya.dashboards.DCIM_Power_Management&apos;))</value>
-                            <value name="activator">:sessionVariableUpdated@</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">5052121465559713792</value>
-                            <value name="target">form/menu0:selectedKeys</value>
-                            <value name="expression">callFunction({:},&apos;sessionGet&apos;,&apos;navigation_from_home&apos;)
-
-//callFunction({:},&apos;sessionSet&apos;,&apos;navigation_from_home&apos;,table(&quot;&lt;&lt;key&gt;&lt;S&gt;&gt;&quot;,5))
-
-//clear({form/menu0:selectedKeys})+</value>
-                            <value name="activator">:sessionVariableUpdated@</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">3059676783557466112</value>
-                            <value name="target">form/menu0:selectedKeys</value>
-                            <value name="expression">1</value>
-                            <value name="activator">form/image3:mouseClicked@</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">5806665130721064960</value>
-                            <value name="target">form/image3:visible</value>
-                            <value name="expression">0</value>
-                            <value name="activator">form/image3:mouseClicked@</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">131047164744777728</value>
-                            <value name="target">form/image3:visible</value>
-                            <value name="expression">cell(callFunction({:},&apos;sessionGet&apos;,&apos;back_button_visible&apos;))
-
-//callFunction({:},&apos;sessionSet&apos;,&apos;back_button_visible&apos;,table(&quot;&lt;&lt;key&gt;&lt;I&gt;&gt;&quot;,1))</value>
-                            <value name="activator">:sessionVariableUpdated@</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">8467431355454304256</value>
-                            <value name="expression">callFunction({:},&apos;sessionSet&apos;,&apos;Device_Status&apos;,table(&quot;&lt;&lt;Tower&gt;&lt;S&gt;&gt;&lt;&lt;Active&gt;&lt;I&gt;&gt;&lt;&lt;In_Active&gt;&lt;I&gt;&gt;&quot;,&apos;B01-L01-F01&apos;,90,22,&apos;B02-L02-F02&apos;,200,37))</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">5731790561281110016</value>
-                            <value name="expression">callFunction({:},&apos;sessionSet&apos;,&apos;Device_Health&apos;,table(&quot;&lt;&lt;Tower&gt;&lt;S&gt;&gt;&lt;&lt;Normal&gt;&lt;I&gt;&gt;&lt;&lt;Not_Starting&gt;&lt;I&gt;&gt;&lt;&lt;End_Of_Life&gt;&lt;I&gt;&gt;&quot;,&apos;B01-L01-F01&apos;,80,10,22,&apos;B02-L02-F02&apos;,200,30,7))</value>
-                          </record>
-                        </records>
-                      </table>
-                    </value>
                     <value name="layoutWidth">800</value>
                     <value name="layoutHeight">800</value>
                     <value name="gap">0px</value>
@@ -753,6 +583,177 @@
                       </table>
                     </value>
                     <value name="name"/>
+                    <value name="bindings">
+                      <table>
+                        <format maxRecords="2147483647" reorderable="true">
+                          <fields>
+                            <field hidden="true" keyfield="true" name="bindingId" notReplicated="true" nullable="true" type="L">
+                              <validators contentType="base64">HEweMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                            <field description="Target" editor="target" name="target" type="S">
+                              <help>A reference that points to where the evaluation result of a binding Expression will be applied/stored.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Expression" editor="expression" name="expression" type="S">
+                              <help>An expression that is evaluated every time the binding is processed. Its evaluation result is stored in binding Target.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Activator" editor="activator" name="activator" type="S">
+                              <help>A reference that points to some event or variable (property). Occurrence of this event or change of this variable (property) triggers processing of the binding. If activator is not specified and On Event flag is set, the binding will be processed when any component of its Expression changes.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Condition" editor="expression" name="condition" type="S">
+                              <help>An expression that is evaluated upon binding activation. The evaluation result should be a boolean that indicates whether the binding should be processed or not.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="On Startup" name="onstartup" type="B">
+                              <help>When enabled, the binding is processed once the widget is launched.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="On Event" name="onevent" type="B">
+                              <help>When enabled, the binding is processed upon Activator event (or Activator state change, if activator is a property). If Activator is not specified, the binding is processed when any component of the Expression changes.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="Periodically" name="periodically" type="B">
+                              <help>When enabled, the binding will be processed periodically.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="Period" editor="period" name="period" type="L">
+                              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                              <help>Interval between periodical binding executions.</help>
+                              <defaultValue>60000</defaultValue>
+                            </field>
+                            <field advanced="true" description="Queue" name="queue" type="S">
+                              <validators contentType="base64">HFIeXHcqXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                              <help>Target operations of bindings in the same queue are guaranteed to be performed sequentially.</help>
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                          <bindings>
+                            <binding>
+                              <reference>expression#options</reference>
+                              <expression>expressionEditorOptions({.:})</expression>
+                            </binding>
+                            <binding>
+                              <reference>activator#enabled</reference>
+                              <expression>{onevent}</expression>
+                            </binding>
+                            <binding>
+                              <reference>period#enabled</reference>
+                              <expression>{periodically}</expression>
+                            </binding>
+                            <binding>
+                              <reference>bindingId</reference>
+                              <expression>{bindingId}==null ? long(random()*9223372036854775807) : {bindingId}</expression>
+                            </binding>
+                          </bindings>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="bindingId">6002509546161506304</value>
+                            <value name="target">form/label2:text</value>
+                            <value name="expression">cell(filter({form/menu0:menuItems}, &quot;{key}==&apos;&quot;+{form/menu0:selectedKeys$key}+&quot;&apos;&quot;),&quot;value&quot;)</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">7628150478441576448</value>
+                            <value name="target">form/label3:text</value>
+                            <value name="expression">(&apos;Last Updated On &apos; + formatDate(now(), &quot;dd-MM-yyyy hh:mm:ss a&quot;,&quot;IST&quot; ))</value>
+                            <value name="onstartup">1</value>
+                            <value name="periodically">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">3711600093697796096</value>
+                            <value name="target">form/image0:image</value>
+                            <value name="expression">fetchDataBlock(cell(filter({form/menu0:menuItems}, &quot;{key}==&apos;&quot;+{form/menu0:selectedKeys$key}+&quot;&apos;&quot;),&quot;image&quot;))</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">6171757580939591680</value>
+                            <value name="target">form/label0:text</value>
+                            <value name="expression">{form/label0:text$text}==0? &quot;1&quot;: {form/label0:text$text}==1? &quot;0&quot; :1</value>
+                            <value name="activator">form/panel1:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">2310442437919651840</value>
+                            <value name="target">form/subdashboard0:reference</value>
+                            <value name="expression">{form/menu0:selectedKeys$key}==1?{users.Yuvraj.dashboards.DCIM_MainDashboard_copy:}:
+{form/menu0:selectedKeys$key}==2?{users.Aditya.dashboards.DCIM_Floor_Management:}:
+{form/menu0:selectedKeys$key}==3?{users.Aditya.dashboards.DCIM_Rack_Space_Management:}:
+{form/menu0:selectedKeys$key}==4?{users.Aditya.dashboards.DCIM_assetdevicemanagement:}:
+{form/menu0:selectedKeys$key}==5?{users.Aditya.dashboards.DCIM_Power_Management:}:
+{form/menu0:selectedKeys$key}==6?{users.Aditya.dashboards.DCIM_UserManagement_Navigation:}:
+{form/menu0:selectedKeys$key}==8?{users.Aditya.dashboards.DCIM_Workflow:}:
+{form/menu0:selectedKeys$key}==7?{users.Yuvraj.dashboards.DCIM_Device_Monitoring:}:
+{form/menu0:selectedKeys$key}==9?{users.Aniketkumar.dashboards.DCIM_Alarms_Configurations:}:
+{form/menu0:selectedKeys$key}==10?{users.Aditya.dashboards.DCIM_Report:}:
+{form/menu0:selectedKeys$key}==11?{users.Aditya.dashboards.DCIM_EE_savings:}:
+{form/menu0:selectedKeys$key}==12?{users.Aditya.dashboards.DCIM_Virtualization:}:
+{users.Yuvraj.dashboards.DCIM_MainDashboard_copy:}</value>
+                            <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">2058721954517809152</value>
+                            <value name="target">form/panel1:containerStyle</value>
+                            <value name="expression">{form/label0:text$text}==1?&quot;background: #0B0C0E;z-index: 1;width:300px;&quot;:&quot;background:transparent ;&quot;
+
+</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">8732127730055100416</value>
+                            <value name="target">form/subdashboard0:reference</value>
+                            <value name="expression">cell(callFunction({:},&apos;sessionGet&apos;,&apos;navigation_from_home&apos;))
+
+//callFunction({:},&apos;sessionSet&apos;,&apos;navigation_from_home&apos;,table(&quot;&lt;&lt;dashboard_name&gt;&lt;S&gt;&gt;&quot;,&apos;users.Aditya.dashboards.DCIM_Power_Management&apos;))</value>
+                            <value name="activator">:sessionVariableUpdated@</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">5052121465559713792</value>
+                            <value name="target">form/menu0:selectedKeys</value>
+                            <value name="expression">callFunction({:},&apos;sessionGet&apos;,&apos;navigation_from_home&apos;)
+
+//callFunction({:},&apos;sessionSet&apos;,&apos;navigation_from_home&apos;,table(&quot;&lt;&lt;key&gt;&lt;S&gt;&gt;&quot;,5))
+
+//clear({form/menu0:selectedKeys})+</value>
+                            <value name="activator">:sessionVariableUpdated@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">3059676783557466112</value>
+                            <value name="target">form/menu0:selectedKeys</value>
+                            <value name="expression">1</value>
+                            <value name="activator">form/image3:mouseClicked@</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">5806665130721064960</value>
+                            <value name="target">form/image3:visible</value>
+                            <value name="expression">0</value>
+                            <value name="activator">form/image3:mouseClicked@</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">131047164744777728</value>
+                            <value name="target">form/image3:visible</value>
+                            <value name="expression">cell(callFunction({:},&apos;sessionGet&apos;,&apos;back_button_visible&apos;))
+
+//callFunction({:},&apos;sessionSet&apos;,&apos;back_button_visible&apos;,table(&quot;&lt;&lt;key&gt;&lt;I&gt;&gt;&quot;,1))</value>
+                            <value name="activator">:sessionVariableUpdated@</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">8467431355454304256</value>
+                            <value name="expression">callFunction({:},&apos;sessionSet&apos;,&apos;Device_Status&apos;,table(&quot;&lt;&lt;Tower&gt;&lt;S&gt;&gt;&lt;&lt;Active&gt;&lt;I&gt;&gt;&lt;&lt;In_Active&gt;&lt;I&gt;&gt;&quot;,&apos;B01-L01-F01&apos;,90,22,&apos;B02-L02-F02&apos;,200,37))</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">5731790561281110016</value>
+                            <value name="expression">callFunction({:},&apos;sessionSet&apos;,&apos;Device_Health&apos;,table(&quot;&lt;&lt;Tower&gt;&lt;S&gt;&gt;&lt;&lt;Normal&gt;&lt;I&gt;&gt;&lt;&lt;Not_Starting&gt;&lt;I&gt;&gt;&lt;&lt;End_Of_Life&gt;&lt;I&gt;&gt;&quot;,&apos;B01-L01-F01&apos;,80,10,22,&apos;B02-L02-F02&apos;,200,30,7))</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
                     <value name="breakpoints">
                       <table>
                         <format maxRecords="2147483647" minRecords="1">
@@ -767,11 +768,11 @@
                             <field description="Value" extendableSelectionValues="true" name="value" type="S">
                               <selectionValues>
                                 <option description="Mobile">320</option>
-                                <option description="Tablet">800</option>
-                                <option description="Laptop">1366</option>
                                 <option description="Full HD">1920</option>
-                                <option description="QHD">2560</option>
+                                <option description="Laptop">1366</option>
+                                <option description="Tablet">800</option>
                                 <option description="Ultra HD">3840</option>
+                                <option description="QHD">2560</option>
                               </selectionValues>
                               <defaultValue>320</defaultValue>
                             </field>
@@ -1268,10 +1269,14 @@
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -1336,7 +1341,7 @@ padding: 10px;</value>
                         </format>
                         <records>
                           <record>
-                            <value name="template">50</value>
+                            <value name="template">40</value>
                             <value name="unit">px</value>
                           </record>
                           <record/>
@@ -1552,10 +1557,14 @@ padding: 10px;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -1824,10 +1833,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -1841,7 +1854,6 @@ letter-spacing: 0px;&#xd;
 color: #D8D9DA;&#xd;
 opacity: 1;;</value>
                             <value name="containerStyle">gridx:1;gridy:2;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: transparent;&#xd;
-&#xd;
 .ant-menu-item,.ant-menu-item-only-child-menu-component-menu-item{background:#141619; color: white;}&#xd;
 &#xd;
 .ant-menu,.ant-menu-sub,.ant-menu-inline{&#xd;
@@ -1854,6 +1866,8 @@ opacity: 1;;</value>
 }&#xd;
 &#xd;
 box-shadow: 0px 3px 6px #FFFFFF0D;&#xd;
+.agg-menu-item-icon{padding-left:10px;}&#xd;
+.agg-menu.flex .ant-menu-item {height:40px}&#xd;
 &#xd;
 ;</value>
                           </record>
@@ -1872,7 +1886,6 @@ box-shadow: 0px 3px 6px #FFFFFF0D;&#xd;
                       </table>
                     </value>
                     <value name="containerStyle">background: transparent;&#xd;
-&#xd;
 .ant-menu-item,.ant-menu-item-only-child-menu-component-menu-item{background:#141619; color: white;}&#xd;
 &#xd;
 .ant-menu,.ant-menu-sub,.ant-menu-inline{&#xd;
@@ -1885,6 +1898,8 @@ box-shadow: 0px 3px 6px #FFFFFF0D;&#xd;
 }&#xd;
 &#xd;
 box-shadow: 0px 3px 6px #FFFFFF0D;&#xd;
+.agg-menu-item-icon{padding-left:10px;}&#xd;
+.agg-menu.flex .ant-menu-item {height:40px}&#xd;
 &#xd;
 </value>
                     <value name="menuItems">
@@ -2013,6 +2028,15 @@ box-shadow: 0px 3px 6px #FFFFFF0D;&#xd;
                             <value name="key">11</value>
                             <value name="value">Calculator</value>
                           </record>
+                          <record>
+                            <value name="image">
+                              <data name="download.png">
+                                <data contentType="base64">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</data>
+                              </data>
+                            </value>
+                            <value name="key">12</value>
+                            <value name="value">Virtualization</value>
+                          </record>
                         </records>
                       </table>
                     </value>
@@ -2068,8 +2092,8 @@ box-shadow: 0px 3px 6px #FFFFFF0D;&#xd;
                                 <option description="Default">default</option>
                                 <option description="Success">success</option>
                                 <option description="Processing">processing</option>
-                                <option description="Error">error</option>
                                 <option description="Warning">warning</option>
+                                <option description="Error">error</option>
                               </selectionValues>
                               <defaultValue/>
                             </field>
@@ -2192,16 +2216,21 @@ box-shadow: 0px 3px 6px #FFFFFF0D;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:2;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: transparent;
 ;</value>
                           </record>
@@ -2662,16 +2691,21 @@ box-shadow: 0px 3px 6px #FFFFFF0D;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: transparent;;</value>
                           </record>
                         </records>
@@ -2851,16 +2885,21 @@ box-shadow: 0px 3px 6px #FFFFFF0D;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:0;gridy:1;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: transparent;;</value>
                           </record>
                         </records>
@@ -2980,10 +3019,14 @@ opacity: 1;*~</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -3216,16 +3259,21 @@ opacity: 1;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">indentTop:0;indentBottom:0;indentLeft:0;indentRight:0;gridx:2;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: #141619;;</value>
                           </record>
                         </records>
@@ -3452,17 +3500,23 @@ opacity: 1;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
+overflow: hidden;
 ;</value>
                           </record>
                         </records>
@@ -3480,6 +3534,7 @@ opacity: 1;&#xd;
                       </table>
                     </value>
                     <value name="containerStyle">background: transparent;
+overflow: hidden;
 </value>
                     <value name="image">
                       <data name="Dashboard.png">
@@ -3584,16 +3639,21 @@ opacity: 1;&#xd;
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:2;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: transparent;
 color: var(--unnamed-color-d8d9da);
 text-align: left;
@@ -3727,9 +3787,6 @@ color: #D8D9DA;</value>
                     <field description="Searchable" name="searchable" type="B">
                       <defaultValue>0</defaultValue>
                     </field>
-                    <field description="Editable" name="editableOption" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
                     <field description="Options" name="options" type="T">
                       <defaultValue>
                         <table>
@@ -3781,16 +3838,21 @@ color: #D8D9DA;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:4;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
 background: #141619 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
@@ -3963,6 +4025,7 @@ opacity: 1;</value>
                     <value name="gridx">6</value>
                     <value name="gridy">1</value>
                     <value name="overflow">hidden</value>
+                    <value name="visible">0</value>
                     <value name="style"/>
                     <value name="gridBreakpoints">
                       <table>
@@ -3972,16 +4035,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:6;gridy:1;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: transparent;;</value>
                           </record>
                         </records>
@@ -4116,10 +4184,14 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
@@ -4248,16 +4320,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:5;gridy:1;gridWidth:1;gridHeight:1;overflow:hidden;containerStyle:background: transparent;&#xd;
 color: var(--unnamed-color-d8d9da);&#xd;
 text-align: left;&#xd;
@@ -4408,7 +4485,9 @@ opacity: 1;</value>
                     </field>
                     <field description="Dropdown Style" editor="code" name="dropdownStyle" nullable="true" type="S">
                       <editorOptions>scss</editorOptions>
-                      <defaultValue/>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
                     </field>
                   </fields>
                 </format>
@@ -4428,16 +4507,21 @@ opacity: 1;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:3;gridy:1;gridWidth:1;gridHeight:1;overflow:visible;containerStyle:background: var(--unnamed-color-141619) 0% 0% no-repeat padding-box;&#xd;
 background: #141619 0% 0% no-repeat padding-box;&#xd;
 border: 1px solid #FFFFFF1A;&#xd;
@@ -4545,6 +4629,7 @@ z-index: 2;</value>
                         </format>
                       </table>
                     </value>
+                    <value name="dropdownStyle"/>
                   </record>
                 </records>
               </table>
@@ -4654,20 +4739,25 @@ z-index: 2;</value>
                               <defaultValue>default</defaultValue>
                             </field>
                             <field description="Style" name="style" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                             <field description="Container Style" name="containerStyle" nullable="true" type="S">
-                              <defaultValue/>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
                             </field>
                           </fields>
                         </format>
                         <records>
                           <record>
                             <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
                             <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:background: #141619;
 padding: 5px;
 z-index: 2;
-;</value>
+overflow: hidden;;</value>
                           </record>
                         </records>
                       </table>
@@ -4686,7 +4776,7 @@ z-index: 2;
                     <value name="containerStyle">background: #141619;
 padding: 5px;
 z-index: 2;
-</value>
+overflow: hidden;</value>
                     <value name="image">
                       <data name="back icon.png">
                         <data contentType="base64">iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAKJJREFUOE9jPHPmDBcnJycfMzMzEwMF4O/fv/++f//+ifHq1asSlBoGcwfIUMYbN25IUeAwDK3DzEBGRuZGkB////9bjyuYSPAy0wQGRoZQhv+MhQwMf1dRaCBxhoEsIcKFxBtG0EBQmP1n+J9CyJvI3sfrQqobCLGZil5GeIV4Q4mIFJixxBlKgoHAJEHdhE1cEUKSC4kxkvoGUr2ApXYVAAAv03g/sWE54QAAAABJRU5ErkJggg==</data>
@@ -4699,6 +4789,32 @@ z-index: 2;
                 </records>
               </table>
             </value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.dashboards_groups.DCIM</value>
           </record>
         </records>
       </table>

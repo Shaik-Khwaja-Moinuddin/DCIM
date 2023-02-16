@@ -492,6 +492,7 @@
         </format>
         <records>
           <record>
+            <value name="bindingId">5420318238427368448</value>
             <value name="target">.:power_consumption</value>
             <value name="expression">addRecords(clear({.:power_consumption}),185,44.24, st(&apos;y&apos;,formatNumber(36+random()*8,&apos;#.##&apos;)) ,st(&apos;x&apos;,formatNumber(ld(&apos;y&apos;)*0.55+random()*3,&apos;#.##&apos;)), ld(&apos;y&apos;)-ld(&apos;x&apos;))</value>
             <value name="onstartup">1</value>
@@ -499,6 +500,7 @@
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">1486212010025047040</value>
             <value name="target">.:category_wise_consumption_pie</value>
             <value name="expression">addRecords(clear({.:category_wise_consumption_pie}),
 &apos;Server&apos;,formatNumber(({.:power_consumption$actual_consumption}*0.32 ),&apos;#.##&apos;),
@@ -513,6 +515,7 @@
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">2702633297575921664</value>
             <value name="target">.:category_wise_consumption</value>
             <value name="expression">addRecords(clear({.:category_wise_consumption}),
 formatNumber(({.:power_consumption$actual_consumption}*0.32 ) / {.:power_consumption$actual_consumption} *100,&apos;#.##&apos;),
@@ -527,6 +530,7 @@ formatNumber(({.:power_consumption$actual_consumption}*0.03) / {.:power_consumpt
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">4411528294481563648</value>
             <value name="target">.:PUE_vs_DCiE</value>
             <value name="expression">/*addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Mon&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Mon&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Tue&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Tue&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Wed&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Wed&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Thu&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Thu&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Fri&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Fri&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Sat&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Sat&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Sun&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Sun&apos;)*/
 
@@ -539,6 +543,7 @@ aggregate(st(&apos;G&apos;,addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,st(
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">5909037041166208000</value>
             <value name="target">.:Power_Usage_Trends</value>
             <value name="expression">addRecords(clear({.:Power_Usage_Trends}),&apos;Consumption&apos;,formatNumber(980+random()*4.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(950+random()*4.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(940+random()*5.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(929+random()*8.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(940+random()*9.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(938+random()*7.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(940+random()*8.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;))</value>
             <value name="onstartup">1</value>
@@ -546,6 +551,7 @@ aggregate(st(&apos;G&apos;,addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,st(
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">3060284297623236608</value>
             <value name="target">.:Total_Energy_Saved</value>
             <value name="expression">addRecords(clear({.:Total_Energy_Saved}),formatDate(dateAdd(now(),-1,&quot;year&quot;),&quot;YYYY&quot;),12369,formatDate(now(),&quot;YYYY&quot;),13827,formatDate(dateAdd(now(),1,&quot;year&quot;),&quot;YYYY&quot;),13904)
 </value>
@@ -553,6 +559,7 @@ aggregate(st(&apos;G&apos;,addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,st(
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">3159635765855297536</value>
             <value name="target">.:Total_Co2_Reduction</value>
             <value name="expression">//{.:Total_Co2_Reduction}
 addRecords(clear({.:Total_Co2_Reduction}),formatDate(dateAdd(now(),-1,&quot;year&quot;),&quot;YYYY&quot;),8658.3,formatDate(now(),&quot;YYYY&quot;),9678.9,formatDate(dateAdd(now(),1,&quot;year&quot;),&quot;YYYY&quot;),9732.8)
@@ -560,6 +567,7 @@ addRecords(clear({.:Total_Co2_Reduction}),formatDate(dateAdd(now(),-1,&quot;year
             <value name="onstartup">1</value>
           </record>
           <record>
+            <value name="bindingId">2326521837888010240</value>
             <value name="target">.:Total_Potable_Water_Saved</value>
             <value name="expression">
 addRecords(clear({.:Total_Potable_Water_Saved}),formatDate(dateAdd(now(),-1,&quot;year&quot;),&quot;YYYY&quot;),2597.49,formatDate(now(),&quot;YYYY&quot;),2903.67,formatDate(dateAdd(now(),1,&quot;year&quot;),&quot;YYYY&quot;),2919.84)
@@ -567,6 +575,7 @@ addRecords(clear({.:Total_Potable_Water_Saved}),formatDate(dateAdd(now(),-1,&quo
             <value name="onstartup">1</value>
           </record>
           <record>
+            <value name="bindingId">1012675974956824576</value>
             <value name="target">.:Total_Tree_Saved</value>
             <value name="expression">
 addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&quot;),&quot;YYYY&quot;),26,formatDate(now(),&quot;YYYY&quot;),29,formatDate(dateAdd(now(),1,&quot;year&quot;),&quot;YYYY&quot;),29)
@@ -574,6 +583,7 @@ addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&qu
             <value name="onstartup">1</value>
           </record>
           <record>
+            <value name="bindingId">8314258906704456704</value>
             <value name="target">.:Device_Status</value>
             <value name="expression">addRecords(clear({.:Device_Status}),st(&apos;x&apos;,formatNumber(80+random()*28,&apos;#&apos;)),108-ld(&apos;x&apos;))
 
@@ -581,12 +591,14 @@ addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&qu
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">1009633293090797568</value>
             <value name="target">.:AC_DG_Status</value>
             <value name="expression">addRecords(clear({.:AC_DG_Status}),&apos;Active&apos;,&apos;In Active&apos;)</value>
             <value name="onstartup">1</value>
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">2142917132371941376</value>
             <value name="target">.:Device_Health</value>
             <value name="expression">addRecords(clear({.:Device_Health}),ceil({.:Device_Status$Active}*9/10),{.:Device_Status$In_Active},floor({.:Device_Status$Active}*1/10))</value>
             <value name="activator">.:Device_Status</value>
@@ -595,6 +607,7 @@ addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&qu
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">2861387844831703040</value>
             <value name="target">.:Alarm_Status</value>
             <value name="expression">addRecords(clear({.:Alarm_Status}),formatNumber(random()*10,&quot;#&quot;),formatNumber(random()*10,&quot;#&quot;),formatNumber(random()*10,&quot;#&quot;))</value>
             <value name="onstartup">1</value>
@@ -602,6 +615,7 @@ addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&qu
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">4972042795298433024</value>
             <value name="target">.:Temperature</value>
             <value name="expression">addRecords(clear({.:Temperature}),formatNumber(28+random()*2.0,&apos;#.#&apos;),formatNumber(33+random()*4.0,&apos;#.#&apos;),formatNumber(19+random()*3.0,&apos;#.#&apos;),formatNumber(29+random()*7.0,&apos;#.#&apos;))</value>
             <value name="onstartup">1</value>
@@ -609,11 +623,13 @@ addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&qu
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">8754399042336972800</value>
             <value name="target">.:Equipment_Device_Type</value>
             <value name="expression">addRecords(clear({.:Equipment_Device_Type}),87,21)</value>
             <value name="onstartup">1</value>
           </record>
           <record>
+            <value name="bindingId">1762412592280885248</value>
             <value name="target">.:rack_consumption</value>
             <value name="expression">aggregate(table(&apos;&lt;&lt;rack&gt;&lt;S&gt;&gt;&lt;&lt;servers&gt;&lt;I&gt;&gt;&lt;&lt;design&gt;&lt;S&gt;&gt;&apos;,&apos;R1&apos;,6,2100,&apos;R2&apos;,7,1750,&apos;R3&apos;,6,1920,&apos;R4&apos;,6,1920,&apos;R5&apos;,8,2480,&apos;R6&apos;,6,2100,&apos;R7&apos;,8,2080,&apos;R8&apos;,7,2380,&apos;R9&apos;,7,1820,&apos;R10&apos;,6,1560),
 &quot;addRecords({env/previous},{rack},{servers},{design},st(&apos;x&apos;,(85+random()*15)/100*{design}),{design}*1.2,ld(&apos;x&apos;)*(105+random()*25)/100,ld(&apos;x&apos;)/{servers})&quot;,clear({.:rack_consumption}))
@@ -623,6 +639,7 @@ addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&qu
             <value name="period">30000</value>
           </record>
           <record>
+            <value name="bindingId">21165747939525632</value>
             <value name="target">.:top5_eng_con</value>
             <value name="expression">subtable(addColumns(adjustRecordLimits(sort({.:rack_consumption},&apos;f_actual&apos;,false),0,5),&apos;&lt;series&gt;&lt;S&gt;&apos;,&quot;&apos;Consumption in Watt&apos;&quot;,&apos;&lt;category&gt;&lt;S&gt;&apos;,&apos;{rack}&apos;,&apos;&lt;value&gt;&lt;S&gt;&apos;,&apos;{f_actual}&apos;),&apos;series&apos;,&apos;category&apos;,&apos;value&apos;)
 
@@ -632,24 +649,32 @@ addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&qu
             <value name="onevent">1</value>
           </record>
           <record>
+            <value name="bindingId">1941635930684052480</value>
             <value name="target">.:inbound_material</value>
             <value name="expression">addRecords(clear({.:inbound_material}),&apos;IoT&apos;,1,formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy HH:mm:ss&apos;),&apos;20:30&apos;,&apos;Bangalore&apos;)</value>
             <value name="onstartup">1</value>
           </record>
           <record>
+            <value name="bindingId">1549741900813676544</value>
             <value name="target">.:outbound_material</value>
             <value name="expression">addRecords(clear({.:outbound_material}),&apos;IoT&apos;,3,formatDate(now(),&apos;dd-MM-yyyy HH:mm:ss&apos;),&apos;05:30&apos;,&apos;Bangalore&apos;)</value>
             <value name="onstartup">1</value>
           </record>
           <record>
+            <value name="bindingId">2361643868579124224</value>
             <value name="target">.:technician_visited</value>
             <value name="expression">addRecords(clear({.:technician_visited}),&apos;David&apos;,&apos;13-12-2022 11:32:56&apos;,&apos;13-12-2022 18:05:02&apos;)</value>
             <value name="onstartup">1</value>
           </record>
           <record>
+            <value name="bindingId">8520361993143086080</value>
             <value name="expression">table(&apos;&lt;&lt;active&gt;&lt;I&gt;&gt;&lt;&lt;inactive&gt;&lt;I&gt;&gt;&apos;,st(&apos;x&apos;,aggregate(aggregate(adjustRecordLimits({.:modelVariables},0,12),&quot;union({env/previous},evaluate(&apos;{.:&apos;+{name}+&apos;}&apos;))&quot;,table()),&quot;{env/previous}+{Active}&quot;,0)),108-ld(&apos;x&apos;))
 
 </value>
+          </record>
+          <record>
+            <value name="bindingId">7465098363168952320</value>
+            <value name="expression">aggregate({form/dataTableEditor3:dataTable},&apos;callFunction({users.Aditya.models.DCIM_Scope_3:},&quot;insert&quot;,&quot;&apos;+{building}+&apos;&quot;,&quot;&apos;+{lab}+&apos;&quot;,&quot;&apos;+{floor}+&apos;&quot;,&quot;&apos;+{date}+&apos;&quot;,&quot;&apos;+{type}+&apos;&quot;,&quot;&apos;+{device_type}+&apos;&quot;,&quot;&apos;+{asset_name}+&apos;&quot;,&quot;&apos;+{oem}+&apos;&quot;,&quot;&apos;+{model}+&apos;&quot;,&quot;&apos;+{unit}+&apos;&quot;,&quot;&apos;+{weight}+&apos;&quot;,&quot;&apos;+{cost}+&apos;&quot;,&quot;&apos;+{ef}+&apos;&quot;&apos;)</value>
           </record>
         </records>
       </table>
@@ -1826,6 +1851,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>

@@ -3,7 +3,7 @@
     <entry>
       <string>replication</string>
       <table>
-        <format maxRecords="43" minRecords="43">
+        <format maxRecords="40" minRecords="40">
           <fields>
             <field description="Property" keyfield="true" name="variable" readonly="true" type="S">
               <help>Name of the variable to apply the replication rule to.</help>
@@ -171,12 +171,12 @@
             <value name="description">Configurations</value>
           </record>
           <record>
-            <value name="variable">conn_device</value>
-            <value name="description">conn_device</value>
+            <value name="variable">fromServer</value>
+            <value name="description">From Server</value>
           </record>
           <record>
-            <value name="variable">Energy_consumption</value>
-            <value name="description">Energy_consumption</value>
+            <value name="variable">toServer</value>
+            <value name="description">To Server</value>
           </record>
           <record>
             <value name="variable">fromCore</value>
@@ -187,24 +187,12 @@
             <value name="description">To Core</value>
           </record>
           <record>
-            <value name="variable">fromServer</value>
-            <value name="description">From Server</value>
+            <value name="variable">conn_device</value>
+            <value name="description">conn_device</value>
           </record>
           <record>
-            <value name="variable">toServer</value>
-            <value name="description">To Server</value>
-          </record>
-          <record>
-            <value name="variable">custom_assetEvents</value>
-            <value name="description">Asset Events</value>
-          </record>
-          <record>
-            <value name="variable">custom_assetLocation</value>
-            <value name="description">Asset Location</value>
-          </record>
-          <record>
-            <value name="variable">custom_assetInformation</value>
-            <value name="description">Asset Information</value>
+            <value name="variable">Energy_consumption</value>
+            <value name="description">Energy_consumption</value>
           </record>
         </records>
       </table>
@@ -488,6 +476,10 @@
                     </field>
                     <field description="Color" name="color" type="I">
                       <selectionValues>
+                        <option description="Light Yellow">112</option>
+                        <option description="Light Red">113</option>
+                        <option description="Light Magenta">114</option>
+                        <option description="Light Blue">115</option>
                         <option description="Dark Grey">100</option>
                         <option description="Dark Green">101</option>
                         <option description="Dark Yellow">102</option>
@@ -496,10 +488,6 @@
                         <option description="Dark Blue">105</option>
                         <option description="Light Grey">110</option>
                         <option description="Light Green">111</option>
-                        <option description="Light Yellow">112</option>
-                        <option description="Light Red">113</option>
-                        <option description="Light Magenta">114</option>
-                        <option description="Light Blue">115</option>
                       </selectionValues>
                       <help>A color that will be used to mark the group with such status (there are twelve predefined group status colors).</help>
                       <defaultValue>100</defaultValue>

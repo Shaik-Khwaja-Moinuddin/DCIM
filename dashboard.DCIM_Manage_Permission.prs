@@ -273,7 +273,6 @@
                 <option description="Class Data Table Editor">classDataTableEditor</option>
                 <option description="Subdashboard">subdashboard</option>
                 <option description="Event Log">eventLog</option>
-                <option description="Slider">slider</option>
               </selectionValues>
               <help>This field defines the element type.</help>
               <defaultValue>textField</defaultValue>
@@ -302,31 +301,6 @@
               <table>
                 <format maxRecords="1" minRecords="1">
                   <fields>
-                    <field description="Bindings" name="bindings" type="T">
-                      <defaultValue>
-                        <table>
-                          <format maxRecords="2147483647"/>
-                        </table>
-                      </defaultValue>
-                    </field>
-                    <field description="Startup Bindings Concurrency" name="startupBindingsConcurrency" type="B">
-                      <defaultValue>0</defaultValue>
-                    </field>
-                    <field description="Normal Concurrent Bindings" extendableSelectionValues="true" name="normalConcurrentBindings" type="I">
-                      <selectionValues>
-                        <option description="Disabled">0</option>
-                      </selectionValues>
-                      <defaultValue>5</defaultValue>
-                    </field>
-                    <field description="Maximum Concurrent Bindings" extendableSelectionValues="true" name="maximumConcurrentBindings" type="I">
-                      <selectionValues>
-                        <option description="Disabled">0</option>
-                      </selectionValues>
-                      <defaultValue>100</defaultValue>
-                    </field>
-                    <field description="Maximum Unprocessed Binding Queue Length" name="maximumBindingQueueLength" type="I">
-                      <defaultValue>1000</defaultValue>
-                    </field>
                     <field description="Layout Width" name="layoutWidth" type="I">
                       <defaultValue>0</defaultValue>
                     </field>
@@ -425,6 +399,13 @@
                         <nullValue/>
                       </defaultValue>
                     </field>
+                    <field description="Bindings" name="bindings" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
                     <field description="Breakpoints" name="breakpoints" type="T">
                       <defaultValue>
                         <table>
@@ -449,6 +430,24 @@
                         </table>
                       </defaultValue>
                     </field>
+                    <field description="Startup Bindings Concurrency" name="startupBindingsConcurrency" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Normal Concurrent Bindings" extendableSelectionValues="true" name="normalConcurrentBindings" type="I">
+                      <selectionValues>
+                        <option description="Disabled">0</option>
+                      </selectionValues>
+                      <defaultValue>5</defaultValue>
+                    </field>
+                    <field description="Maximum Concurrent Bindings" extendableSelectionValues="true" name="maximumConcurrentBindings" type="I">
+                      <selectionValues>
+                        <option description="Disabled">0</option>
+                      </selectionValues>
+                      <defaultValue>100</defaultValue>
+                    </field>
+                    <field description="Maximum Unprocessed Binding Queue Length" name="maximumBindingQueueLength" type="I">
+                      <defaultValue>1000</defaultValue>
+                    </field>
                     <field description="state" name="state" type="S">
                       <selectionValues>
                         <option description="CREATED">CREATED</option>
@@ -463,159 +462,6 @@
                 </format>
                 <records>
                   <record>
-                    <value name="bindings">
-                      <table>
-                        <format maxRecords="2147483647" reorderable="true">
-                          <fields>
-                            <field hidden="true" keyfield="true" name="bindingId" notReplicated="true" nullable="true" type="L">
-                              <validators contentType="base64">HEweMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
-                              <defaultValue>
-                                <nullValue/>
-                              </defaultValue>
-                            </field>
-                            <field description="Target" editor="target" name="target" type="S">
-                              <help>A reference that points to where the evaluation result of a binding Expression will be applied/stored.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="Expression" editor="expression" name="expression" type="S">
-                              <help>An expression that is evaluated every time the binding is processed. Its evaluation result is stored in binding Target.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="Activator" editor="activator" name="activator" type="S">
-                              <help>A reference that points to some event or variable (property). Occurrence of this event or change of this variable (property) triggers processing of the binding. If activator is not specified and On Event flag is set, the binding will be processed when any component of its Expression changes.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="Condition" editor="expression" name="condition" type="S">
-                              <help>An expression that is evaluated upon binding activation. The evaluation result should be a boolean that indicates whether the binding should be processed or not.</help>
-                              <defaultValue/>
-                            </field>
-                            <field description="On Startup" name="onstartup" type="B">
-                              <help>When enabled, the binding is processed once the widget is launched.</help>
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="On Event" name="onevent" type="B">
-                              <help>When enabled, the binding is processed upon Activator event (or Activator state change, if activator is a property). If Activator is not specified, the binding is processed when any component of the Expression changes.</help>
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="Periodically" name="periodically" type="B">
-                              <help>When enabled, the binding will be processed periodically.</help>
-                              <defaultValue>0</defaultValue>
-                            </field>
-                            <field description="Period" editor="period" name="period" type="L">
-                              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
-                              <help>Interval between periodical binding executions.</help>
-                              <defaultValue>60000</defaultValue>
-                            </field>
-                            <field advanced="true" description="Queue" name="queue" type="S">
-                              <validators contentType="base64">HFIeXHcqXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
-                              <help>Target operations of bindings in the same queue are guaranteed to be performed sequentially.</help>
-                              <defaultValue/>
-                            </field>
-                          </fields>
-                          <bindings>
-                            <binding>
-                              <reference>expression#options</reference>
-                              <expression>expressionEditorOptions({.:})</expression>
-                            </binding>
-                            <binding>
-                              <reference>activator#enabled</reference>
-                              <expression>{onevent}</expression>
-                            </binding>
-                            <binding>
-                              <reference>period#enabled</reference>
-                              <expression>{periodically}</expression>
-                            </binding>
-                            <binding>
-                              <reference>bindingId</reference>
-                              <expression>{bindingId}==null ? long(random()*9223372036854775807) : {bindingId}</expression>
-                            </binding>
-                          </bindings>
-                        </format>
-                        <records>
-                          <record>
-                            <value name="bindingId">7162308195566194688</value>
-                            <value name="target">form/dataTableEditor0:dataTable</value>
-                            <value name="expression">{users.Ekta.models.DCIM_PERMISSION:Menu_level}</value>
-                            <value name="activator">form/label2:mouseClicked@</value>
-                            <value name="onstartup">1</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">8769983030724569088</value>
-                            <value name="target">form/dataTableEditor1:dataTable</value>
-                            <value name="expression">{users.Ekta.models.DCIM_PERMISSION:Sub_Menu}</value>
-                            <value name="activator">form/label4:mouseClicked@</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">7873768722353670144</value>
-                            <value name="target">form/dataTableEditor2:dataTable</value>
-                            <value name="expression">{users.Ekta.models.DCIM_PERMISSION:Screen_level}</value>
-                            <value name="activator">form/label6:mouseClicked@</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">748600296102000640</value>
-                            <value name="target">form/label15:text</value>
-                            <value name="expression">1</value>
-                            <value name="activator">form/label2:mouseClicked@</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">1438981992882636800</value>
-                            <value name="target">form/label15:text</value>
-                            <value name="expression">2</value>
-                            <value name="activator">form/label4:mouseClicked@</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">1403738242199961600</value>
-                            <value name="target">form/label15:text</value>
-                            <value name="expression">3</value>
-                            <value name="activator">form/label6:mouseClicked@</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">3364748886230059008</value>
-                            <value name="target">form/dataTableEditor0:visible</value>
-                            <value name="expression">{form/label15:text$text}==1 ? true: false</value>
-                            <value name="activator">form/label15:text</value>
-                            <value name="onstartup">1</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">4994049510886596608</value>
-                            <value name="target">form/dataTableEditor1:visible</value>
-                            <value name="expression">{form/label15:text$text}==2 ? true: false</value>
-                            <value name="activator">form/label15:text</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">6737627276973576192</value>
-                            <value name="target">form/dataTableEditor2:visible</value>
-                            <value name="expression">{form/label15:text$text}==3 ? true: false</value>
-                            <value name="activator">form/label15:text</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">5012215235865135104</value>
-                            <value name="target">form/label6:customClasses</value>
-                            <value name="expression">{form/label15:text$text}==2 ? &quot;.color&quot;:null</value>
-                            <value name="activator">form/label15:text</value>
-                            <value name="onevent">1</value>
-                          </record>
-                          <record>
-                            <value name="bindingId">3516624071824261120</value>
-                            <value name="target">form/panel3:containerStyle</value>
-                            <value name="expression">{form/label15:text}==1?&quot;#label2{background-color: #5C427A;}&quot;
-:{form/label15:text}==2?&quot;#label4{background-color: #5C427A;}&quot;
-:{form/label15:text}==3?&quot;#label6{background-color: #5C427A;}&quot;
-:&quot;#label2{background-color: #5C427A;}&quot;</value>
-                            <value name="onevent">1</value>
-                          </record>
-                        </records>
-                      </table>
-                    </value>
                     <value name="layoutWidth">800</value>
                     <value name="layoutHeight">800</value>
                     <value name="style">
@@ -776,6 +622,159 @@ background-color: #5C427A;
                       </table>
                     </value>
                     <value name="name"/>
+                    <value name="bindings">
+                      <table>
+                        <format maxRecords="2147483647" reorderable="true">
+                          <fields>
+                            <field hidden="true" keyfield="true" name="bindingId" notReplicated="true" nullable="true" type="L">
+                              <validators contentType="base64">HEweMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                            <field description="Target" editor="target" name="target" type="S">
+                              <help>A reference that points to where the evaluation result of a binding Expression will be applied/stored.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Expression" editor="expression" name="expression" type="S">
+                              <help>An expression that is evaluated every time the binding is processed. Its evaluation result is stored in binding Target.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Activator" editor="activator" name="activator" type="S">
+                              <help>A reference that points to some event or variable (property). Occurrence of this event or change of this variable (property) triggers processing of the binding. If activator is not specified and On Event flag is set, the binding will be processed when any component of its Expression changes.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Condition" editor="expression" name="condition" type="S">
+                              <help>An expression that is evaluated upon binding activation. The evaluation result should be a boolean that indicates whether the binding should be processed or not.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="On Startup" name="onstartup" type="B">
+                              <help>When enabled, the binding is processed once the widget is launched.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="On Event" name="onevent" type="B">
+                              <help>When enabled, the binding is processed upon Activator event (or Activator state change, if activator is a property). If Activator is not specified, the binding is processed when any component of the Expression changes.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="Periodically" name="periodically" type="B">
+                              <help>When enabled, the binding will be processed periodically.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="Period" editor="period" name="period" type="L">
+                              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                              <help>Interval between periodical binding executions.</help>
+                              <defaultValue>60000</defaultValue>
+                            </field>
+                            <field advanced="true" description="Queue" name="queue" type="S">
+                              <validators contentType="base64">HFIeXHcqXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                              <help>Target operations of bindings in the same queue are guaranteed to be performed sequentially.</help>
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                          <bindings>
+                            <binding>
+                              <reference>expression#options</reference>
+                              <expression>expressionEditorOptions({.:})</expression>
+                            </binding>
+                            <binding>
+                              <reference>activator#enabled</reference>
+                              <expression>{onevent}</expression>
+                            </binding>
+                            <binding>
+                              <reference>period#enabled</reference>
+                              <expression>{periodically}</expression>
+                            </binding>
+                            <binding>
+                              <reference>bindingId</reference>
+                              <expression>{bindingId}==null ? long(random()*9223372036854775807) : {bindingId}</expression>
+                            </binding>
+                          </bindings>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="bindingId">7162308195566194688</value>
+                            <value name="target">form/dataTableEditor0:dataTable</value>
+                            <value name="expression">{users.Ekta.models.DCIM_PERMISSION:Menu_level}</value>
+                            <value name="activator">form/label2:mouseClicked@</value>
+                            <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">8769983030724569088</value>
+                            <value name="target">form/dataTableEditor1:dataTable</value>
+                            <value name="expression">{users.Ekta.models.DCIM_PERMISSION:Sub_Menu}</value>
+                            <value name="activator">form/label4:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">7873768722353670144</value>
+                            <value name="target">form/dataTableEditor2:dataTable</value>
+                            <value name="expression">{users.Ekta.models.DCIM_PERMISSION:Screen_level}</value>
+                            <value name="activator">form/label6:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">748600296102000640</value>
+                            <value name="target">form/label15:text</value>
+                            <value name="expression">1</value>
+                            <value name="activator">form/label2:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">1438981992882636800</value>
+                            <value name="target">form/label15:text</value>
+                            <value name="expression">2</value>
+                            <value name="activator">form/label4:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">1403738242199961600</value>
+                            <value name="target">form/label15:text</value>
+                            <value name="expression">3</value>
+                            <value name="activator">form/label6:mouseClicked@</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">3364748886230059008</value>
+                            <value name="target">form/dataTableEditor0:visible</value>
+                            <value name="expression">{form/label15:text$text}==1 ? true: false</value>
+                            <value name="activator">form/label15:text</value>
+                            <value name="onstartup">1</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">4994049510886596608</value>
+                            <value name="target">form/dataTableEditor1:visible</value>
+                            <value name="expression">{form/label15:text$text}==2 ? true: false</value>
+                            <value name="activator">form/label15:text</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">6737627276973576192</value>
+                            <value name="target">form/dataTableEditor2:visible</value>
+                            <value name="expression">{form/label15:text$text}==3 ? true: false</value>
+                            <value name="activator">form/label15:text</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">5012215235865135104</value>
+                            <value name="target">form/label6:customClasses</value>
+                            <value name="expression">{form/label15:text$text}==2 ? &quot;.color&quot;:null</value>
+                            <value name="activator">form/label15:text</value>
+                            <value name="onevent">1</value>
+                          </record>
+                          <record>
+                            <value name="bindingId">3516624071824261120</value>
+                            <value name="target">form/panel3:containerStyle</value>
+                            <value name="expression">{form/label15:text}==1?&quot;#label2{background-color: #5C427A;}&quot;
+:{form/label15:text}==2?&quot;#label4{background-color: #5C427A;}&quot;
+:{form/label15:text}==3?&quot;#label6{background-color: #5C427A;}&quot;
+:&quot;#label2{background-color: #5C427A;}&quot;</value>
+                            <value name="onevent">1</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
                     <value name="breakpoints">
                       <table>
                         <format maxRecords="2147483647" minRecords="1">
@@ -790,11 +789,11 @@ background-color: #5C427A;
                             <field description="Value" extendableSelectionValues="true" name="value" type="S">
                               <selectionValues>
                                 <option description="Mobile">320</option>
-                                <option description="Tablet">800</option>
-                                <option description="Laptop">1366</option>
                                 <option description="Full HD">1920</option>
-                                <option description="QHD">2560</option>
+                                <option description="Laptop">1366</option>
+                                <option description="Tablet">800</option>
                                 <option description="Ultra HD">3840</option>
+                                <option description="QHD">2560</option>
                               </selectionValues>
                               <defaultValue>320</defaultValue>
                             </field>
@@ -826,11 +825,11 @@ background-color: #5C427A;
                             <field description="Value" extendableSelectionValues="true" name="value" type="S">
                               <selectionValues>
                                 <option description="Mobile">320</option>
-                                <option description="Tablet">800</option>
-                                <option description="Laptop">1366</option>
                                 <option description="Full HD">1920</option>
-                                <option description="QHD">2560</option>
+                                <option description="Laptop">1366</option>
+                                <option description="Tablet">800</option>
                                 <option description="Ultra HD">3840</option>
+                                <option description="QHD">2560</option>
                               </selectionValues>
                               <defaultValue>320</defaultValue>
                             </field>
@@ -2560,6 +2559,9 @@ background:#141619  ;}&#xd;
 .ant-table-body .ant-checkbox.ant-checkbox-checked {&#xd;
 &#xd;
 background-color: #5C427A;}&#xd;
+&#xd;
+.ant-table-body .ant-table-tbody &gt; tr &gt; td {&#xd;
+    background: #141619; }&#xd;
 ;</value>
                           </record>
                         </records>
@@ -2586,6 +2588,9 @@ background:#141619  ;}&#xd;
 .ant-table-body .ant-checkbox.ant-checkbox-checked {&#xd;
 &#xd;
 background-color: #5C427A;}&#xd;
+&#xd;
+.ant-table-body .ant-table-tbody &gt; tr &gt; td {&#xd;
+    background: #141619; }&#xd;
 </value>
                     <value name="additionalActionSettings">
                       <table>
@@ -2621,10 +2626,10 @@ background-color: #5C427A;}&#xd;
                             <field description="Action" name="buttonAction" type="S">
                               <selectionValues>
                                 <option description=""/>
-                                <option description="Edit">edit</option>
-                                <option description="Delete">delete</option>
                                 <option description="Cancel">cancel</option>
+                                <option description="Edit">edit</option>
                                 <option description="Apply">apply</option>
+                                <option description="Delete">delete</option>
                               </selectionValues>
                               <defaultValue/>
                             </field>
@@ -3202,32 +3207,32 @@ background-color: #5C427A;}&#xd;
                             </field>
                             <field description="Header Text Behavior" name="headerTextBehavior" type="S">
                               <selectionValues>
+                                <option description="Word Wrap">wordWrap</option>
                                 <option description="Expand Column">expandColumn</option>
                                 <option description="Ellipsis">ellipsis</option>
-                                <option description="Word Wrap">wordWrap</option>
                               </selectionValues>
                               <defaultValue>expandColumn</defaultValue>
                             </field>
                             <field description="Word Break" name="wordBreak" type="S">
                               <selectionValues>
-                                <option description="Break All">break-all</option>
-                                <option description="Break Word">break-word</option>
                                 <option description="Don&apos;t Break">false</option>
+                                <option description="Break Word">break-word</option>
+                                <option description="Break All">break-all</option>
                               </selectionValues>
                               <defaultValue>false</defaultValue>
                             </field>
                             <field description="Cell Text Horizontal Alignment" name="textAlignHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
                             </field>
                             <field description="Header Text Horizontal Alignment" name="textAlignHeaderHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
@@ -3254,16 +3259,16 @@ background-color: #5C427A;}&#xd;
                             <field description="Sorter Preset" name="sorterPreset" type="S">
                               <selectionValues>
                                 <option description="Ascending">ASC</option>
-                                <option description="Descending">DESC</option>
                                 <option description="Unset">unset</option>
+                                <option description="Descending">DESC</option>
                               </selectionValues>
                               <defaultValue>unset</defaultValue>
                             </field>
                             <field description="Filtering" name="filtering" type="S">
                               <selectionValues>
-                                <option description="None">none</option>
-                                <option description="Search">search</option>
                                 <option description="Filter">filter</option>
+                                <option description="Search">search</option>
+                                <option description="None">none</option>
                               </selectionValues>
                               <defaultValue>none</defaultValue>
                             </field>
@@ -4157,7 +4162,8 @@ color: #ffffff;&#xd;
 background:#141619  ;}&#xd;
 .ant-table-body .ant-checkbox.ant-checkbox-checked {&#xd;
 background-color: #5C427A;}&#xd;
-&#xd;
+.ant-table-body .ant-table-tbody &gt; tr &gt; td {&#xd;
+    background: #141619; }&#xd;
 ;</value>
                           </record>
                         </records>
@@ -4183,7 +4189,8 @@ color: #ffffff;&#xd;
 background:#141619  ;}&#xd;
 .ant-table-body .ant-checkbox.ant-checkbox-checked {&#xd;
 background-color: #5C427A;}&#xd;
-&#xd;
+.ant-table-body .ant-table-tbody &gt; tr &gt; td {&#xd;
+    background: #141619; }&#xd;
 </value>
                     <value name="additionalActionSettings">
                       <table>
@@ -4219,10 +4226,10 @@ background-color: #5C427A;}&#xd;
                             <field description="Action" name="buttonAction" type="S">
                               <selectionValues>
                                 <option description=""/>
-                                <option description="Edit">edit</option>
-                                <option description="Delete">delete</option>
                                 <option description="Cancel">cancel</option>
+                                <option description="Edit">edit</option>
                                 <option description="Apply">apply</option>
+                                <option description="Delete">delete</option>
                               </selectionValues>
                               <defaultValue/>
                             </field>
@@ -4510,32 +4517,32 @@ background-color: #5C427A;}&#xd;
                             </field>
                             <field description="Header Text Behavior" name="headerTextBehavior" type="S">
                               <selectionValues>
+                                <option description="Word Wrap">wordWrap</option>
                                 <option description="Expand Column">expandColumn</option>
                                 <option description="Ellipsis">ellipsis</option>
-                                <option description="Word Wrap">wordWrap</option>
                               </selectionValues>
                               <defaultValue>expandColumn</defaultValue>
                             </field>
                             <field description="Word Break" name="wordBreak" type="S">
                               <selectionValues>
-                                <option description="Break All">break-all</option>
-                                <option description="Break Word">break-word</option>
                                 <option description="Don&apos;t Break">false</option>
+                                <option description="Break Word">break-word</option>
+                                <option description="Break All">break-all</option>
                               </selectionValues>
                               <defaultValue>false</defaultValue>
                             </field>
                             <field description="Cell Text Horizontal Alignment" name="textAlignHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
                             </field>
                             <field description="Header Text Horizontal Alignment" name="textAlignHeaderHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
@@ -4562,16 +4569,16 @@ background-color: #5C427A;}&#xd;
                             <field description="Sorter Preset" name="sorterPreset" type="S">
                               <selectionValues>
                                 <option description="Ascending">ASC</option>
-                                <option description="Descending">DESC</option>
                                 <option description="Unset">unset</option>
+                                <option description="Descending">DESC</option>
                               </selectionValues>
                               <defaultValue>unset</defaultValue>
                             </field>
                             <field description="Filtering" name="filtering" type="S">
                               <selectionValues>
-                                <option description="None">none</option>
-                                <option description="Search">search</option>
                                 <option description="Filter">filter</option>
+                                <option description="Search">search</option>
+                                <option description="None">none</option>
                               </selectionValues>
                               <defaultValue>none</defaultValue>
                             </field>
@@ -4906,7 +4913,10 @@ font: bold normal normal 12px/14px shapesans;&#xd;
 color: #ffffff;&#xd;
 background:#141619  ;}&#xd;
 .ant-table-body .ant-checkbox.ant-checkbox-checked {&#xd;
-background-color: #5C427A;};</value>
+background-color: #5C427A;}&#xd;
+&#xd;
+.ant-table-body .ant-table-tbody &gt; tr &gt; td {&#xd;
+    background: #141619; };</value>
                           </record>
                         </records>
                       </table>
@@ -4930,7 +4940,10 @@ font: bold normal normal 12px/14px shapesans;&#xd;
 color: #ffffff;&#xd;
 background:#141619  ;}&#xd;
 .ant-table-body .ant-checkbox.ant-checkbox-checked {&#xd;
-background-color: #5C427A;}</value>
+background-color: #5C427A;}&#xd;
+&#xd;
+.ant-table-body .ant-table-tbody &gt; tr &gt; td {&#xd;
+    background: #141619; }</value>
                     <value name="additionalActionSettings">
                       <table>
                         <format maxRecords="2147483647">
@@ -4965,10 +4978,10 @@ background-color: #5C427A;}</value>
                             <field description="Action" name="buttonAction" type="S">
                               <selectionValues>
                                 <option description=""/>
-                                <option description="Edit">edit</option>
-                                <option description="Delete">delete</option>
                                 <option description="Cancel">cancel</option>
+                                <option description="Edit">edit</option>
                                 <option description="Apply">apply</option>
+                                <option description="Delete">delete</option>
                               </selectionValues>
                               <defaultValue/>
                             </field>
@@ -5256,32 +5269,32 @@ background-color: #5C427A;}</value>
                             </field>
                             <field description="Header Text Behavior" name="headerTextBehavior" type="S">
                               <selectionValues>
+                                <option description="Word Wrap">wordWrap</option>
                                 <option description="Expand Column">expandColumn</option>
                                 <option description="Ellipsis">ellipsis</option>
-                                <option description="Word Wrap">wordWrap</option>
                               </selectionValues>
                               <defaultValue>expandColumn</defaultValue>
                             </field>
                             <field description="Word Break" name="wordBreak" type="S">
                               <selectionValues>
-                                <option description="Break All">break-all</option>
-                                <option description="Break Word">break-word</option>
                                 <option description="Don&apos;t Break">false</option>
+                                <option description="Break Word">break-word</option>
+                                <option description="Break All">break-all</option>
                               </selectionValues>
                               <defaultValue>false</defaultValue>
                             </field>
                             <field description="Cell Text Horizontal Alignment" name="textAlignHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
                             </field>
                             <field description="Header Text Horizontal Alignment" name="textAlignHeaderHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
@@ -5308,16 +5321,16 @@ background-color: #5C427A;}</value>
                             <field description="Sorter Preset" name="sorterPreset" type="S">
                               <selectionValues>
                                 <option description="Ascending">ASC</option>
-                                <option description="Descending">DESC</option>
                                 <option description="Unset">unset</option>
+                                <option description="Descending">DESC</option>
                               </selectionValues>
                               <defaultValue>unset</defaultValue>
                             </field>
                             <field description="Filtering" name="filtering" type="S">
                               <selectionValues>
-                                <option description="None">none</option>
-                                <option description="Search">search</option>
                                 <option description="Filter">filter</option>
+                                <option description="Search">search</option>
+                                <option description="None">none</option>
                               </selectionValues>
                               <defaultValue>none</defaultValue>
                             </field>
@@ -8012,6 +8025,32 @@ background: #141619 0% 0% no-repeat padding-box;</value>
                 </records>
               </table>
             </value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.dashboards_groups.DCIM</value>
           </record>
         </records>
       </table>

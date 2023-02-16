@@ -493,40 +493,54 @@
           <record>
             <value name="bindingId">7854024283293069312</value>
             <value name="target">.:power_consumption</value>
-            <value name="expression">addRecords(clear({.:power_consumption}),185,44.24, st(&apos;y&apos;,formatNumber(36+random()*8,&apos;#.##&apos;)) ,st(&apos;x&apos;,formatNumber(ld(&apos;y&apos;)*0.55+random()*3,&apos;#.##&apos;)), ld(&apos;y&apos;)-ld(&apos;x&apos;))</value>
+            <value name="expression">addRecords(clear({.:power_consumption}),185,84.39, st(&apos;y&apos;,formatNumber(73+random()*10,&apos;#.##&apos;)) ,st(&apos;x&apos;,formatNumber(ld(&apos;y&apos;)*0.55+random()*3,&apos;#.##&apos;)), ld(&apos;y&apos;)-ld(&apos;x&apos;),&quot;B01-L01-F01&quot;,485,260.24, st(&apos;y1&apos;,formatNumber(238+random()*12,&apos;#.##&apos;)) ,st(&apos;x1&apos;,formatNumber(ld(&apos;y1&apos;)*0.55+random()*3,&apos;#.##&apos;)), ld(&apos;y1&apos;)-ld(&apos;x1&apos;),&quot;B02-L02-F02&quot;) 
+
+
+//addRecords(clear({.:power_consumption}),185,44.24, st(&apos;y&apos;,formatNumber(36+random()*8,&apos;#.##&apos;)) ,st(&apos;x&apos;,formatNumber(ld(&apos;y&apos;)*0.55+random()*3,&apos;#.##&apos;)), ld(&apos;y&apos;)-ld(&apos;x&apos;))</value>
             <value name="onstartup">1</value>
+            <value name="periodically">1</value>
             <value name="period">30000</value>
           </record>
           <record>
             <value name="bindingId">8411347577915889664</value>
             <value name="target">.:category_wise_consumption_pie</value>
-            <value name="expression">addRecords(clear({.:category_wise_consumption_pie}),
-&apos;Server&apos;,formatNumber(({.:power_consumption$actual_consumption}*0.32 ),&apos;#.##&apos;),
-&apos;Cooling System&apos;,formatNumber(({.:power_consumption$actual_consumption}*0.53),&apos;#.##&apos;),
-&apos;Rack&apos;,formatNumber(({.:power_consumption$actual_consumption}*0.14),&apos;#.##&apos;),
-&apos;IT Devices&apos;,formatNumber(({.:power_consumption$actual_consumption}*0.01),&apos;#.##&apos;),
-&apos;Lighting&apos;,formatNumber(({.:power_consumption$actual_consumption}*0.03),&apos;#.##&apos;))
+            <value name="expression">union(addColumns(addRecords(removeColumns(clear({.:category_wise_consumption_pie}),&apos;percentage&apos;),
+&apos;B01-L01-F01&apos;,&apos;Server&apos;,st(&apos;svr&apos;,formatNumber(({.:power_consumption$it_load}*(0.88+random()*.04)),&apos;#.##&apos;)),
+&apos;B01-L01-F01&apos;,&apos;Cooling System&apos;,st(&apos;cl&apos;,formatNumber(({.:power_consumption$facility_load}*(0.87+random()*.04)),&apos;#.##&apos;)),
+&apos;B01-L01-F01&apos;,&apos;Rack&apos;,st(&apos;rk&apos;,formatNumber(({.:power_consumption$facility_load}*(0.04+random()*.04)),&apos;#.##&apos;)),
+&apos;B01-L01-F01&apos;,&apos;IT Devices&apos;,formatNumber(({.:power_consumption$it_load}-ld(&apos;svr&apos;)),&apos;#.##&apos;),
+&apos;B01-L01-F01&apos;,&apos;Lighting&apos;,formatNumber(({.:power_consumption$facility_load}-ld(&apos;cl&apos;)-ld(&apos;rk&apos;)),&apos;#.##&apos;))
+,&apos;&lt;percentage&gt;&lt;S&gt;&apos;,&quot;formatNumber({value}/(&quot;+({.:power_consumption$actual_consumption})+&quot;)*100,&apos;#.##&apos;)&quot;)
+,
+addColumns(addRecords(removeColumns(clear({.:category_wise_consumption_pie}),&apos;percentage&apos;),
+&apos;B02-L02-F02&apos;,&apos;Server&apos;,st(&apos;svr&apos;,formatNumber(({.:power_consumption$it_load[1]}*(0.88+random()*.04)),&apos;#.##&apos;)),
+&apos;B02-L02-F02&apos;,&apos;Cooling System&apos;,st(&apos;cl&apos;,formatNumber(({.:power_consumption$facility_load[1]}*(0.87+random()*.04)),&apos;#.##&apos;)),
+&apos;B02-L02-F02&apos;,&apos;Rack&apos;,st(&apos;rk&apos;,formatNumber(({.:power_consumption$facility_load[1]}*(0.04+random()*.04)),&apos;#.##&apos;)),
+&apos;B02-L02-F02&apos;,&apos;IT Devices&apos;,formatNumber(({.:power_consumption$it_load[1]}-ld(&apos;svr&apos;)),&apos;#.##&apos;),
+&apos;B02-L02-F02&apos;,&apos;Lighting&apos;,formatNumber(({.:power_consumption$facility_load[1]}-ld(&apos;cl&apos;)-ld(&apos;rk&apos;)),&apos;#.##&apos;)),&apos;&lt;percentage&gt;&lt;S&gt;&apos;,&quot;formatNumber({value}/(&quot;+( {.:power_consumption$actual_consumption[1]})+&quot;)*100,&apos;#.##&apos;)&quot;))
 
-</value>
+ </value>
             <value name="onstartup">1</value>
+            <value name="periodically">1</value>
             <value name="period">30000</value>
           </record>
           <record>
             <value name="bindingId">5459419556793915392</value>
             <value name="target">.:PUE_vs_DCiE</value>
-            <value name="expression">/*addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Mon&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Mon&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Tue&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Tue&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Wed&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Wed&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Thu&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Thu&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Fri&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Fri&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Sat&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Sat&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Sun&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Sun&apos;)*/
+            <value name="expression">aggregate(st(&apos;G&apos;,addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,st(&apos;x&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;x&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;y&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;y&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;z&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;z&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;a&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;a&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;b&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;b&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;c&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;c&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;d&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;d&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;))),&quot;addRecords({env/previous},&apos;Desired PUE&apos;,1.2,{category})&quot;,ld(&apos;G&apos;))
 
+/*addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Mon&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Mon&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Tue&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Tue&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Wed&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Wed&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Thu&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Thu&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Fri&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Fri&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Sat&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Sat&apos;,&apos;PUE&apos;,formatNumber(random()*2.0,&apos;#.##&apos;),&apos;Sun&apos;,&apos;DCiE&apos;,formatNumber(random()*1.0,&apos;#.##&apos;),&apos;Sun&apos;)*/
 //table(&apos;&lt;&lt;series&gt;&lt;S&gt;&gt;&lt;&lt;value&gt;&lt;F&gt;&gt;&lt;&lt;category&gt;&lt;S&gt;&gt;&apos;,&apos;PUE&apos;,st(&apos;x&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),&apos;Mon&apos;,&apos;DCiE&apos;,formatNumber(1/ld(&apos;x&apos;),&apos;#.##&apos;),&apos;Mon&apos;)&apos;Desired&apos;,1,formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),
 //st(&apos;x&apos;,1.4+random()*0.3)
-//formatNumber(1.4+random()*0.3,&apos;#.##&apos;)
-aggregate(st(&apos;G&apos;,addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,st(&apos;x&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;x&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;y&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;y&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;z&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;z&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;a&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;a&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;b&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;b&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;c&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;c&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;d&apos;,formatNumber(1.4+random()*0.3,&apos;#.##&apos;)),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;d&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;))),&quot;addRecords({env/previous},&apos;Desired&apos;,1,{category})&quot;,ld(&apos;G&apos;))</value>
+//formatNumber(1.4+random()*0.3,&apos;#.##&apos;)</value>
             <value name="onstartup">1</value>
             <value name="period">30000</value>
           </record>
           <record>
             <value name="bindingId">814225330830455808</value>
             <value name="target">.:Power_Usage_Trends</value>
-            <value name="expression">addRecords(clear({.:Power_Usage_Trends}),&apos;Consumption&apos;,formatNumber(5780+random()*4.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5750+random()*4.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5740+random()*25.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5729+random()*18.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5740+random()*19.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5638+random()*27.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5740+random()*18.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;))</value>
+            <value name="expression">union(addColumns(addRecords(removeColumns(clear({.:Power_Usage_Trends}),&apos;floor&apos;),&apos;Consumption&apos;,formatNumber(2159.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2147,&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2146,&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2149,&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2153,&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2142,&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2123.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;)),&quot;&lt;floor&gt;&lt;S&gt;&quot;,&quot;&apos;B01-L01-F01&apos;&quot;)
+,addColumns(addRecords(removeColumns(clear({.:Power_Usage_Trends}),&apos;floor&apos;),&apos;Consumption&apos;,formatNumber(5732,&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5725,&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5746,&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5729,&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5710,&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5735,&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5723,&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;)),&quot;&lt;floor&gt;&lt;S&gt;&quot;,&quot;&apos;B02-L02-F02&apos;&quot;))</value>
             <value name="onstartup">1</value>
             <value name="period">30000</value>
           </record>
@@ -580,15 +594,17 @@ addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&qu
           <record>
             <value name="bindingId">8389079996355838976</value>
             <value name="target">.:Device_Health</value>
-            <value name="expression">addRecords(clear({.:Device_Health}),ceil({.:Device_Status$Active}*9/10),{.:Device_Status$In_Active},floor({.:Device_Status$Active}*1/10))</value>
+            <value name="expression">addRecords(clear({.:Device_Health}),&quot;B01-L01-F01&quot;,90,15,7,&quot;B02-L02-F02&quot;,200,28,9)</value>
             <value name="activator">.:Device_Status</value>
             <value name="period">30000</value>
           </record>
           <record>
             <value name="bindingId">6528004632063507456</value>
             <value name="target">.:Alarm_Status</value>
-            <value name="expression">addRecords(clear({.:Alarm_Status}),formatNumber(random()*10,&quot;#&quot;),formatNumber(random()*10,&quot;#&quot;),formatNumber(random()*10,&quot;#&quot;))</value>
+            <value name="expression">union(addColumns(addRecords(removeColumns(clear({.:Alarm_Status}),&apos;floor&apos;),formatNumber(random()*10,&quot;#&quot;),formatNumber(random()*10,&quot;#&quot;),formatNumber(random()*10,&quot;#&quot;)),&quot;&lt;floor&gt;&lt;S&gt;&quot;,&quot;&apos;B01-L01-F01&apos;&quot;),
+addColumns(addRecords(removeColumns(clear({.:Alarm_Status}),&quot;floor&quot;),formatNumber(random()*15,&quot;#&quot;),formatNumber(random()*15,&quot;#&quot;),formatNumber(random()*15,&quot;#&quot;)),&quot;&lt;floor&gt;&lt;S&gt;&quot;,&quot;&apos;B02-L02-F02&apos;&quot;))</value>
             <value name="onstartup">1</value>
+            <value name="periodically">1</value>
             <value name="period">30000</value>
           </record>
           <record>
@@ -625,13 +641,13 @@ addRecords(clear({.:Total_Tree_Saved}),formatDate(dateAdd(now(),-1,&quot;year&qu
           <record>
             <value name="bindingId">3481754915136188416</value>
             <value name="target">.:inbound_material</value>
-            <value name="expression">addRecords(clear({.:inbound_material}),&apos;IoT&apos;,1,formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy HH:mm:ss&apos;),&apos;20:30&apos;,&apos;Bangalore&apos;)</value>
+            <value name="expression">addRecords(clear({.:inbound_material}),&apos;IoT&apos;,1,formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd.MM.yyyy HH:mm:ss&apos;),&apos;20:30&apos;,&apos;Bangalore&apos;)</value>
             <value name="onstartup">1</value>
           </record>
           <record>
             <value name="bindingId">2480876860578855936</value>
             <value name="target">.:outbound_material</value>
-            <value name="expression">addRecords(clear({.:outbound_material}),&apos;IoT&apos;,3,formatDate(now(),&apos;dd-MM-yyyy HH:mm:ss&apos;),&apos;05:30&apos;,&apos;Bangalore&apos;)</value>
+            <value name="expression">addRecords(clear({.:outbound_material}),&apos;IoT&apos;,3,formatDate(now(),&apos;dd.MM.yyyy HH:mm:ss&apos;),&apos;05:30&apos;,&apos;Bangalore&apos;)</value>
             <value name="onstartup">1</value>
           </record>
           <record>
@@ -1680,7 +1696,7 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">{Floor}==&apos;B01-L01-F01&apos;? addRecords(clear({.:power_consumption}),185,84.39, st(&apos;y&apos;,formatNumber(73+random()*10,&apos;#.##&apos;)) ,st(&apos;x&apos;,formatNumber(ld(&apos;y&apos;)*0.55+random()*3,&apos;#.##&apos;)), ld(&apos;y&apos;)-ld(&apos;x&apos;)):addRecords(clear({.:power_consumption}),485,260.24, st(&apos;y&apos;,formatNumber(238+random()*12,&apos;#.##&apos;)) ,st(&apos;x&apos;,formatNumber(ld(&apos;y&apos;)*0.55+random()*3,&apos;#.##&apos;)), ld(&apos;y&apos;)-ld(&apos;x&apos;)) </value>
+            <value name="expresion">filter({.:power_consumption},&quot;{floor}==&apos;&quot;+{Floor}+&quot;&apos;&quot;)</value>
           </record>
           <record>
             <value name="name">PUE_vs_DCiE</value>
@@ -2114,7 +2130,7 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">aggregate(st(&apos;G&apos;,addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,st(&apos;x&apos;,formatNumber(1.61,&apos;#.##&apos;)),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;x&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;y&apos;,formatNumber(1.59,&apos;#.##&apos;)),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;y&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;z&apos;,formatNumber(1.62,&apos;#.##&apos;)),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;z&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;a&apos;,formatNumber(1.57,&apos;#.##&apos;)),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;a&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;b&apos;,formatNumber(1.55,&apos;#.##&apos;)),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;b&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;c&apos;,formatNumber(1.62,&apos;#.##&apos;)),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;c&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;d&apos;,formatNumber(1.59,&apos;#.##&apos;)),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;d&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;))),&quot;addRecords({env/previous},&apos;Desired&apos;,1,{category})&quot;,ld(&apos;G&apos;)) </value>
+            <value name="expresion">aggregate(st(&apos;G&apos;,addRecords(clear({.:PUE_vs_DCiE}),&apos;PUE&apos;,st(&apos;x&apos;,formatNumber(1.92,&apos;#.##&apos;)),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;x&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;y&apos;,formatNumber(2.11,&apos;#.##&apos;)),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;y&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;z&apos;,formatNumber(2.08,&apos;#.##&apos;)),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;z&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;a&apos;,formatNumber(2.09,&apos;#.##&apos;)),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;a&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;b&apos;,formatNumber(2.13,&apos;#.##&apos;)),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;b&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;c&apos;,formatNumber(2.21,&apos;#.##&apos;)),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;c&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;PUE&apos;,st(&apos;d&apos;,formatNumber(2.15,&apos;#.##&apos;)),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;DCiE&apos;,formatNumber(1/ld(&apos;d&apos;),&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;))),&quot;addRecords({env/previous},&apos;Desired&apos;,1,{category})&quot;,ld(&apos;G&apos;)) </value>
           </record>
           <record>
             <value name="name">Power_Usage_Trends</value>
@@ -2547,7 +2563,7 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">{Floor}==&apos;B01-L01-F01&apos;? addRecords(clear({.:Power_Usage_Trends}),&apos;Consumption&apos;,formatNumber(2159.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2147,&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2146,&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2149,&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2153,&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2142,&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(2123.0,&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;)) : addRecords(clear({.:Power_Usage_Trends}),&apos;Consumption&apos;,formatNumber(5732,&apos;#.##&apos;),formatDate(dateAdd(now(),-7,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5725,&apos;#.##&apos;),formatDate(dateAdd(now(),-6,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5746,&apos;#.##&apos;),formatDate(dateAdd(now(),-5,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5729,&apos;#.##&apos;),formatDate(dateAdd(now(),-4,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5710,&apos;#.##&apos;),formatDate(dateAdd(now(),-3,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5735,&apos;#.##&apos;),formatDate(dateAdd(now(),-2,&apos;day&apos;),&apos;dd-MM-yyyy&apos;),&apos;Consumption&apos;,formatNumber(5723,&apos;#.##&apos;),formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy&apos;))</value>
+            <value name="expresion">removeColumns(filter({.:Power_Usage_Trends},&quot;{floor}==&apos;&quot;+{Floor}+&quot;&apos;&quot;),&apos;floor&apos;)</value>
           </record>
           <record>
             <value name="name">Total_Energy_Saved</value>
@@ -5151,7 +5167,7 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">{Floor}==&apos;B01-L01-F01&apos;?addRecords(clear({.:Alarm_Status}),formatNumber(random()*10,&quot;#&quot;),formatNumber(random()*10,&quot;#&quot;),formatNumber(random()*10,&quot;#&quot;)) : addRecords(clear({.:Alarm_Status}),formatNumber(random()*15,&quot;#&quot;),formatNumber(random()*15,&quot;#&quot;),formatNumber(random()*15,&quot;#&quot;))</value>
+            <value name="expresion">removeColumns(filter({.:Alarm_Status},&quot;{floor}==&apos;&quot;+{Floor}+&quot;&apos;&quot;),&apos;floor&apos;)</value>
           </record>
           <record>
             <value name="name">Temperature</value>
@@ -6450,7 +6466,7 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">{Floor}==&apos;B01-L01-F01&apos;?addRecords(clear({.:inbound_material}),&apos;IoT&apos;,1,formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy HH:mm:ss&apos;),&apos;4 Hours 59 Minutes&apos;,&apos;Bangalore&apos;):addRecords(clear({.:inbound_material}),&apos;IT&apos;,2,formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy HH:mm:ss&apos;),&apos;5 Hours 29 Minutes&apos;,&apos;Bangalore&apos;)
+            <value name="expresion">{Floor}==&apos;B01-L01-F01&apos;?addRecords(clear({.:inbound_material}),&apos;IoT&apos;,1,formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd.MM.yyyy HH:mm:ss&apos;),&apos;4 Hours 59 Minutes&apos;,&apos;Bangalore&apos;):addRecords(clear({.:inbound_material}),&apos;IT&apos;,2,formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd.MM.yyyy HH:mm:ss&apos;),&apos;5 Hours 29 Minutes&apos;,&apos;Bangalore&apos;)
 
 //printPeriod(dateDiff(now()-formatDate(dateAdd(now(),-1,&apos;day&apos;),&apos;dd-MM-yyyy HH:mm:ss&apos;)))
 
@@ -6887,7 +6903,7 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">{Floor}==&apos;B01-L01-F01&apos;?addRecords(clear({.:outbound_material}),&apos;IoT&apos;,3,formatDate(now(),&apos;dd-MM-yyyy HH:mm:ss&apos;),&apos;3 Hours 5 Minutes&apos;,&apos;Bangalore&apos;):addRecords(clear({.:outbound_material}),&apos;IT&apos;,2,formatDate(now(),&apos;dd-MM-yyyy HH:mm:ss&apos;),&apos;4 Hours 59 Minutes&apos;,&apos;Bangalore&apos;)</value>
+            <value name="expresion">{Floor}==&apos;B01-L01-F01&apos;?addRecords(clear({.:outbound_material}),&apos;IoT&apos;,3,formatDate(now(),&apos;dd.MM.yyyy HH:mm:ss&apos;),&apos;3 Hours 5 Minutes&apos;,&apos;Bangalore&apos;):addRecords(clear({.:outbound_material}),&apos;IT&apos;,2,formatDate(now(),&apos;dd.MM.yyyy HH:mm:ss&apos;),&apos;4 Hours 59 Minutes&apos;,&apos;Bangalore&apos;)</value>
           </record>
           <record>
             <value name="name">technician_visited</value>
@@ -8222,14 +8238,9 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">addColumns(addRecords(clear({.:category_wise_consumption_pie}),
-&apos;Server&apos;,st(&apos;svr&apos;,formatNumber(({it_load}*(0.88+random()*.04)),&apos;#.##&apos;)),
-&apos;Cooling System&apos;,st(&apos;cl&apos;,formatNumber(({facility_load}*(0.87+random()*.04)),&apos;#.##&apos;)),
-&apos;Rack&apos;,st(&apos;rk&apos;,formatNumber(({facility_load}*(0.04+random()*.04)),&apos;#.##&apos;)),
-&apos;IT Devices&apos;,formatNumber(({it_load}-ld(&apos;svr&apos;)),&apos;#.##&apos;),
-&apos;Lighting&apos;,formatNumber(({facility_load}-ld(&apos;cl&apos;)-ld(&apos;rk&apos;)),&apos;#.##&apos;)),&apos;&lt;percentage&gt;&lt;S&gt;&apos;,&quot;formatNumber({value}/(&quot;+({facility_load}+{it_load})+&quot;)*100,&apos;#.##&apos;)&quot;)
+            <value name="expresion">removeColumns(filter({.:category_wise_consumption_pie},&apos;{floor}==&quot;&apos;+{Floor}+&apos;&quot;&apos;),&apos;floor&apos;)
 
-</value>
+//removeColumns(filter({.:category_wise_consumption_pie},&apos;{floor}==&quot;B01-F01-L01&quot;&apos;),&apos;floor&apos;)</value>
           </record>
           <record>
             <value name="name">Device_Status</value>
@@ -9998,7 +10009,11 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">{Floor}==&apos;B01-L01-F01&apos;?subtable(addColumns(sort(filter({.:rack_consumption},&apos;{floor}==&quot;B01-L01-F01&quot;&apos;),&apos;f_actual&apos;,false),&apos;&lt;series&gt;&lt;S&gt;&apos;,&quot;&apos;Consumption in Watt&apos;&quot;,&apos;&lt;category&gt;&lt;S&gt;&apos;,&apos;{rack}&apos;,&apos;&lt;value&gt;&lt;S&gt;&apos;,&apos;{f_actual}&apos;),&apos;series&apos;,&apos;category&apos;,&apos;value&apos;)  :subtable(addColumns(sort(filter({.:rack_consumption},&apos;{floor}==&quot;B02-L02-F02&quot;&apos;),&apos;f_actual&apos;,false),&apos;&lt;series&gt;&lt;S&gt;&apos;,&quot;&apos;Consumption in Watt&apos;&quot;,&apos;&lt;category&gt;&lt;S&gt;&apos;,&apos;{rack}&apos;,&apos;&lt;value&gt;&lt;S&gt;&apos;,&apos;{f_actual}&apos;),&apos;series&apos;,&apos;category&apos;,&apos;value&apos;)  </value>
+            <value name="expresion">{Floor}==&apos;B01-L01-F01&apos;?union(subtable(addColumns(filter({.:rack_consumption},&apos;{floor}==&quot;B01-L01-F01&quot;&apos;),&apos;&lt;series&gt;&lt;S&gt;&apos;,&quot;&apos;Actual&apos;&quot;,&apos;&lt;category&gt;&lt;S&gt;&apos;,&apos;{rack}&apos;,&apos;&lt;value&gt;&lt;S&gt;&apos;,&apos;{f_actual}&apos;),&apos;series&apos;,&apos;category&apos;,&apos;value&apos;),subtable(addColumns(filter({.:rack_consumption},&apos;{floor}==&quot;B02-L02-F02&quot;&apos;),&apos;&lt;series&gt;&lt;S&gt;&apos;,&quot;&apos;Design&apos;&quot;,&apos;&lt;category&gt;&lt;S&gt;&apos;,&apos;{rack}&apos;,&apos;&lt;value&gt;&lt;S&gt;&apos;,&apos;{s_design}&apos;),&apos;series&apos;,&apos;category&apos;,&apos;value&apos;))  :union(subtable(addColumns(filter({.:rack_consumption},&apos;{floor}==&quot;B02-L02-F02&quot;&apos;),&apos;&lt;series&gt;&lt;S&gt;&apos;,&quot;&apos;Actual&apos;&quot;,&apos;&lt;category&gt;&lt;S&gt;&apos;,&apos;{rack}&apos;,&apos;&lt;value&gt;&lt;S&gt;&apos;,&apos;{f_actual}&apos;),&apos;series&apos;,&apos;category&apos;,&apos;value&apos;),subtable(addColumns(filter({.:rack_consumption},&apos;{floor}==&quot;B02-L02-F02&quot;&apos;),&apos;&lt;series&gt;&lt;S&gt;&apos;,&quot;&apos;Design&apos;&quot;,&apos;&lt;category&gt;&lt;S&gt;&apos;,&apos;{rack}&apos;,&apos;&lt;value&gt;&lt;S&gt;&apos;,&apos;{s_design}&apos;),&apos;series&apos;,&apos;category&apos;,&apos;value&apos;))</value>
+          </record>
+          <record>
+            <value name="name">Device_Type</value>
+            <value name="expresion">addColumns(callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&apos;call dcim.device_type()&apos;),&apos;&lt;value&gt;&lt;S&gt;&apos;,&apos;{device_type}&apos;,&apos;&lt;label&gt;&lt;S&gt;&apos;,&apos;{device_type}&apos;)</value>
           </record>
         </records>
       </table>
@@ -10589,6 +10604,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>
@@ -11496,6 +11537,24 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                               </table>
                             </value>
                           </record>
+                          <record>
+                            <value name="name">floor</value>
+                            <value name="type">S</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                         </records>
                       </table>
                     </value>
@@ -11912,6 +11971,24 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                         </format>
                         <records>
                           <record>
+                            <value name="name">floor</value>
+                            <value name="type">S</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
                             <value name="name">series</value>
                             <value name="type">S</value>
                             <value name="editorOptions">
@@ -11931,6 +12008,24 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                           </record>
                           <record>
                             <value name="name">value</value>
+                            <value name="type">S</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
+                            <value name="name">percentage</value>
                             <value name="type">S</value>
                             <value name="editorOptions">
                               <table>
@@ -13334,6 +13429,24 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                           <validators contentType="base64">HEseHQ==</validators>
                         </format>
                         <records>
+                          <record>
+                            <value name="name">floor</value>
+                            <value name="type">S</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                           <record>
                             <value name="name">series</value>
                             <value name="type">S</value>
@@ -16998,6 +17111,24 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                           <validators contentType="base64">HEseHQ==</validators>
                         </format>
                         <records>
+                          <record>
+                            <value name="name">floor</value>
+                            <value name="type">S</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                           <record>
                             <value name="name">Closed_Alarms</value>
                             <value name="editorOptions">

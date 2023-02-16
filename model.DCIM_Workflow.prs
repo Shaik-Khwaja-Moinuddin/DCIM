@@ -493,8 +493,10 @@
           <record>
             <value name="bindingId">7807120247947409408</value>
             <value name="target">.:Workflow_list</value>
-            <value name="expression">union(clear({.:Workflow_List}),union(table(&quot;&lt;&lt;workflow_id&gt;&lt;I&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Workflow ID&gt;&gt;&lt;&lt;requestor_name&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Requestor Name&gt;&gt;&lt;&lt;request_type&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Request Type&gt;&gt;&lt;&lt;request_description&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Request Description&gt;&gt;&lt;&lt;location&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Location&gt;&gt;&lt;&lt;cost_center&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Cost Center&gt;&gt;&lt;&lt;approver&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Approver&gt;&gt;&lt;&lt;sla_for_apporver&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=SLA For Apporver&gt;&gt;&lt;&lt;implementor&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Implementor&gt;&gt;&lt;&lt;sla_for_implementation&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=SLA For Implementation&gt;&gt;&lt;&lt;acknowledged_by&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Acknowledged By&gt;&gt;&lt;&lt;device_type&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Device Type&gt;&gt;&lt;&lt;device_id&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Rack ID/Device ID/Server ID&gt;&gt;&lt;&lt;Requested_On&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Requested On&gt;&gt;&lt;&lt;status&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Status&gt;&gt;&quot;),removeColumns(addColumns(adjustRecordLimits(callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call workflow_list()&quot;),0,2147483647),&apos;&lt;Requested_On&gt;&lt;S&gt;&apos;,&apos;formatDate({created_on},&quot;dd-MM-yyyy&quot;)&apos;),&apos;created_on&apos;)))
-//addRecords(clear({.:Workflow_List})adjustRecordLimits(DataTable table, Integer minRecords, Integer maxRecords)</value>
+            <value name="expression">union(clear({.:Workflow_List}),union(table(&quot;&lt;&lt;requestor_name&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Requestor`s Name&gt;&gt;&lt;&lt;request_type&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Request Type&gt;&gt;&lt;&lt;request_description&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Request Description&gt;&gt;&lt;&lt;location&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Location&gt;&gt;&lt;&lt;cost_center&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Cost Center&gt;&gt;&lt;&lt;approver&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Approver&gt;&gt;&lt;&lt;sla_for_apporver&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=SLA for Approver&gt;&gt;&lt;&lt;implementor&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Implementor&gt;&gt;&lt;&lt;sla_for_implementation&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=SLA for Implementation&gt;&gt;&lt;&lt;acknowledged_by&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Acknowledged by&gt;&gt;&lt;&lt;device_type&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Device Type&gt;&gt;&lt;&lt;device_id&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Rack ID/Device ID/Server ID&gt;&gt;&lt;&lt;device_category&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Device Category&gt;&gt;&lt;&lt;created_On&gt;&lt;D&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Requested on&gt;&gt;&lt;&lt;status&gt;&lt;S&gt;&lt;F=N&gt;&lt;A=&lt;NULL&gt;&gt;&lt;D=Status&gt;&gt;&quot;),adjustRecordLimits(callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call workflow_list()&quot;),0,2147483647)))
+
+//addRecords(clear({.:Workflow_List})adjustRecordLimits(DataTable table, Integer minRecords, Integer maxRecords)
+/*removeColumns(addColumns(adjustRecordLimits(callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call workflow_list()&quot;),0,2147483647),&apos;&lt;Requested_On&gt;&lt;D&gt;&apos;,&apos;formatDate({created_on},&quot;dd-MM-yyyy&quot;)&apos;),&apos;created_on&apos;)*/</value>
             <value name="onstartup">1</value>
             <value name="periodically">1</value>
             <value name="period">30000</value>
@@ -1771,6 +1773,24 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                               </table>
                             </value>
                           </record>
+                          <record>
+                            <value name="name">Device_Category</value>
+                            <value name="type">S</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                         </records>
                       </table>
                     </value>
@@ -1778,7 +1798,7 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
-            <value name="expresion">callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call add_workflow(&apos;&quot;+{Requester_Name}+&quot;&apos;,&apos;&quot;+{Request_type}+&quot;&apos;,&apos;&quot;+{Request_Disc}+&quot;&apos;,&apos;&quot;+{Building}+&quot;&apos;,&apos;&quot;+{Lab}+&quot;&apos;,&apos;&quot;+{Floor}+&quot;&apos;,&apos;&quot;+{Cost_Center}+&quot;&apos;,&apos;&quot;+{Approver}+&quot;&apos;,&apos;&quot;+{SLA_For_Approver}+&quot;&apos;,&apos;&quot;+{Implementor}+&quot;&apos;,&apos;&quot;+{SLA_For_Implementor}+&quot;&apos;,&apos;&quot;+{Acknowledge_By}+&quot;&apos;,&apos;&quot;+{Device_Type}+&quot;&apos;,&apos;&quot;+{Rack_Device_Server_Id}+&quot;&apos;,&apos;&quot;+formatDate({Date_Of_Request},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;)&quot;)</value>
+            <value name="expresion">callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call add_workflow(&apos;&quot;+{Requester_Name}+&quot;&apos;,&apos;&quot;+{Request_type}+&quot;&apos;,&apos;&quot;+{Request_Disc}+&quot;&apos;,&apos;&quot;+{Building}+&quot;&apos;,&apos;&quot;+{Lab}+&quot;&apos;,&apos;&quot;+{Floor}+&quot;&apos;,&apos;&quot;+{Cost_Center}+&quot;&apos;,&apos;&quot;+{Approver}+&quot;&apos;,&apos;&quot;+{SLA_For_Approver}+&quot;&apos;,&apos;&quot;+{Implementor}+&quot;&apos;,&apos;&quot;+{SLA_For_Implementor}+&quot;&apos;,&apos;&quot;+{Acknowledge_By}+&quot;&apos;,&apos;&quot;+{Device_Type}+&quot;&apos;,&apos;&quot;+{Rack_Device_Server_Id}+&quot;&apos;,&apos;&quot;+formatDate({Date_Of_Request},&apos;yyyy-MM-dd HH:mm:ss&apos;)+&quot;&apos;,&apos;&quot;+{Device_Category}+&quot;&apos;)&quot;)</value>
           </record>
         </records>
       </table>
@@ -2369,6 +2389,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>

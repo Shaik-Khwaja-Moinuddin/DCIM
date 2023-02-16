@@ -489,6 +489,12 @@
             </binding>
           </bindings>
         </format>
+        <records>
+          <record>
+            <value name="bindingId">752587340610796544</value>
+            <value name="expression">records(filter(table(&apos;&lt;&lt;type&gt;&lt;S&gt;&gt;&lt;&lt;min&gt;&lt;I&gt;&gt;&lt;&lt;max&gt;&lt;I&gt;&gt;&apos;,&apos;Temperature&apos;,20,40,&apos;Fan Speed&apos;,300,1000),&quot;{type}==&apos;&quot;+{form/comboBox28:currentOptions$value}+&quot;&apos;  &amp;&amp; (&quot;+ integer({form/numberField0:value$value})+&quot;&lt;{min} || &quot;+integer({form/numberField0:value$value})+&quot; &gt;{max}) &quot;))&gt;0</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>
@@ -4658,6 +4664,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>

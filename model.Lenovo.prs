@@ -508,7 +508,6 @@ table(&apos;&lt;&lt;Status&gt;&lt;I&gt;&gt;&lt;M=1&gt;&lt;X=1&gt;&apos;,0)
             <value name="bindingId">2476760765848346624</value>
             <value name="expression">callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot; call insert_device_transaction(&apos;&quot;+{.:genericProperties$name}+&quot;&apos;,&apos;&quot;+cell({.:Device_status},&apos;Status&apos;)+&quot;&apos;)&quot;)</value>
             <value name="activator">.:Device_status</value>
-            <value name="periodically">1</value>
             <value name="period">30000</value>
           </record>
         </records>
@@ -1686,6 +1685,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM_Device_Status</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>

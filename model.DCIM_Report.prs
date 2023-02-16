@@ -2458,7 +2458,6 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
               </table>
             </value>
             <value name="expresion">callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;,&quot;call device_eol_report(&apos;&quot;+{tower}+&quot;&apos;)&quot;)
-
 </value>
           </record>
           <record>
@@ -4257,7 +4256,7 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                 </records>
               </table>
             </value>
-            <value name="expresion">{Tower}==&quot;Tower 07&quot;&amp;&amp;{Duration}==&quot;Last 30 days&quot;?(aggregate(table(&apos;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,&apos;B02-L02-F02-R01&apos;,&apos;B02-L02-F02-R02&apos;,&apos;B02-L02-F02-R03&apos;,&apos;B02-L02-F02-R04&apos;,&apos;B02-L02-F02-R05&apos;,&apos;B02-L02-F02-R06&apos;,&apos;B02-L02-F02-R07&apos;,&apos;B02-L02-F02-R08&apos;,&apos;B02-L02-F02-R09&apos;,&apos;B02-L02-F02-R10&apos;,&apos;B02-L02-F02-R11&apos;,&apos;B02-L02-F02-R12&apos;,&apos;B02-L02-F02-R13&apos;,&apos;B02-L02-F02-R14&apos;,&apos;B02-L02-F02-R15&apos;,&apos;B02-L02-F02-R16&apos;,&apos;B02-L02-F02-R17&apos;,&apos;B02-L02-F02-R18&apos;,&apos;B02-L02-F02-R19&apos;,&apos;B02-L02-F02-R20&apos;),&quot;addRecords({env/previous},&apos;Tower 7&apos;,&apos;DC2&apos;,&apos;2nd Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*30),&apos;#.##&apos;)+&apos; KwH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; KwH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; KwH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_30days_tower7}))):{Tower}==&quot;Tower 07&quot;&amp;&amp;{Duration}==&quot;Last 3 months&quot;?(aggregate(table(&apos;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,&apos;B02-L02-F02-R01&apos;,&apos;B02-L02-F02-R02&apos;,&apos;B02-L02-F02-R03&apos;,&apos;B02-L02-F02-R04&apos;,&apos;B02-L02-F02-R05&apos;,&apos;B02-L02-F02-R06&apos;,&apos;B02-L02-F02-R07&apos;,&apos;B02-L02-F02-R08&apos;,&apos;B02-L02-F02-R09&apos;,&apos;B02-L02-F02-R10&apos;,&apos;B02-L02-F02-R11&apos;,&apos;B02-L02-F02-R12&apos;,&apos;B02-L02-F02-R13&apos;,&apos;B02-L02-F02-R14&apos;,&apos;B02-L02-F02-R15&apos;,&apos;B02-L02-F02-R16&apos;,&apos;B02-L02-F02-R17&apos;,&apos;B02-L02-F02-R18&apos;,&apos;B02-L02-F02-R19&apos;,&apos;B02-L02-F02-R20&apos;),&quot;addRecords({env/previous},&apos;Tower 7&apos;,&apos;DC2&apos;,&apos;2nd Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*90),&apos;#.##&apos;)+&apos; KwH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; KwH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; KwH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_3months_tower7}))):{Tower}==&quot;Tower 07&quot;&amp;&amp;{Duration}==&quot;1 year&quot;?(aggregate(table(&apos;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,&apos;B02-L02-F02-R01&apos;,&apos;B02-L02-F02-R02&apos;,&apos;B02-L02-F02-R03&apos;,&apos;B02-L02-F02-R04&apos;,&apos;B02-L02-F02-R05&apos;,&apos;B02-L02-F02-R06&apos;,&apos;B02-L02-F02-R07&apos;,&apos;B02-L02-F02-R08&apos;,&apos;B02-L02-F02-R09&apos;,&apos;B02-L02-F02-R10&apos;,&apos;B02-L02-F02-R11&apos;,&apos;B02-L02-F02-R12&apos;,&apos;B02-L02-F02-R13&apos;,&apos;B02-L02-F02-R14&apos;,&apos;B02-L02-F02-R15&apos;,&apos;B02-L02-F02-R16&apos;,&apos;B02-L02-F02-R17&apos;,&apos;B02-L02-F02-R18&apos;,&apos;B02-L02-F02-R19&apos;,&apos;B02-L02-F02-R20&apos;),&quot;addRecords({env/previous},&apos;Tower 7&apos;,&apos;DC2&apos;,&apos;2nd Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*365),&apos;#.##&apos;)+&apos; KwH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; KwH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; KwH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_1yr_tower7}))):{Tower}==&quot;Tower 10&quot;&amp;&amp;{Duration}==&quot;Last 30 days&quot;?(aggregate(table(&apos;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,&apos;B02-L02-F02-R01&apos;,&apos;B02-L02-F02-R02&apos;,&apos;B02-L02-F02-R03&apos;,&apos;B02-L02-F02-R04&apos;,&apos;B02-L02-F02-R05&apos;,&apos;B02-L02-F02-R06&apos;,&apos;B02-L02-F02-R07&apos;),&quot;addRecords({env/previous},&apos;Tower 10&apos;,&apos;DC1&apos;,&apos;Ground Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*30),&apos;#.##&apos;)+&apos; KwH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; KwH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; KwH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_30days_tower10}))):{Tower}==&quot;Tower 10&quot;&amp;&amp;{Duration}==&quot;Last 3 months&quot;?(aggregate(table(&apos;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,&apos;B02-L02-F02-R01&apos;,&apos;B02-L02-F02-R02&apos;,&apos;B02-L02-F02-R03&apos;,&apos;B02-L02-F02-R04&apos;,&apos;B02-L02-F02-R05&apos;,&apos;B02-L02-F02-R06&apos;,&apos;B02-L02-F02-R07&apos;),&quot;addRecords({env/previous},&apos;Tower 10&apos;,&apos;DC1&apos;,&apos;Ground Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*90),&apos;#.##&apos;)+&apos; KwH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; KwH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; KwH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_3months_tower10}))):{Tower}==&quot;Tower 10&quot;&amp;&amp;{Duration}==&quot;1 year&quot;?(aggregate(table(&apos;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,&apos;B02-L02-F02-R01&apos;,&apos;B02-L02-F02-R02&apos;,&apos;B02-L02-F02-R03&apos;,&apos;B02-L02-F02-R04&apos;,&apos;B02-L02-F02-R05&apos;,&apos;B02-L02-F02-R06&apos;,&apos;B02-L02-F02-R07&apos;),&quot;addRecords({env/previous},&apos;Tower 10&apos;,&apos;DC1&apos;,&apos;Ground Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*365),&apos;#.##&apos;)+&apos; KwH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; KwH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; KwH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_1yr_tower10}))):null</value>
+            <value name="expresion">{Tower}==&quot;Tower 07&quot;&amp;&amp;{Duration}==&quot;Last 30 days&quot;?(aggregate(table(&apos;&lt;&lt;serialno&gt;&lt;S&gt;&gt;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,1,&apos;B02-L02-F02-R01&apos;,2,&apos;B02-L02-F02-R02&apos;,3,&apos;B02-L02-F02-R03&apos;,4,&apos;B02-L02-F02-R04&apos;,5,&apos;B02-L02-F02-R05&apos;,6,&apos;B02-L02-F02-R06&apos;,7,&apos;B02-L02-F02-R07&apos;,8,&apos;B02-L02-F02-R08&apos;,9,&apos;B02-L02-F02-R09&apos;,10,&apos;B02-L02-F02-R10&apos;,11,&apos;B02-L02-F02-R11&apos;,12,&apos;B02-L02-F02-R12&apos;,13,&apos;B02-L02-F02-R13&apos;,14,&apos;B02-L02-F02-R14&apos;,15,&apos;B02-L02-F02-R15&apos;,16,&apos;B02-L02-F02-R16&apos;,17,&apos;B02-L02-F02-R17&apos;,18,&apos;B02-L02-F02-R18&apos;,19,&apos;B02-L02-F02-R19&apos;,20,&apos;B02-L02-F02-R20&apos;),&quot;addRecords({env/previous},{serialno},&apos;Tower 7&apos;,&apos;DC2&apos;,&apos;2nd Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*30),&apos;#.##&apos;)+&apos; kWH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; kWH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; kWH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_30days_tower7}))):{Tower}==&quot;Tower 07&quot;&amp;&amp;{Duration}==&quot;Last 3 months&quot;?(aggregate(table(&apos;&lt;&lt;serialno&gt;&lt;S&gt;&gt;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,1,&apos;B02-L02-F02-R01&apos;,2,&apos;B02-L02-F02-R02&apos;,3,&apos;B02-L02-F02-R03&apos;,4,&apos;B02-L02-F02-R04&apos;,5,&apos;B02-L02-F02-R05&apos;,6,&apos;B02-L02-F02-R06&apos;,7,&apos;B02-L02-F02-R07&apos;,8,&apos;B02-L02-F02-R08&apos;,9,&apos;B02-L02-F02-R09&apos;,10,&apos;B02-L02-F02-R10&apos;,11,&apos;B02-L02-F02-R11&apos;,12,&apos;B02-L02-F02-R12&apos;,13,&apos;B02-L02-F02-R13&apos;,14,&apos;B02-L02-F02-R14&apos;,15,&apos;B02-L02-F02-R15&apos;,16,&apos;B02-L02-F02-R16&apos;,17,&apos;B02-L02-F02-R17&apos;,18,&apos;B02-L02-F02-R18&apos;,19,&apos;B02-L02-F02-R19&apos;,20,&apos;B02-L02-F02-R20&apos;),&quot;addRecords({env/previous},{serialno},&apos;Tower 7&apos;,&apos;DC2&apos;,&apos;2nd Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*90),&apos;#.##&apos;)+&apos; kWH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; kWH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; kWH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_3months_tower7}))):{Tower}==&quot;Tower 07&quot;&amp;&amp;{Duration}==&quot;1 year&quot;?(aggregate(table(&apos;&lt;&lt;serialno&gt;&lt;S&gt;&gt;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,1,&apos;B02-L02-F02-R01&apos;,2,&apos;B02-L02-F02-R02&apos;,3,&apos;B02-L02-F02-R03&apos;,4,&apos;B02-L02-F02-R04&apos;,5,&apos;B02-L02-F02-R05&apos;,6,&apos;B02-L02-F02-R06&apos;,7,&apos;B02-L02-F02-R07&apos;,8,&apos;B02-L02-F02-R08&apos;,9,&apos;B02-L02-F02-R09&apos;,10,&apos;B02-L02-F02-R10&apos;,11,&apos;B02-L02-F02-R11&apos;,12,&apos;B02-L02-F02-R12&apos;,13,&apos;B02-L02-F02-R13&apos;,14,&apos;B02-L02-F02-R14&apos;,15,&apos;B02-L02-F02-R15&apos;,16,&apos;B02-L02-F02-R16&apos;,17,&apos;B02-L02-F02-R17&apos;,18,&apos;B02-L02-F02-R18&apos;,19,&apos;B02-L02-F02-R19&apos;,20,&apos;B02-L02-F02-R20&apos;),&quot;addRecords({env/previous},{serialno},&apos;Tower 7&apos;,&apos;DC2&apos;,&apos;2nd Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*365),&apos;#.##&apos;)+&apos; kWH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; kWH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; kWH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_1yr_tower7}))):{Tower}==&quot;Tower 10&quot;&amp;&amp;{Duration}==&quot;Last 30 days&quot;?(aggregate(table(&apos;&lt;&lt;serialno&gt;&lt;S&gt;&gt;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,1,&apos;B02-L02-F02-R01&apos;,2,&apos;B02-L02-F02-R02&apos;,3,&apos;B02-L02-F02-R03&apos;,4,&apos;B02-L02-F02-R04&apos;,5,&apos;B02-L02-F02-R05&apos;,6,&apos;B02-L02-F02-R06&apos;,7,&apos;B02-L02-F02-R07&apos;),&quot;addRecords({env/previous},{serialno},&apos;Tower 10&apos;,&apos;DC1&apos;,&apos;Ground Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*30),&apos;#.##&apos;)+&apos; kWH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; kWH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; kWH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_30days_tower10}))):{Tower}==&quot;Tower 10&quot;&amp;&amp;{Duration}==&quot;Last 3 months&quot;?(aggregate(table(&apos;&lt;&lt;serialno&gt;&lt;S&gt;&gt;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,1,&apos;B02-L02-F02-R01&apos;,2,&apos;B02-L02-F02-R02&apos;,3,&apos;B02-L02-F02-R03&apos;,4,&apos;B02-L02-F02-R04&apos;,5,&apos;B02-L02-F02-R05&apos;,6,&apos;B02-L02-F02-R06&apos;,7,&apos;B02-L02-F02-R07&apos;),&quot;addRecords({env/previous},{serialno},&apos;Tower 10&apos;,&apos;DC1&apos;,&apos;Ground Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*90),&apos;#.##&apos;)+&apos; kWH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; kWH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; kWH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_3months_tower10}))):{Tower}==&quot;Tower 10&quot;&amp;&amp;{Duration}==&quot;1 year&quot;?(aggregate(table(&apos;&lt;&lt;serialno&gt;&lt;S&gt;&gt;&lt;&lt;rack&gt;&lt;S&gt;&gt;&apos;,1,&apos;B02-L02-F02-R01&apos;,2,&apos;B02-L02-F02-R02&apos;,3,&apos;B02-L02-F02-R03&apos;,4,&apos;B02-L02-F02-R04&apos;,5,&apos;B02-L02-F02-R05&apos;,6,&apos;B02-L02-F02-R06&apos;,7,&apos;B02-L02-F02-R07&apos;),&quot;addRecords({env/previous},{serialno},&apos;Tower 10&apos;,&apos;DC1&apos;,&apos;Ground Floor&apos;,{rack},formatNumber(st(&apos;x&apos;,((1.9+random()*0.6))*24*365),&apos;#.##&apos;)+&apos; kWH&apos;,st(&apos;y&apos;,formatNumber(ld(&apos;x&apos;)*(90+random()*5)/100,&apos;#.##&apos;))+&apos; kWH&apos;,formatNumber(st(&apos;z&apos;,(ld(&apos;x&apos;)-ld(&apos;y&apos;))),&apos;#.##&apos;)+&apos; kWH&apos;,formatNumber((ld(&apos;z&apos;)*0.709),&apos;#.##&apos;)+&apos; Kg&apos;,formatNumber((ld(&apos;z&apos;)*0.2),&apos;#.##&apos;)+&apos; ltr&apos;,formatNumber((ld(&apos;z&apos;)*0.0008),&apos;#.##&apos;))&quot;,clear({.:sustainability_1yr_tower10}))):null</value>
           </record>
         </records>
       </table>
@@ -4848,6 +4847,32 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>
@@ -5667,6 +5692,24 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                         </format>
                         <records>
                           <record>
+                            <value name="name">sl_no</value>
+                            <value name="description">Serial No.</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
                             <value name="name">Request_Number</value>
                             <value name="editorOptions">
                               <table>
@@ -6332,6 +6375,24 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                           <validators contentType="base64">HEseHQ==</validators>
                         </format>
                         <records>
+                          <record>
+                            <value name="name">sl_no</value>
+                            <value name="description">Serial No.</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                           <record>
                             <value name="name">Request_Number</value>
                             <value name="editorOptions">
@@ -6999,6 +7060,24 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                         </format>
                         <records>
                           <record>
+                            <value name="name">sl_no</value>
+                            <value name="description">Serial No.</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
                             <value name="name">Request</value>
                             <value name="editorOptions">
                               <table>
@@ -7234,6 +7313,7 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                           <record>
                             <value name="name">Handedover_To</value>
                             <value name="type">S</value>
+                            <value name="description">Handed Over To</value>
                             <value name="editorOptions">
                               <table>
                                 <format maxRecords="1" minRecords="1">
@@ -7720,6 +7800,24 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                         </format>
                         <records>
                           <record>
+                            <value name="name">sl_no</value>
+                            <value name="description">Serial No.</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
                             <value name="name">Request</value>
                             <value name="editorOptions">
                               <table>
@@ -7955,6 +8053,7 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                           <record>
                             <value name="name">Handedover_To</value>
                             <value name="type">S</value>
+                            <value name="description">Handed Over To</value>
                             <value name="editorOptions">
                               <table>
                                 <format maxRecords="1" minRecords="1">
@@ -8439,6 +8538,23 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                           <validators contentType="base64">HEseHQ==</validators>
                         </format>
                         <records>
+                          <record>
+                            <value name="name">serialno</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                           <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>
@@ -9035,6 +9151,23 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                         </format>
                         <records>
                           <record>
+                            <value name="name">serialno</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>
                             <value name="editorOptions">
@@ -9629,6 +9762,23 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                           <validators contentType="base64">HEseHQ==</validators>
                         </format>
                         <records>
+                          <record>
+                            <value name="name">serialno</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                           <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>
@@ -10225,6 +10375,23 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                         </format>
                         <records>
                           <record>
+                            <value name="name">serialno</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>
                             <value name="editorOptions">
@@ -10819,6 +10986,23 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                           <validators contentType="base64">HEseHQ==</validators>
                         </format>
                         <records>
+                          <record>
+                            <value name="name">serialno</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                           <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>
@@ -11415,6 +11599,23 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                         </format>
                         <records>
                           <record>
+                            <value name="name">serialno</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>
                             <value name="editorOptions">
@@ -12010,6 +12211,24 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                         </format>
                         <records>
                           <record>
+                            <value name="name">Serial_No</value>
+                            <value name="description"/>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>
                             <value name="editorOptions">
@@ -12551,6 +12770,24 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                         </format>
                         <records>
                           <record>
+                            <value name="name">Serial_No</value>
+                            <value name="description">Serial No.</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
+                          <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>
                             <value name="editorOptions">
@@ -13091,6 +13328,24 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                           <validators contentType="base64">HEseHQ==</validators>
                         </format>
                         <records>
+                          <record>
+                            <value name="name">sl_no</value>
+                            <value name="description">Serial No.</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                           <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>
@@ -13650,6 +13905,24 @@ callFunction({users.Aniketkumar.devices.DCIM_Database:},&apos;executeQuery&apos;
                           <validators contentType="base64">HEseHQ==</validators>
                         </format>
                         <records>
+                          <record>
+                            <value name="name">sl_no</value>
+                            <value name="description">Serial No.</value>
+                            <value name="editorOptions">
+                              <table>
+                                <format maxRecords="1" minRecords="1">
+                                  <fields>
+                                    <field description="Editor Options" name="options" type="S">
+                                      <defaultValue/>
+                                    </field>
+                                  </fields>
+                                </format>
+                                <records>
+                                  <record/>
+                                </records>
+                              </table>
+                            </value>
+                          </record>
                           <record>
                             <value name="name">Building</value>
                             <value name="type">S</value>

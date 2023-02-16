@@ -1650,6 +1650,11 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
                 </records>
               </table>
             </value>
+            <value name="expresion">//{users:create(&quot;Dinesh_1&quot;,&quot;Dinesh&quot;,&quot;P&quot;,&quot;123456789&quot;,&apos;dateAdd(now(),100,&quot;year&quot;)&apos;,false, false,true, 0,null,null,null,null,null,null,null,null,&quot;dinesh@w.com&quot;,null,null,null,&quot;en&quot;,&quot;dd.MM.yyyy&quot;,&quot;HH:mm:ss&quot;,1)}
+
+{users:create({name},{firstname},{lastname},{password},&apos;dateAdd(now(),100,&quot;year&quot;)&apos;,false, false,true, 0,null,null,null,null,null,null,null,null,{email},null,null,null,&quot;en&quot;,&quot;dd.MM.yyyy&quot;,&quot;HH:mm:ss&quot;,1)}
+
+</value>
           </record>
           <record>
             <value name="name">Inser_user</value>
@@ -2819,6 +2824,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>

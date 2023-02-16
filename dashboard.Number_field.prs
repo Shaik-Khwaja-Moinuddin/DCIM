@@ -1,0 +1,1102 @@
+<properties>
+  <properties class="linked-hash-map">
+    <entry>
+      <string>childInfo</string>
+      <table>
+        <format maxRecords="1" minRecords="1">
+          <fields>
+            <field description="Name" name="name" notReplicated="true" type="S">
+              <validators contentType="base64">HEweMSA1MB0cUh5cdyteXk5hbWUgbWF5IGNvbnRhaW4gb25seSBMYXRpbiBsZXR0ZXJzLCBkaWdpdHMsIGFuZCB1bmRlcnNjb3Jlcx0=</validators>
+              <help>Name of the object and corresponding system context, required to refer to this object from other parts of the system. It should satisfy the context naming conventions. WARNING: changing name will corrupt all references to the object.</help>
+              <defaultValue/>
+            </field>
+            <field description="Description" name="description" notReplicated="true" type="S">
+              <validators contentType="base64">HEweMCAxMDAdHFIeW15ccHtDbnRybH1dKl5eRGVzY3JpcHRpb24gbWF5IGNvbnRhaW4gb25seSBwcmludGFibGUgY2hhcmFjdGVycx0=</validators>
+              <help>This field defines a dashboard textual description. This is also a description of the Dashboard context.</help>
+              <defaultValue/>
+            </field>
+            <field description="Title Expression" editor="expression" name="title" type="S">
+              <help>This field defines a dashboard title appearing on the top of the dashboard window. If the title is not specified, its description is used instead. The title can be a plain string or an expression. If it&apos;s an expression, it returns a string to allow the relative dashboard titles displaying values from the contexts whose data is shown on the dashboard.</help>
+              <group>Window Properties</group>
+              <defaultValue/>
+            </field>
+            <field description="Layout" name="layout" readonly="true" type="I">
+              <help>The field allows to specify the dashboard layout: dockable or scrollable.</help>
+              <group>Window Properties</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Column Count" name="columns" type="I">
+              <help>The field defines a number of columns. The option is relevant to scrollable dashboards only.</help>
+              <group>Window Properties</group>
+              <defaultValue>3</defaultValue>
+            </field>
+            <field description="Destination" name="destination" type="I">
+              <selectionValues>
+                <option description="Web">0</option>
+                <option description="Desktop">1</option>
+              </selectionValues>
+              <help>The field defines the dashboard destination: Web or Desktop.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Type" name="type" type="I">
+              <selectionValues>
+                <option description="Relative">0</option>
+                <option description="Absolute">1</option>
+                <option description="Class Instance">2</option>
+              </selectionValues>
+              <help>The field defines the dashboard type: Absolute or Relative.</help>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Validity Expression" editor="expression" name="validityExpression" type="S">
+              <editorOptions contentType="base64">HEYeHBxjb250ZXh0HRxTHRxGHk4dHEEeGh0cRB5EZWZhdWx0IENvbnRleHQdHRwcdGFibGUdHFQdHEYeTh0cQR4aHRxEHkRlZmF1bHQgVGFibGUdHRwccmVmZXJlbmNlcx0cVB0cRh5OHRxBHhxGHhwccmVmZXJlbmNlHRxTHRxBHh0cRB5SZWZlcmVuY2UdHRwcZGVzY3JpcHRpb24dHFMdHEEeHRxEHkRlc2NyaXB0aW9uHR0dHRxEHlJlZmVyZW5jZXMdHRwcZXhwZWN0ZWRSZXN1bHQdHFMdHEYeTh0cQR4aHRxEHkV4cGVjdGVkIFJlc3VsdB0dHBxjb250ZXh0RGVzY3JpcHRpb24dHFMdHEYeTh0cQR4aHRxEHkRlZmF1bHQgQ29udGV4dCBEZXNjcmlwdGlvbh0dHBx0YWJsZURlc2NyaXB0aW9uHRxTHRxGHk4dHEEeGh0cRB5EZWZhdWx0IFRhYmxlIERlc2NyaXB0aW9uHR0cTR4xHRxYHjEdHRxSHhwaHRwaHRwcUh4cLjojdHlwZR0cQ29udGV4dCBUeXBlHR0cUh4cLjodHENvbnRleHQgUGF0aB0dHRwaHRwaHRwaHR0=</editorOptions>
+              <help>The field includes the expression defining context(s) to which the dashboard can be attached.</help>
+              <group>Validity</group>
+              <defaultValue/>
+            </field>
+            <field description="Validity Update Rules" name="validityListeners" type="T">
+              <help>This field defines a list of context masks and event names. If the event specified in the Event field occurs in any of contexts matching the mask specified by the Mask field in the same record, the Validity Expression will be recalculated for this context. This allows to make the dashboard valid/invalid for a certain context if some changes occur in it.</help>
+              <group>Validity</group>
+              <defaultValue>
+                <table>
+                  <format maxRecords="2147483647">
+                    <fields>
+                      <field description="Context Mask" editor="contextmask" icon="fi_context" keyfield="true" name="mask" type="S">
+                        <help>Mask of contexts to monitor events in&#xd;
+</help>
+                        <defaultValue/>
+                      </field>
+                      <field description="Event" extendableSelectionValues="true" icon="fi_event" keyfield="true" name="event" type="S">
+                        <help>Name of Event to listen for</help>
+                        <defaultValue/>
+                      </field>
+                      <field description="Target Expression" editor="expression" icon="fi_expression" name="expression" nullable="true" type="S">
+                        <help>If specified, points to a context those validity should be checked. If Target Expression is not specified (what is suitable in most cases), the system checks validity of context in that Event has occurred.</help>
+                        <defaultValue>
+                          <nullValue/>
+                        </defaultValue>
+                      </field>
+                    </fields>
+                    <bindings>
+                      <binding>
+                        <reference>event#choices</reference>
+                        <expression>{utilities:eventsByMask(&apos;{mask}&apos;)}</expression>
+                      </binding>
+                    </bindings>
+                    <validators contentType="base64">HEseHQ==</validators>
+                  </format>
+                </table>
+              </defaultValue>
+            </field>
+            <field description="Allow Validity For Remote Contexts" name="allowValidityForRemoteContexts" type="B">
+              <help>If enabled then this context will be allowed to attach to remote contexts, connected via distributed architecture</help>
+              <group>Validity</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Default Context" editor="context" name="defaultContext" nullable="true" type="S">
+              <group>Validity</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Closable" name="closable" type="B">
+              <help>This flag defines whether the dashboard can be closed. Non-closable dashboards often play a role of main dashboards in operator UIs.</help>
+              <group>Advanced Properties</group>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Close Dashboard On Reopen" name="closeDashboardOnReopen" type="B">
+              <group>Advanced Properties</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Launch via Manage Action" name="launchViaManage" type="B">
+              <help>This flag defines whether the dashboard will open by the context action, e.g. Manage Device action.</help>
+              <group>Advanced Properties</group>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Layout Control Panel" name="layoutControlPanel" type="B">
+              <help>This flag defines the visibility of the bottom panel (Save/Load layout and other buttons).</help>
+              <group>Advanced Properties</group>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Template Processing Expression" editor="expression" name="templateProcessingExpression" nullable="true" type="S">
+              <help>If specified, it processes the template during dashboard opening and return the modified template</help>
+              <group>Advanced Properties</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Storage Context" editor="context" name="storageContext" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Table" name="storageClass" type="S">
+              <defaultValue/>
+            </field>
+            <field hidden="true" name="resourceBundle" nullable="true" readonly="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field advanced="true" description="Enable Caching" name="cacheEnabled" type="B">
+              <defaultValue>1</defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>layout#choices</reference>
+              <expression>{utilities:layoutsByDestination(&apos;{destination}&apos;)}</expression>
+            </binding>
+            <binding>
+              <reference>columns#hidden</reference>
+              <expression>{layout} != 1</expression>
+            </binding>
+            <binding>
+              <reference>validityExpression#hidden</reference>
+              <expression>{type} != 0</expression>
+            </binding>
+            <binding>
+              <reference>validityListeners#hidden</reference>
+              <expression>{type} != 0</expression>
+            </binding>
+            <binding>
+              <reference>allowValidityForRemoteContexts#hidden</reference>
+              <expression>{type} != 0</expression>
+            </binding>
+            <binding>
+              <reference>defaultContext#hidden</reference>
+              <expression>{type} != 0</expression>
+            </binding>
+            <binding>
+              <reference>storageContext#hidden</reference>
+              <expression>{type} != 2</expression>
+            </binding>
+            <binding>
+              <reference>storageClass#hidden</reference>
+              <expression>{type} != 2</expression>
+            </binding>
+            <binding>
+              <reference>storageClass#enabled</reference>
+              <expression>{storageContext} != null &amp;&amp; length({storageContext}) &gt; 0 &amp;&amp; functionAvailable({storageContext}, &apos;storageTables&apos;)</expression>
+            </binding>
+            <binding>
+              <reference>storageClass#choices</reference>
+              <expression>({storageContext} != null &amp;&amp; length({storageContext}) &gt; 0) ? callFunction(&quot;utilities&quot;, &quot;selectionValues&quot;, &quot;callFunction(&apos;&quot; + {storageContext} + &quot;&apos;, &apos;storageTables&apos;)&quot;,  &quot;{value}&quot;,  &quot;{description}&quot;) : null</expression>
+            </binding>
+            <binding>
+              <reference>title#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>closable#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>closeDashboardOnReopen#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>launchViaManage#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>layoutControlPanel#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>templateProcessingExpression#hidden</reference>
+              <expression>{layout} != 2</expression>
+            </binding>
+            <binding>
+              <reference>templateProcessingExpression#options</reference>
+              <expression>variableAvailable({.:}, &apos;elements&apos;) ? cell(callFunction({.:}, &apos;expressionEditorOptions&apos;,{.:}, {.:elements})) : &apos;&apos;</expression>
+            </binding>
+            <binding>
+              <reference>cacheEnabled#hidden</reference>
+              <expression>{layout} != 2</expression>
+            </binding>
+          </bindings>
+        </format>
+        <records>
+          <record>
+            <value name="name">Number_field</value>
+            <value name="description">Number_field</value>
+            <value name="layout">2</value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>elements</string>
+      <table>
+        <format maxRecords="2147483647" reorderable="true">
+          <fields>
+            <field description="Name" keyfield="true" name="name" type="S">
+              <help>Name of the object and corresponding system context, required to refer to this object from other parts of the system. It should satisfy the context naming conventions. WARNING: changing name will corrupt all references to the object.</help>
+              <defaultValue/>
+            </field>
+            <field description="Type" name="type" type="S">
+              <selectionValues>
+                <option description="Text Field">textField</option>
+                <option description="Text Area">textArea</option>
+                <option description="Dropdown Menu">dropDownButton</option>
+                <option description="HTML Snippet">htmlSnippet</option>
+                <option description="Label">label</option>
+                <option description="Button">button</option>
+                <option description="Map">map</option>
+                <option description="Image">image</option>
+                <option description="Root">root</option>
+                <option description="Panel">panel</option>
+                <option description="Tabbed Panel">tabbedPanel</option>
+                <option description="Combo Box">comboBox</option>
+                <option description="Check Box">checkBox</option>
+                <option description="Check Box Group">checkBoxGroup</option>
+                <option description="Toggle Button">toggleButton</option>
+                <option description="Radio Button Group">radioButton</option>
+                <option description="Date Time Picker">dateTimePicker</option>
+                <option description="Bar Chart">barChart</option>
+                <option description="Line Chart">lineChart</option>
+                <option description="Pie Chart">pieChart</option>
+                <option description="Custom Tree">customTree</option>
+                <option description="System Tree">systemTree</option>
+                <option description="Progress Bar">progressBar</option>
+                <option description="Tab">tab</option>
+                <option description="Data Table Editor">dataTableEditor</option>
+                <option description="Button Group">buttonGroup</option>
+                <option description="Steps Component">steps</option>
+                <option description="Steps Content">stepsContent</option>
+                <option description="Timer">timer</option>
+                <option description="Breadcrumb">breadcrumb</option>
+                <option description="Tree Select">treeSelect</option>
+                <option description="Number Field">numberField</option>
+                <option description="Time Picker">timePicker</option>
+                <option description="Widget">widget</option>
+                <option description="Uploader">uploader</option>
+                <option description="Menu">menu</option>
+                <option description="Class Data Table Editor">classDataTableEditor</option>
+                <option description="Subdashboard">subdashboard</option>
+                <option description="Event Log">eventLog</option>
+              </selectionValues>
+              <help>This field defines the element type.</help>
+              <defaultValue>textField</defaultValue>
+            </field>
+            <field description="Parameters" name="parameters" type="T">
+              <help>This field defines the element settings. The settings define which data to show and how to present it. The list of settings depends on the element type.</help>
+              <defaultValue>
+                <table>
+                  <format maxRecords="2147483647"/>
+                </table>
+              </defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>parameters</reference>
+              <expression>{.:elementParameters(&apos;{type}&apos;, &apos;{parameters}&apos;)}</expression>
+            </binding>
+          </bindings>
+          <validators contentType="base64">HEseHQ==</validators>
+        </format>
+        <records>
+          <record>
+            <value name="type">root</value>
+            <value name="parameters">
+              <table>
+                <format maxRecords="1" minRecords="1">
+                  <fields>
+                    <field description="Layout Width" name="layoutWidth" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Layout Height" name="layoutHeight" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Row Height" name="rowHeight" type="I">
+                      <defaultValue>20</defaultValue>
+                    </field>
+                    <field description="Gap" name="gap" type="S">
+                      <defaultValue>10px</defaultValue>
+                    </field>
+                    <field description="Max columns" hidden="true" name="maxColumns" type="I">
+                      <defaultValue>12</defaultValue>
+                    </field>
+                    <field description="Max Rows" hidden="true" name="maxRows" type="I">
+                      <defaultValue>2</defaultValue>
+                    </field>
+                    <field description="Custom Classes" name="customClasses" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Element CSS Style" editor="code" name="style" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="visibleChildren" name="visibleChildren" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="childContexts" name="childContexts" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Editable" name="editable" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Resizable" hidden="true" name="resizable" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Movable" hidden="true" name="movable" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Show Grid Background" name="showGridBackground" type="S">
+                      <selectionValues>
+                        <option description="None">none</option>
+                        <option description="Rows">rows</option>
+                        <option description="Columns">columns</option>
+                        <option description="Rows And Columns">rowsAndColumns</option>
+                      </selectionValues>
+                      <defaultValue>rowsAndColumns</defaultValue>
+                    </field>
+                    <field description="Grid Type" name="gridType" type="S">
+                      <selectionValues>
+                        <option description="Scrollable">scrollable</option>
+                        <option description="Dockable">dockable</option>
+                      </selectionValues>
+                      <defaultValue>scrollable</defaultValue>
+                    </field>
+                    <field description="Layout" name="layout" type="S">
+                      <selectionValues>
+                        <option description="Grid">grid</option>
+                        <option description="Absolute">absolute</option>
+                      </selectionValues>
+                      <defaultValue>grid</defaultValue>
+                    </field>
+                    <field description="Grid Step" name="gridStep" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Snap to grid" name="snapToGrid" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Grid Column Properties" name="gridCols" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Grid Row Properties" name="gridRows" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Name" name="name" nullable="true" type="S">
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Bindings" name="bindings" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Breakpoints" name="breakpoints" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Current Breakpoint" name="currentBreakpoint" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Default Screen Resolution" name="defaultBreakpoint" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Custom Properties" name="customProperties" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Startup Bindings Concurrency" name="startupBindingsConcurrency" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Normal Concurrent Bindings" extendableSelectionValues="true" name="normalConcurrentBindings" type="I">
+                      <selectionValues>
+                        <option description="Disabled">0</option>
+                      </selectionValues>
+                      <defaultValue>5</defaultValue>
+                    </field>
+                    <field description="Maximum Concurrent Bindings" extendableSelectionValues="true" name="maximumConcurrentBindings" type="I">
+                      <selectionValues>
+                        <option description="Disabled">0</option>
+                      </selectionValues>
+                      <defaultValue>100</defaultValue>
+                    </field>
+                    <field description="Maximum Unprocessed Binding Queue Length" name="maximumBindingQueueLength" type="I">
+                      <defaultValue>1000</defaultValue>
+                    </field>
+                    <field description="state" name="state" type="S">
+                      <selectionValues>
+                        <option description="CREATED">CREATED</option>
+                        <option description="STARTING">STARTING</option>
+                        <option description="RUNNING">RUNNING</option>
+                        <option description="PAUSED">PAUSED</option>
+                        <option description="STOPPED">STOPPED</option>
+                      </selectionValues>
+                      <defaultValue>CREATED</defaultValue>
+                    </field>
+                  </fields>
+                </format>
+                <records>
+                  <record>
+                    <value name="layoutWidth">800</value>
+                    <value name="layoutHeight">800</value>
+                    <value name="style"/>
+                    <value name="visibleChildren">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field name="path" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="path">numberField0</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="childContexts">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="childContexts" name="childContexts" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="childContexts">numberField0</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="gridType">dockable</value>
+                    <value name="gridStep">25</value>
+                    <value name="gridCols">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Template" name="template" type="S">
+                              <defaultValue>1</defaultValue>
+                            </field>
+                            <field description="Unit" name="unit" type="S">
+                              <defaultValue>fr</defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record/>
+                          <record/>
+                          <record/>
+                          <record/>
+                          <record/>
+                          <record/>
+                          <record/>
+                          <record/>
+                          <record/>
+                          <record/>
+                          <record/>
+                          <record/>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="gridRows">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Template" name="template" type="S">
+                              <defaultValue>1</defaultValue>
+                            </field>
+                            <field description="Unit" name="unit" type="S">
+                              <defaultValue>fr</defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record/>
+                          <record/>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="name"/>
+                    <value name="bindings">
+                      <table>
+                        <format maxRecords="2147483647" reorderable="true">
+                          <fields>
+                            <field hidden="true" keyfield="true" name="bindingId" notReplicated="true" nullable="true" type="L">
+                              <validators contentType="base64">HEweMCA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                            <field description="Target" editor="target" name="target" type="S">
+                              <help>A reference that points to where the evaluation result of a binding Expression will be applied/stored.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Expression" editor="expression" name="expression" type="S">
+                              <help>An expression that is evaluated every time the binding is processed. Its evaluation result is stored in binding Target.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Activator" editor="activator" name="activator" type="S">
+                              <help>A reference that points to some event or variable (property). Occurrence of this event or change of this variable (property) triggers processing of the binding. If activator is not specified and On Event flag is set, the binding will be processed when any component of its Expression changes.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="Condition" editor="expression" name="condition" type="S">
+                              <help>An expression that is evaluated upon binding activation. The evaluation result should be a boolean that indicates whether the binding should be processed or not.</help>
+                              <defaultValue/>
+                            </field>
+                            <field description="On Startup" name="onstartup" type="B">
+                              <help>When enabled, the binding is processed once the widget is launched.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="On Event" name="onevent" type="B">
+                              <help>When enabled, the binding is processed upon Activator event (or Activator state change, if activator is a property). If Activator is not specified, the binding is processed when any component of the Expression changes.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="Periodically" name="periodically" type="B">
+                              <help>When enabled, the binding will be processed periodically.</help>
+                              <defaultValue>0</defaultValue>
+                            </field>
+                            <field description="Period" editor="period" name="period" type="L">
+                              <validators contentType="base64">HEweMSA5MjIzMzcyMDM2ODU0Nzc1ODA3HQ==</validators>
+                              <help>Interval between periodical binding executions.</help>
+                              <defaultValue>60000</defaultValue>
+                            </field>
+                            <field advanced="true" description="Queue" name="queue" type="S">
+                              <validators contentType="base64">HFIeXHcqXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                              <help>Target operations of bindings in the same queue are guaranteed to be performed sequentially.</help>
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                          <bindings>
+                            <binding>
+                              <reference>expression#options</reference>
+                              <expression>expressionEditorOptions({.:})</expression>
+                            </binding>
+                            <binding>
+                              <reference>activator#enabled</reference>
+                              <expression>{onevent}</expression>
+                            </binding>
+                            <binding>
+                              <reference>period#enabled</reference>
+                              <expression>{periodically}</expression>
+                            </binding>
+                            <binding>
+                              <reference>bindingId</reference>
+                              <expression>{bindingId}==null ? long(random()*9223372036854775807) : {bindingId}</expression>
+                            </binding>
+                          </bindings>
+                        </format>
+                      </table>
+                    </value>
+                    <value name="breakpoints">
+                      <table>
+                        <format maxRecords="2147483647" minRecords="1">
+                          <fields>
+                            <field description="Name" name="name" type="S">
+                              <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                              <defaultValue/>
+                            </field>
+                            <field description="Description" name="description" type="S">
+                              <defaultValue/>
+                            </field>
+                            <field description="Value" extendableSelectionValues="true" name="value" type="S">
+                              <selectionValues>
+                                <option description="Mobile">320</option>
+                                <option description="Tablet">800</option>
+                                <option description="Laptop">1366</option>
+                                <option description="Full HD">1920</option>
+                                <option description="QHD">2560</option>
+                                <option description="Ultra HD">3840</option>
+                              </selectionValues>
+                              <defaultValue>320</defaultValue>
+                            </field>
+                            <field description="Enabled" name="enabled" type="B">
+                              <defaultValue>1</defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="name">fullHD</value>
+                            <value name="description">Full HD</value>
+                            <value name="value">1920</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="currentBreakpoint">
+                      <table>
+                        <format maxRecords="1" minRecords="1">
+                          <fields>
+                            <field description="Name" name="name" type="S">
+                              <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                              <defaultValue/>
+                            </field>
+                            <field description="Description" name="description" type="S">
+                              <defaultValue/>
+                            </field>
+                            <field description="Value" extendableSelectionValues="true" name="value" type="S">
+                              <selectionValues>
+                                <option description="Mobile">320</option>
+                                <option description="Tablet">800</option>
+                                <option description="Laptop">1366</option>
+                                <option description="Full HD">1920</option>
+                                <option description="QHD">2560</option>
+                                <option description="Ultra HD">3840</option>
+                              </selectionValues>
+                              <defaultValue>320</defaultValue>
+                            </field>
+                            <field description="Enabled" name="enabled" type="B">
+                              <defaultValue>1</defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="name">fullHD</value>
+                            <value name="description">Full HD</value>
+                            <value name="value">1920</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="defaultBreakpoint">fullHD</value>
+                    <value name="customProperties">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Name" name="name" type="S">
+                              <validators contentType="base64">HEweMSA1MB0cUh5cdyteXk5hbWUgbWF5IGNvbnRhaW4gb25seSBMYXRpbiBsZXR0ZXJzLCBkaWdpdHMsIGFuZCB1bmRlcnNjb3Jlcx0=</validators>
+                              <defaultValue/>
+                            </field>
+                            <field description="Format" name="format" nullable="true" type="T">
+                              <defaultValue>
+                                <table>
+                                  <format maxRecords="1" minRecords="1">
+                                    <fields>
+                                      <field description="Minimal Record Count" name="minRecords" type="I">
+                                        <validators contentType="base64">HEweMCAyMTQ3NDgzNjQ3HQ==</validators>
+                                        <defaultValue>0</defaultValue>
+                                      </field>
+                                      <field description="Maximal Record Count" extendableSelectionValues="true" name="maxRecords" type="I">
+                                        <validators contentType="base64">HEweMCAyMTQ3NDgzNjQ3HQ==</validators>
+                                        <selectionValues>
+                                          <option description="Not limited">2147483647</option>
+                                        </selectionValues>
+                                        <defaultValue>2147483647</defaultValue>
+                                      </field>
+                                      <field description="Fields" name="fields" type="T">
+                                        <defaultValue>
+                                          <table>
+                                            <format maxRecords="2147483647" reorderable="true">
+                                              <fields>
+                                                <field hidden="true" name="oldname" type="S">
+                                                  <defaultValue/>
+                                                </field>
+                                                <field description="Name" keyfield="true" name="name" type="S">
+                                                  <validators contentType="base64">HFIeXHcrXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                                                  <defaultValue/>
+                                                </field>
+                                                <field description="Type" name="type" type="S">
+                                                  <selectionValues>
+                                                    <option description="Integer">I</option>
+                                                    <option description="String">S</option>
+                                                    <option description="Boolean">B</option>
+                                                    <option description="Long">L</option>
+                                                    <option description="Float">F</option>
+                                                    <option description="Double">E</option>
+                                                    <option description="Date">D</option>
+                                                    <option description="Data Table">T</option>
+                                                    <option description="Color">C</option>
+                                                    <option description="Data Block">A</option>
+                                                  </selectionValues>
+                                                  <defaultValue>I</defaultValue>
+                                                </field>
+                                                <field description="Description" name="description" nullable="true" type="S">
+                                                  <validators contentType="base64">HFIeW15ccHtDbnRybH1dKl5eRGVzY3JpcHRpb24gbWF5IGNvbnRhaW4gb25seSBwcmludGFibGUgY2hhcmFjdGVycx0=</validators>
+                                                  <defaultValue>
+                                                    <nullValue/>
+                                                  </defaultValue>
+                                                </field>
+                                                <field description="Default" name="defaultValue" nullable="true" type="S">
+                                                  <defaultValue>
+                                                    <nullValue/>
+                                                  </defaultValue>
+                                                </field>
+                                                <field description="Read-only" name="readonly" type="B">
+                                                  <defaultValue>0</defaultValue>
+                                                </field>
+                                                <field description="Nullable" name="nullable" type="B">
+                                                  <defaultValue>0</defaultValue>
+                                                </field>
+                                                <field description="Key" name="key" type="B">
+                                                  <defaultValue>0</defaultValue>
+                                                </field>
+                                                <field description="Selection Values" name="selvals" type="T">
+                                                  <defaultValue>
+                                                    <table>
+                                                      <format maxRecords="2147483647" reorderable="true">
+                                                        <fields>
+                                                          <field description="Value" keyfield="true" name="value" nullable="true" type="S">
+                                                            <defaultValue>
+                                                              <nullValue/>
+                                                            </defaultValue>
+                                                          </field>
+                                                          <field description="Description" name="description" type="S">
+                                                            <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                                                            <defaultValue/>
+                                                          </field>
+                                                        </fields>
+                                                        <validators contentType="base64">HEseHQ==</validators>
+                                                      </format>
+                                                    </table>
+                                                  </defaultValue>
+                                                </field>
+                                                <field description="Extendable Selection Values" name="extselvals" type="B">
+                                                  <defaultValue>0</defaultValue>
+                                                </field>
+                                                <field advanced="true" description="Hidden" name="hidden" type="B">
+                                                  <defaultValue>0</defaultValue>
+                                                </field>
+                                                <field advanced="true" description="Inline" name="inline" type="B">
+                                                  <defaultValue>0</defaultValue>
+                                                </field>
+                                                <field advanced="true" description="Encrypted" name="encrypted" type="B">
+                                                  <defaultValue>0</defaultValue>
+                                                </field>
+                                                <field description="Help" editor="textarea" name="help" nullable="true" type="S">
+                                                  <validators contentType="base64">HFIeW15ccHtDbnRybH1dKl5eRGVzY3JpcHRpb24gbWF5IGNvbnRhaW4gb25seSBwcmludGFibGUgY2hhcmFjdGVycx0=</validators>
+                                                  <defaultValue>
+                                                    <nullValue/>
+                                                  </defaultValue>
+                                                </field>
+                                                <field description="Editor/Viewer" extendableSelectionValues="true" name="editor" nullable="true" type="S">
+                                                  <selectionValues>
+                                                    <option description="Default">
+                                                      <nullValue/>
+                                                    </option>
+                                                    <option description="List">list</option>
+                                                    <option description="Date">date</option>
+                                                    <option description="Time">time</option>
+                                                    <option description="Bar">bar</option>
+                                                    <option description="Bytes">bytes</option>
+                                                    <option description="Class Instance">instance</option>
+                                                    <option description="Time Period">period</option>
+                                                    <option description="Foreign Class Instance">foreignInstance</option>
+                                                    <option description="Expression">expression</option>
+                                                    <option description="Function Selector">functionselector</option>
+                                                    <option description="Password">password</option>
+                                                    <option description="Text Editor">text</option>
+                                                    <option description="HTML">html</option>
+                                                    <option description="Text Area">textarea</option>
+                                                    <option description="Embedded Text Area">etextarea</option>
+                                                    <option description="Context">context</option>
+                                                    <option description="Context Mask">contextmask</option>
+                                                    <option description="Font">font</option>
+                                                    <option description="IP Address">ip</option>
+                                                    <option description="Box">box</option>
+                                                    <option description="Image">image</option>
+                                                    <option description="Sound">sound</option>
+                                                    <option description="Hex">hex</option>
+                                                    <option description="Reference">reference</option>
+                                                    <option description="Activator">activator</option>
+                                                    <option description="Code Editor">code</option>
+                                                    <option description="Spinner">spinner</option>
+                                                    <option description="Event Level">eventLevel</option>
+                                                  </selectionValues>
+                                                  <defaultValue>
+                                                    <nullValue/>
+                                                  </defaultValue>
+                                                </field>
+                                                <field description="Editor Options" name="editorOptions" nullable="true" type="T">
+                                                  <defaultValue>
+                                                    <nullValue/>
+                                                  </defaultValue>
+                                                </field>
+                                                <field description="Validators" name="validators" nullable="true" type="T">
+                                                  <defaultValue>
+                                                    <table>
+                                                      <format maxRecords="2147483647" reorderable="true">
+                                                        <fields>
+                                                          <field description="Type" name="validator" nullable="true" type="S">
+                                                            <selectionValues>
+                                                              <option description="Default">
+                                                                <nullValue/>
+                                                              </option>
+                                                              <option description="ID Validator">I</option>
+                                                              <option description="Limits Validator">L</option>
+                                                              <option description="Non-Null Validator">N</option>
+                                                              <option description="Regex Validator">R</option>
+                                                              <option description="Expression Validator">E</option>
+                                                            </selectionValues>
+                                                            <defaultValue>
+                                                              <nullValue/>
+                                                            </defaultValue>
+                                                          </field>
+                                                          <field description="Options" name="options" type="S">
+                                                            <defaultValue/>
+                                                          </field>
+                                                        </fields>
+                                                      </format>
+                                                    </table>
+                                                  </defaultValue>
+                                                </field>
+                                                <field description="Group" name="group" nullable="true" type="S">
+                                                  <defaultValue>
+                                                    <nullValue/>
+                                                  </defaultValue>
+                                                </field>
+                                              </fields>
+                                              <bindings>
+                                                <binding>
+                                                  <reference>editorOptions</reference>
+                                                  <expression>callFunction(&quot;utilities&quot;, &quot;editorOptions&quot;, {type}, {editor}, {editorOptions})</expression>
+                                                </binding>
+                                                <binding>
+                                                  <reference>editor#choices</reference>
+                                                  <expression>{utilities:editors(&apos;{type}&apos;)}</expression>
+                                                </binding>
+                                              </bindings>
+                                              <validators contentType="base64">HEseHQ==</validators>
+                                            </format>
+                                          </table>
+                                        </defaultValue>
+                                      </field>
+                                      <field description="Reorderable" name="reorderable" type="B">
+                                        <defaultValue>0</defaultValue>
+                                      </field>
+                                      <field description="Unresizable" name="unresizable" type="B">
+                                        <defaultValue>0</defaultValue>
+                                      </field>
+                                      <field description="Bindings" name="bindings" type="T">
+                                        <defaultValue>
+                                          <table>
+                                            <format maxRecords="2147483647" reorderable="true">
+                                              <fields>
+                                                <field description="Target" name="target" type="S">
+                                                  <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                                                  <defaultValue/>
+                                                </field>
+                                                <field description="Expression" editor="expression" name="expression" type="S">
+                                                  <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                                                  <defaultValue/>
+                                                </field>
+                                              </fields>
+                                            </format>
+                                          </table>
+                                        </defaultValue>
+                                      </field>
+                                      <field description="Encoded" editor="textarea" name="encoded" readonly="true" type="S">
+                                        <help>Encoded table format</help>
+                                        <defaultValue/>
+                                      </field>
+                                      <field description="Naming Expression" editor="expression" name="namingExpression" nullable="true" type="S">
+                                        <defaultValue>
+                                          <nullValue/>
+                                        </defaultValue>
+                                      </field>
+                                    </fields>
+                                    <validators contentType="base64">HEUeZTIxcGJsSmxZMjl5WkhOOUlEdzlJSHR0WVhoU1pXTnZjbVJ6ZlNBL0lHNTFiR3dnT2lBblRXRjRhVzFoYkNCdWRXMWlaWElnYjJZZw0KY21WamIzSmtjeUJqWVc1dWIzUWdZbVVnYkdWemN5QjBhR1Z1SUcxcGJtbHRZV3duDQod</validators>
+                                  </format>
+                                  <records>
+                                    <record/>
+                                  </records>
+                                </table>
+                              </defaultValue>
+                            </field>
+                            <field description="Description" name="description" type="S">
+                              <defaultValue/>
+                            </field>
+                            <field description="Help" name="help" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                      </table>
+                    </value>
+                    <value name="state">RUNNING</value>
+                  </record>
+                </records>
+              </table>
+            </value>
+          </record>
+          <record>
+            <value name="name">numberField0</value>
+            <value name="type">numberField</value>
+            <value name="parameters">
+              <table>
+                <format maxRecords="1" minRecords="1">
+                  <fields>
+                    <field description="Name" name="name" nullable="true" type="S">
+                      <validators contentType="base64">HFIeXHcrXl5OYW1lIG1heSBjb250YWluIG9ubHkgTGF0aW4gbGV0dGVycywgZGlnaXRzLCBhbmQgdW5kZXJzY29yZXMd</validators>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Column" name="gridx" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Row" name="gridy" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Column Span" name="gridWidth" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Row Span" name="gridHeight" type="I">
+                      <validators contentType="base64">HEweMSAyMTQ3NDgzNjQ3HQ==</validators>
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Content Overflow" name="overflow" type="S">
+                      <selectionValues>
+                        <option description="Auto">auto</option>
+                        <option description="Hidden">hidden</option>
+                        <option description="Scroll">scroll</option>
+                        <option description="Unset">unset</option>
+                        <option description="Visible">visible</option>
+                      </selectionValues>
+                      <defaultValue>auto</defaultValue>
+                    </field>
+                    <field description="Visible" name="visible" type="B">
+                      <defaultValue>1</defaultValue>
+                    </field>
+                    <field description="Custom Classes" name="customClasses" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Element CSS Style" editor="code" name="style" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Breakpoints" name="gridBreakpoints" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="visibleChildren" name="visibleChildren" type="T">
+                      <defaultValue>
+                        <table>
+                          <format maxRecords="2147483647"/>
+                        </table>
+                      </defaultValue>
+                    </field>
+                    <field description="Container Style" editor="code" name="containerStyle" nullable="true" type="S">
+                      <editorOptions>scss</editorOptions>
+                      <defaultValue>
+                        <nullValue/>
+                      </defaultValue>
+                    </field>
+                    <field description="Minimum Value" name="minValue" type="E">
+                      <defaultValue>0.0</defaultValue>
+                    </field>
+                    <field description="Maximum value" name="maxValue" type="E">
+                      <defaultValue>10.0</defaultValue>
+                    </field>
+                    <field description="Step" name="step" type="E">
+                      <defaultValue>1.0</defaultValue>
+                    </field>
+                    <field description="Unit" name="unit" type="S">
+                      <defaultValue/>
+                    </field>
+                    <field description="Disabled" name="disabled" type="B">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                    <field description="Value" name="value" type="E">
+                      <defaultValue>0.0</defaultValue>
+                    </field>
+                    <field description="Precision" name="precision" type="I">
+                      <defaultValue>0</defaultValue>
+                    </field>
+                  </fields>
+                </format>
+                <records>
+                  <record>
+                    <value name="name">numberField0</value>
+                    <value name="gridx">2</value>
+                    <value name="gridy">1</value>
+                    <value name="gridWidth">3</value>
+                    <value name="style"/>
+                    <value name="gridBreakpoints">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field description="Breakpoint" name="breakpoint" nullable="true" type="S">
+                              <defaultValue>default</defaultValue>
+                            </field>
+                            <field description="Style" name="style" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                            <field description="Container Style" name="containerStyle" nullable="true" type="S">
+                              <defaultValue>
+                                <nullValue/>
+                              </defaultValue>
+                            </field>
+                          </fields>
+                        </format>
+                        <records>
+                          <record>
+                            <value name="breakpoint">fullHD</value>
+                            <value name="style"/>
+                            <value name="containerStyle">gridx:2;gridy:1;gridWidth:3;gridHeight:1;overflow:auto;</value>
+                          </record>
+                        </records>
+                      </table>
+                    </value>
+                    <value name="visibleChildren">
+                      <table>
+                        <format maxRecords="2147483647">
+                          <fields>
+                            <field name="path" type="S">
+                              <defaultValue/>
+                            </field>
+                          </fields>
+                        </format>
+                      </table>
+                    </value>
+                    <value name="containerStyle"/>
+                    <value name="value">1.0</value>
+                  </record>
+                </records>
+              </table>
+            </value>
+          </record>
+        </records>
+      </table>
+    </entry>
+  </properties>
+</properties>

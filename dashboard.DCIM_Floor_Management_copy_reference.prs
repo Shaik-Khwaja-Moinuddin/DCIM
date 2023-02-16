@@ -1,0 +1,298 @@
+<properties>
+  <properties class="linked-hash-map">
+    <entry>
+      <string>childInfo</string>
+      <table>
+        <format maxRecords="1" minRecords="1">
+          <fields>
+            <field description="Name" name="name" notReplicated="true" type="S">
+              <validators contentType="base64">HEweMSA1MB0cUh5cdyteXk5hbWUgbWF5IGNvbnRhaW4gb25seSBMYXRpbiBsZXR0ZXJzLCBkaWdpdHMsIGFuZCB1bmRlcnNjb3Jlcx0=</validators>
+              <help>Name of the object and corresponding system context, required to refer to this object from other parts of the system. It should satisfy the context naming conventions. WARNING: changing name will corrupt all references to the object.</help>
+              <defaultValue/>
+            </field>
+            <field description="Description" name="description" notReplicated="true" type="S">
+              <validators contentType="base64">HEweMCAxMDAdHFIeW15ccHtDbnRybH1dKl5eRGVzY3JpcHRpb24gbWF5IGNvbnRhaW4gb25seSBwcmludGFibGUgY2hhcmFjdGVycx0=</validators>
+              <help>This field defines a dashboard textual description. This is also a description of the Dashboard context.</help>
+              <defaultValue/>
+            </field>
+            <field description="Title Expression" editor="expression" name="title" type="S">
+              <help>This field defines a dashboard title appearing on the top of the dashboard window. If the title is not specified, its description is used instead. The title can be a plain string or an expression. If it&apos;s an expression, it returns a string to allow the relative dashboard titles displaying values from the contexts whose data is shown on the dashboard.</help>
+              <group>Window Properties</group>
+              <defaultValue/>
+            </field>
+            <field description="Layout" name="layout" readonly="true" type="I">
+              <help>The field allows to specify the dashboard layout: dockable or scrollable.</help>
+              <group>Window Properties</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Column Count" name="columns" type="I">
+              <help>The field defines a number of columns. The option is relevant to scrollable dashboards only.</help>
+              <group>Window Properties</group>
+              <defaultValue>3</defaultValue>
+            </field>
+            <field description="Destination" name="destination" type="I">
+              <selectionValues>
+                <option description="Web">0</option>
+                <option description="Desktop">1</option>
+              </selectionValues>
+              <help>The field defines the dashboard destination: Web or Desktop.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Type" name="type" type="I">
+              <selectionValues>
+                <option description="Relative">0</option>
+                <option description="Absolute">1</option>
+                <option description="Class Instance">2</option>
+              </selectionValues>
+              <help>The field defines the dashboard type: Absolute or Relative.</help>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Validity Expression" editor="expression" name="validityExpression" type="S">
+              <editorOptions contentType="base64">HEYeHBxjb250ZXh0HRxTHRxGHk4dHEEeGh0cRB5EZWZhdWx0IENvbnRleHQdHRwcdGFibGUdHFQdHEYeTh0cQR4aHRxEHkRlZmF1bHQgVGFibGUdHRwccmVmZXJlbmNlcx0cVB0cRh5OHRxBHhxGHhwccmVmZXJlbmNlHRxTHRxBHh0cRB5SZWZlcmVuY2UdHRwcZGVzY3JpcHRpb24dHFMdHEEeHRxEHkRlc2NyaXB0aW9uHR0dHRxEHlJlZmVyZW5jZXMdHRwcZXhwZWN0ZWRSZXN1bHQdHFMdHEYeTh0cQR4aHRxEHkV4cGVjdGVkIFJlc3VsdB0dHBxjb250ZXh0RGVzY3JpcHRpb24dHFMdHEYeTh0cQR4aHRxEHkRlZmF1bHQgQ29udGV4dCBEZXNjcmlwdGlvbh0dHBx0YWJsZURlc2NyaXB0aW9uHRxTHRxGHk4dHEEeGh0cRB5EZWZhdWx0IFRhYmxlIERlc2NyaXB0aW9uHR0cTR4xHRxYHjEdHRxSHhwaHRwaHRwcUh4cLjojdHlwZR0cQ29udGV4dCBUeXBlHR0cUh4cLjodHENvbnRleHQgUGF0aB0dHRwaHRwaHRwaHR0=</editorOptions>
+              <help>The field includes the expression defining context(s) to which the dashboard can be attached.</help>
+              <group>Validity</group>
+              <defaultValue/>
+            </field>
+            <field description="Validity Update Rules" name="validityListeners" type="T">
+              <help>This field defines a list of context masks and event names. If the event specified in the Event field occurs in any of contexts matching the mask specified by the Mask field in the same record, the Validity Expression will be recalculated for this context. This allows to make the dashboard valid/invalid for a certain context if some changes occur in it.</help>
+              <group>Validity</group>
+              <defaultValue>
+                <table>
+                  <format maxRecords="2147483647">
+                    <fields>
+                      <field description="Context Mask" editor="contextmask" icon="fi_context" keyfield="true" name="mask" type="S">
+                        <help>Mask of contexts to monitor events in&#xd;
+</help>
+                        <defaultValue/>
+                      </field>
+                      <field description="Event" extendableSelectionValues="true" icon="fi_event" keyfield="true" name="event" type="S">
+                        <help>Name of Event to listen for</help>
+                        <defaultValue/>
+                      </field>
+                      <field description="Target Expression" editor="expression" icon="fi_expression" name="expression" nullable="true" type="S">
+                        <help>If specified, points to a context those validity should be checked. If Target Expression is not specified (what is suitable in most cases), the system checks validity of context in that Event has occurred.</help>
+                        <defaultValue>
+                          <nullValue/>
+                        </defaultValue>
+                      </field>
+                    </fields>
+                    <bindings>
+                      <binding>
+                        <reference>event#choices</reference>
+                        <expression>{utilities:eventsByMask(&apos;{mask}&apos;)}</expression>
+                      </binding>
+                    </bindings>
+                    <validators contentType="base64">HEseHQ==</validators>
+                  </format>
+                </table>
+              </defaultValue>
+            </field>
+            <field description="Allow Validity For Remote Contexts" name="allowValidityForRemoteContexts" type="B">
+              <help>If enabled then this context will be allowed to attach to remote contexts, connected via distributed architecture</help>
+              <group>Validity</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Default Context" editor="context" name="defaultContext" nullable="true" type="S">
+              <group>Validity</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Closable" name="closable" type="B">
+              <help>This flag defines whether the dashboard can be closed. Non-closable dashboards often play a role of main dashboards in operator UIs.</help>
+              <group>Advanced Properties</group>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Close Dashboard On Reopen" name="closeDashboardOnReopen" type="B">
+              <group>Advanced Properties</group>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Launch via Manage Action" name="launchViaManage" type="B">
+              <help>This flag defines whether the dashboard will open by the context action, e.g. Manage Device action.</help>
+              <group>Advanced Properties</group>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Layout Control Panel" name="layoutControlPanel" type="B">
+              <help>This flag defines the visibility of the bottom panel (Save/Load layout and other buttons).</help>
+              <group>Advanced Properties</group>
+              <defaultValue>1</defaultValue>
+            </field>
+            <field description="Template Processing Expression" editor="expression" name="templateProcessingExpression" nullable="true" type="S">
+              <help>If specified, it processes the template during dashboard opening and return the modified template</help>
+              <group>Advanced Properties</group>
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field description="Storage Context" editor="context" name="storageContext" type="S">
+              <defaultValue/>
+            </field>
+            <field description="Table" name="storageClass" type="S">
+              <defaultValue/>
+            </field>
+            <field hidden="true" name="resourceBundle" nullable="true" readonly="true" type="S">
+              <defaultValue>
+                <nullValue/>
+              </defaultValue>
+            </field>
+            <field advanced="true" description="Enable Caching" name="cacheEnabled" type="B">
+              <defaultValue>1</defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>layout#choices</reference>
+              <expression>{utilities:layoutsByDestination(&apos;{destination}&apos;)}</expression>
+            </binding>
+            <binding>
+              <reference>columns#hidden</reference>
+              <expression>{layout} != 1</expression>
+            </binding>
+            <binding>
+              <reference>validityExpression#hidden</reference>
+              <expression>{type} != 0</expression>
+            </binding>
+            <binding>
+              <reference>validityListeners#hidden</reference>
+              <expression>{type} != 0</expression>
+            </binding>
+            <binding>
+              <reference>allowValidityForRemoteContexts#hidden</reference>
+              <expression>{type} != 0</expression>
+            </binding>
+            <binding>
+              <reference>defaultContext#hidden</reference>
+              <expression>{type} != 0</expression>
+            </binding>
+            <binding>
+              <reference>storageContext#hidden</reference>
+              <expression>{type} != 2</expression>
+            </binding>
+            <binding>
+              <reference>storageClass#hidden</reference>
+              <expression>{type} != 2</expression>
+            </binding>
+            <binding>
+              <reference>storageClass#enabled</reference>
+              <expression>{storageContext} != null &amp;&amp; length({storageContext}) &gt; 0 &amp;&amp; functionAvailable({storageContext}, &apos;storageTables&apos;)</expression>
+            </binding>
+            <binding>
+              <reference>storageClass#choices</reference>
+              <expression>({storageContext} != null &amp;&amp; length({storageContext}) &gt; 0) ? callFunction(&quot;utilities&quot;, &quot;selectionValues&quot;, &quot;callFunction(&apos;&quot; + {storageContext} + &quot;&apos;, &apos;storageTables&apos;)&quot;,  &quot;{value}&quot;,  &quot;{description}&quot;) : null</expression>
+            </binding>
+            <binding>
+              <reference>title#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>closable#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>closeDashboardOnReopen#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>launchViaManage#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>layoutControlPanel#hidden</reference>
+              <expression>{layout} == 2</expression>
+            </binding>
+            <binding>
+              <reference>templateProcessingExpression#hidden</reference>
+              <expression>{layout} != 2</expression>
+            </binding>
+            <binding>
+              <reference>templateProcessingExpression#options</reference>
+              <expression>variableAvailable({.:}, &apos;elements&apos;) ? cell(callFunction({.:}, &apos;expressionEditorOptions&apos;,{.:}, {.:elements})) : &apos;&apos;</expression>
+            </binding>
+            <binding>
+              <reference>cacheEnabled#hidden</reference>
+              <expression>{layout} != 2</expression>
+            </binding>
+          </bindings>
+        </format>
+        <records>
+          <record>
+            <value name="destination">1</value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>elements</string>
+      <table>
+        <format maxRecords="2147483647" reorderable="true">
+          <fields>
+            <field description="Name" keyfield="true" name="name" type="S">
+              <help>Name of the object and corresponding system context, required to refer to this object from other parts of the system. It should satisfy the context naming conventions. WARNING: changing name will corrupt all references to the object.</help>
+              <defaultValue/>
+            </field>
+            <field description="Type" name="type" type="S">
+              <selectionValues>
+                <option description="Text Field">textField</option>
+                <option description="Text Area">textArea</option>
+                <option description="Dropdown Menu">dropDownButton</option>
+                <option description="HTML Snippet">htmlSnippet</option>
+                <option description="Label">label</option>
+                <option description="Button">button</option>
+                <option description="Map">map</option>
+                <option description="Image">image</option>
+                <option description="Root">root</option>
+                <option description="Panel">panel</option>
+                <option description="Tabbed Panel">tabbedPanel</option>
+                <option description="Combo Box">comboBox</option>
+                <option description="Check Box">checkBox</option>
+                <option description="Check Box Group">checkBoxGroup</option>
+                <option description="Toggle Button">toggleButton</option>
+                <option description="Radio Button Group">radioButton</option>
+                <option description="Date Time Picker">dateTimePicker</option>
+                <option description="Bar Chart">barChart</option>
+                <option description="Line Chart">lineChart</option>
+                <option description="Pie Chart">pieChart</option>
+                <option description="Custom Tree">customTree</option>
+                <option description="System Tree">systemTree</option>
+                <option description="Progress Bar">progressBar</option>
+                <option description="Tab">tab</option>
+                <option description="Data Table Editor">dataTableEditor</option>
+                <option description="Button Group">buttonGroup</option>
+                <option description="Steps Component">steps</option>
+                <option description="Steps Content">stepsContent</option>
+                <option description="Timer">timer</option>
+                <option description="Breadcrumb">breadcrumb</option>
+                <option description="Tree Select">treeSelect</option>
+                <option description="Number Field">numberField</option>
+                <option description="Time Picker">timePicker</option>
+                <option description="Widget">widget</option>
+                <option description="Uploader">uploader</option>
+                <option description="Menu">menu</option>
+                <option description="Class Data Table Editor">classDataTableEditor</option>
+                <option description="Subdashboard">subdashboard</option>
+                <option description="Event Log">eventLog</option>
+              </selectionValues>
+              <help>This field defines the element type.</help>
+              <defaultValue>textField</defaultValue>
+            </field>
+            <field description="Parameters" name="parameters" type="T">
+              <help>This field defines the element settings. The settings define which data to show and how to present it. The list of settings depends on the element type.</help>
+              <defaultValue>
+                <table>
+                  <format maxRecords="2147483647"/>
+                </table>
+              </defaultValue>
+            </field>
+          </fields>
+          <bindings>
+            <binding>
+              <reference>parameters</reference>
+              <expression>{.:elementParameters(&apos;{type}&apos;, &apos;{parameters}&apos;)}</expression>
+            </binding>
+          </bindings>
+          <validators contentType="base64">HEseHQ==</validators>
+        </format>
+      </table>
+    </entry>
+  </properties>
+</properties>

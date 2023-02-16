@@ -1077,15 +1077,15 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
         <records>
           <record>
             <value name="name">total_space</value>
-            <value name="expresion">&quot;40U&quot;</value>
+            <value name="expresion">table(&apos;&lt;&lt;Total_Space&gt;&lt;S&gt;&gt;&apos;,&quot;40U&quot;)</value>
           </record>
           <record>
             <value name="name">occupied_space</value>
-            <value name="expresion">&quot;24U&quot;</value>
+            <value name="expresion">table(&apos;&lt;&lt;Occupied_Sapce&gt;&lt;S&gt;&gt;&apos;,&quot;24U&quot;)</value>
           </record>
           <record>
             <value name="name">free_space</value>
-            <value name="expresion">&quot;16U&quot;</value>
+            <value name="expresion">table(&apos;&lt;&lt;Free_Space&gt;&lt;S&gt;&gt;&apos;,&quot;16U&quot;)</value>
           </record>
         </records>
       </table>
@@ -1676,6 +1676,32 @@ public class %ScriptClassNamePattern% implements FunctionImplementation
           </fields>
           <validators contentType="base64">HEseHQ==</validators>
         </format>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.models_groups.DCIM</value>
+          </record>
+        </records>
       </table>
     </entry>
     <entry>

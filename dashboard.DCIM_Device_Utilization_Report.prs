@@ -234,46 +234,46 @@
             </field>
             <field description="Type" name="type" type="S">
               <selectionValues>
-                <option description="Text Field">textField</option>
-                <option description="Text Area">textArea</option>
-                <option description="Dropdown Menu">dropDownButton</option>
-                <option description="HTML Snippet">htmlSnippet</option>
-                <option description="Label">label</option>
-                <option description="Button">button</option>
-                <option description="Map">map</option>
-                <option description="Image">image</option>
-                <option description="Root">root</option>
-                <option description="Panel">panel</option>
-                <option description="Tabbed Panel">tabbedPanel</option>
-                <option description="Combo Box">comboBox</option>
-                <option description="Check Box">checkBox</option>
-                <option description="Check Box Group">checkBoxGroup</option>
-                <option description="Toggle Button">toggleButton</option>
-                <option description="Radio Button Group">radioButton</option>
-                <option description="Date Time Picker">dateTimePicker</option>
-                <option description="Bar Chart">barChart</option>
-                <option description="Line Chart">lineChart</option>
-                <option description="Pie Chart">pieChart</option>
-                <option description="Custom Tree">customTree</option>
-                <option description="System Tree">systemTree</option>
-                <option description="Progress Bar">progressBar</option>
-                <option description="Tab">tab</option>
-                <option description="Data Table Editor">dataTableEditor</option>
-                <option description="Button Group">buttonGroup</option>
-                <option description="Steps Component">steps</option>
-                <option description="Steps Content">stepsContent</option>
-                <option description="Timer">timer</option>
-                <option description="Breadcrumb">breadcrumb</option>
-                <option description="Tree Select">treeSelect</option>
-                <option description="Number Field">numberField</option>
-                <option description="Time Picker">timePicker</option>
-                <option description="Widget">widget</option>
-                <option description="Uploader">uploader</option>
-                <option description="Menu">menu</option>
-                <option description="Class Data Table Editor">classDataTableEditor</option>
-                <option description="Subdashboard">subdashboard</option>
-                <option description="Event Log">eventLog</option>
                 <option description="Slider">slider</option>
+                <option description="Widget">widget</option>
+                <option description="Check Box Group">checkBoxGroup</option>
+                <option description="Text Field">textField</option>
+                <option description="Button">button</option>
+                <option description="Class Data Table Editor">classDataTableEditor</option>
+                <option description="Radio Button Group">radioButton</option>
+                <option description="Timer">timer</option>
+                <option description="Date Time Picker">dateTimePicker</option>
+                <option description="Data Table Editor">dataTableEditor</option>
+                <option description="Bar Chart">barChart</option>
+                <option description="Tab">tab</option>
+                <option description="Custom Tree">customTree</option>
+                <option description="Uploader">uploader</option>
+                <option description="Root">root</option>
+                <option description="Progress Bar">progressBar</option>
+                <option description="Event Log">eventLog</option>
+                <option description="HTML Snippet">htmlSnippet</option>
+                <option description="Dropdown Menu">dropDownButton</option>
+                <option description="Panel">panel</option>
+                <option description="Map">map</option>
+                <option description="Combo Box">comboBox</option>
+                <option description="Pie Chart">pieChart</option>
+                <option description="Image">image</option>
+                <option description="Button Group">buttonGroup</option>
+                <option description="Number Field">numberField</option>
+                <option description="Line Chart">lineChart</option>
+                <option description="Tree Select">treeSelect</option>
+                <option description="Label">label</option>
+                <option description="Menu">menu</option>
+                <option description="Steps Component">steps</option>
+                <option description="Subdashboard">subdashboard</option>
+                <option description="Tabbed Panel">tabbedPanel</option>
+                <option description="Time Picker">timePicker</option>
+                <option description="Breadcrumb">breadcrumb</option>
+                <option description="Check Box">checkBox</option>
+                <option description="System Tree">systemTree</option>
+                <option description="Steps Content">stepsContent</option>
+                <option description="Toggle Button">toggleButton</option>
+                <option description="Text Area">textArea</option>
               </selectionValues>
               <help>This field defines the element type.</help>
               <defaultValue>textField</defaultValue>
@@ -379,17 +379,17 @@
                     </field>
                     <field description="Show Grid Background" name="showGridBackground" type="S">
                       <selectionValues>
+                        <option description="Rows And Columns">rowsAndColumns</option>
+                        <option description="Columns">columns</option>
                         <option description="None">none</option>
                         <option description="Rows">rows</option>
-                        <option description="Columns">columns</option>
-                        <option description="Rows And Columns">rowsAndColumns</option>
                       </selectionValues>
                       <defaultValue>rowsAndColumns</defaultValue>
                     </field>
                     <field description="Grid Type" name="gridType" type="S">
                       <selectionValues>
-                        <option description="Scrollable">scrollable</option>
                         <option description="Dockable">dockable</option>
+                        <option description="Scrollable">scrollable</option>
                       </selectionValues>
                       <defaultValue>scrollable</defaultValue>
                     </field>
@@ -451,10 +451,10 @@
                     </field>
                     <field description="state" name="state" type="S">
                       <selectionValues>
+                        <option description="PAUSED">PAUSED</option>
                         <option description="CREATED">CREATED</option>
                         <option description="STARTING">STARTING</option>
                         <option description="RUNNING">RUNNING</option>
-                        <option description="PAUSED">PAUSED</option>
                         <option description="STOPPED">STOPPED</option>
                       </selectionValues>
                       <defaultValue>CREATED</defaultValue>
@@ -658,11 +658,11 @@ addColumns(callFunction({users.Aditya.models.DCIM_Asset_Device_Management:},&apo
                             <field description="Value" extendableSelectionValues="true" name="value" type="S">
                               <selectionValues>
                                 <option description="Mobile">320</option>
-                                <option description="Tablet">800</option>
-                                <option description="Laptop">1366</option>
                                 <option description="Full HD">1920</option>
-                                <option description="QHD">2560</option>
+                                <option description="Laptop">1366</option>
+                                <option description="Tablet">800</option>
                                 <option description="Ultra HD">3840</option>
+                                <option description="QHD">2560</option>
                               </selectionValues>
                               <defaultValue>320</defaultValue>
                             </field>
@@ -694,11 +694,11 @@ addColumns(callFunction({users.Aditya.models.DCIM_Asset_Device_Management:},&apo
                             <field description="Value" extendableSelectionValues="true" name="value" type="S">
                               <selectionValues>
                                 <option description="Mobile">320</option>
-                                <option description="Tablet">800</option>
-                                <option description="Laptop">1366</option>
                                 <option description="Full HD">1920</option>
-                                <option description="QHD">2560</option>
+                                <option description="Laptop">1366</option>
+                                <option description="Tablet">800</option>
                                 <option description="Ultra HD">3840</option>
+                                <option description="QHD">2560</option>
                               </selectionValues>
                               <defaultValue>320</defaultValue>
                             </field>
@@ -755,16 +755,16 @@ addColumns(callFunction({users.Aditya.models.DCIM_Asset_Device_Management:},&apo
                                                 </field>
                                                 <field description="Type" name="type" type="S">
                                                   <selectionValues>
-                                                    <option description="Integer">I</option>
-                                                    <option description="String">S</option>
+                                                    <option description="Data Block">A</option>
                                                     <option description="Boolean">B</option>
-                                                    <option description="Long">L</option>
-                                                    <option description="Float">F</option>
-                                                    <option description="Double">E</option>
+                                                    <option description="String">S</option>
+                                                    <option description="Color">C</option>
                                                     <option description="Date">D</option>
                                                     <option description="Data Table">T</option>
-                                                    <option description="Color">C</option>
-                                                    <option description="Data Block">A</option>
+                                                    <option description="Double">E</option>
+                                                    <option description="Float">F</option>
+                                                    <option description="Integer">I</option>
+                                                    <option description="Long">L</option>
                                                   </selectionValues>
                                                   <defaultValue>I</defaultValue>
                                                 </field>
@@ -831,34 +831,34 @@ addColumns(callFunction({users.Aditya.models.DCIM_Asset_Device_Management:},&apo
                                                     <option description="Default">
                                                       <nullValue/>
                                                     </option>
-                                                    <option description="List">list</option>
                                                     <option description="Date">date</option>
-                                                    <option description="Time">time</option>
-                                                    <option description="Bar">bar</option>
-                                                    <option description="Bytes">bytes</option>
                                                     <option description="Class Instance">instance</option>
-                                                    <option description="Time Period">period</option>
-                                                    <option description="Foreign Class Instance">foreignInstance</option>
-                                                    <option description="Expression">expression</option>
-                                                    <option description="Function Selector">functionselector</option>
-                                                    <option description="Password">password</option>
-                                                    <option description="Text Editor">text</option>
-                                                    <option description="HTML">html</option>
-                                                    <option description="Text Area">textarea</option>
-                                                    <option description="Embedded Text Area">etextarea</option>
-                                                    <option description="Context">context</option>
-                                                    <option description="Context Mask">contextmask</option>
-                                                    <option description="Font">font</option>
-                                                    <option description="IP Address">ip</option>
-                                                    <option description="Box">box</option>
-                                                    <option description="Image">image</option>
-                                                    <option description="Sound">sound</option>
-                                                    <option description="Hex">hex</option>
-                                                    <option description="Reference">reference</option>
-                                                    <option description="Activator">activator</option>
                                                     <option description="Code Editor">code</option>
-                                                    <option description="Spinner">spinner</option>
+                                                    <option description="Function Selector">functionselector</option>
+                                                    <option description="Sound">sound</option>
+                                                    <option description="Text Area">textarea</option>
+                                                    <option description="Box">box</option>
+                                                    <option description="Reference">reference</option>
+                                                    <option description="Bar">bar</option>
+                                                    <option description="Password">password</option>
                                                     <option description="Event Level">eventLevel</option>
+                                                    <option description="Context">context</option>
+                                                    <option description="HTML">html</option>
+                                                    <option description="Hex">hex</option>
+                                                    <option description="Text Editor">text</option>
+                                                    <option description="Spinner">spinner</option>
+                                                    <option description="Image">image</option>
+                                                    <option description="Time Period">period</option>
+                                                    <option description="Expression">expression</option>
+                                                    <option description="IP Address">ip</option>
+                                                    <option description="List">list</option>
+                                                    <option description="Embedded Text Area">etextarea</option>
+                                                    <option description="Foreign Class Instance">foreignInstance</option>
+                                                    <option description="Context Mask">contextmask</option>
+                                                    <option description="Bytes">bytes</option>
+                                                    <option description="Time">time</option>
+                                                    <option description="Activator">activator</option>
+                                                    <option description="Font">font</option>
                                                   </selectionValues>
                                                   <defaultValue>
                                                     <nullValue/>
@@ -879,11 +879,11 @@ addColumns(callFunction({users.Aditya.models.DCIM_Asset_Device_Management:},&apo
                                                               <option description="Default">
                                                                 <nullValue/>
                                                               </option>
+                                                              <option description="Regex Validator">R</option>
+                                                              <option description="Expression Validator">E</option>
                                                               <option description="ID Validator">I</option>
                                                               <option description="Limits Validator">L</option>
                                                               <option description="Non-Null Validator">N</option>
-                                                              <option description="Regex Validator">R</option>
-                                                              <option description="Expression Validator">E</option>
                                                             </selectionValues>
                                                             <defaultValue>
                                                               <nullValue/>
@@ -1040,10 +1040,10 @@ addColumns(callFunction({users.Aditya.models.DCIM_Asset_Device_Management:},&apo
                     <field description="Content Overflow" name="overflow" type="S">
                       <selectionValues>
                         <option description="Auto">auto</option>
+                        <option description="Visible">visible</option>
                         <option description="Hidden">hidden</option>
                         <option description="Scroll">scroll</option>
                         <option description="Unset">unset</option>
-                        <option description="Visible">visible</option>
                       </selectionValues>
                       <defaultValue>auto</defaultValue>
                     </field>
@@ -1097,17 +1097,17 @@ addColumns(callFunction({users.Aditya.models.DCIM_Asset_Device_Management:},&apo
                     </field>
                     <field description="Show Grid Background" name="showGridBackground" type="S">
                       <selectionValues>
+                        <option description="Rows And Columns">rowsAndColumns</option>
+                        <option description="Columns">columns</option>
                         <option description="None">none</option>
                         <option description="Rows">rows</option>
-                        <option description="Columns">columns</option>
-                        <option description="Rows And Columns">rowsAndColumns</option>
                       </selectionValues>
                       <defaultValue>rowsAndColumns</defaultValue>
                     </field>
                     <field description="Grid Type" name="gridType" type="S">
                       <selectionValues>
-                        <option description="Scrollable">scrollable</option>
                         <option description="Dockable">dockable</option>
+                        <option description="Scrollable">scrollable</option>
                       </selectionValues>
                       <defaultValue>scrollable</defaultValue>
                     </field>
@@ -1296,10 +1296,10 @@ addColumns(callFunction({users.Aditya.models.DCIM_Asset_Device_Management:},&apo
                     <field description="Content Overflow" name="overflow" type="S">
                       <selectionValues>
                         <option description="Auto">auto</option>
+                        <option description="Visible">visible</option>
                         <option description="Hidden">hidden</option>
                         <option description="Scroll">scroll</option>
                         <option description="Unset">unset</option>
-                        <option description="Visible">visible</option>
                       </selectionValues>
                       <defaultValue>auto</defaultValue>
                     </field>
@@ -1438,10 +1438,10 @@ opacity: 1;</value>
                     <field description="Content Overflow" name="overflow" type="S">
                       <selectionValues>
                         <option description="Auto">auto</option>
+                        <option description="Visible">visible</option>
                         <option description="Hidden">hidden</option>
                         <option description="Scroll">scroll</option>
                         <option description="Unset">unset</option>
-                        <option description="Visible">visible</option>
                       </selectionValues>
                       <defaultValue>auto</defaultValue>
                     </field>
@@ -1666,7 +1666,12 @@ opacity: 1;</value>
                           <record>
                             <value name="breakpoint">fullHD</value>
                             <value name="style"/>
-                            <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:.ant-table {background:transparent!important}
+                            <value name="containerStyle">gridx:1;gridy:1;gridWidth:1;gridHeight:1;overflow:auto;containerStyle:.ant-table-header .ant-table-thead tr &gt; th {background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
+
+ 
+
+}
+.ant-table {background:transparent!important}
 .ant-table-row {background:transparent!important}.ant-table-tbody &gt; tr.ant-table-row &gt;
 td:nth-child(n) {color:#D8D9DA;background:transparent!important}    background: transparent;
 .ant-table-header .ant-table-thead tr &gt; th { background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
@@ -1674,16 +1679,12 @@ td:nth-child(n) {color:#D8D9DA;background:transparent!important}    background: 
 .ant-table-cell{
 z-index: 0;
 }
-.data-table-column-title .data-table-column-description {
+.data-table-column-title .data-table-column-description {pointer-events: none;
 color: #fafafa;
 }
 .gbOxvM .ant-table-header .ant-table-thead .ant-table-cell:hover {
     background-color: #16171a;}
 
-.ant-table-header .ant-table-thead tr &gt; th { pointer-events: none; background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
-
-
-}
 .toolbar-import-button{
   display: none;
 }
@@ -1691,6 +1692,9 @@ color: #fafafa;
   display: none;
 }
 
+.ant-table-body .ant-table-tbody &gt; tr.ant-table-row &gt; td.sorted-column-cell {
+    border: none!important;
+}
 ;</value>
                           </record>
                         </records>
@@ -1707,7 +1711,12 @@ color: #fafafa;
                         </format>
                       </table>
                     </value>
-                    <value name="containerStyle">.ant-table {background:transparent!important}
+                    <value name="containerStyle">.ant-table-header .ant-table-thead tr &gt; th {background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
+
+ 
+
+}
+.ant-table {background:transparent!important}
 .ant-table-row {background:transparent!important}.ant-table-tbody &gt; tr.ant-table-row &gt;
 td:nth-child(n) {color:#D8D9DA;background:transparent!important}    background: transparent;
 .ant-table-header .ant-table-thead tr &gt; th { background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
@@ -1715,16 +1724,12 @@ td:nth-child(n) {color:#D8D9DA;background:transparent!important}    background: 
 .ant-table-cell{
 z-index: 0;
 }
-.data-table-column-title .data-table-column-description {
+.data-table-column-title .data-table-column-description {pointer-events: none;
 color: #fafafa;
 }
 .gbOxvM .ant-table-header .ant-table-thead .ant-table-cell:hover {
     background-color: #16171a;}
 
-.ant-table-header .ant-table-thead tr &gt; th { pointer-events: none; background: transparent linear-gradient(90deg, #FFFFFF1A 100%, #DADADA1A 0%, #CECECE00 40%, #B5B5B500 0%, #A8A8A81A 96%, #FFFFFF1A 100%) 0% 0% no-repeat padding-box;; color:#fafafa;!important}
-
-
-}
 .toolbar-import-button{
   display: none;
 }
@@ -1732,6 +1737,9 @@ color: #fafafa;
   display: none;
 }
 
+.ant-table-body .ant-table-tbody &gt; tr.ant-table-row &gt; td.sorted-column-cell {
+    border: none!important;
+}
 </value>
                     <value name="additionalActionSettings">
                       <table>
@@ -1767,10 +1775,10 @@ color: #fafafa;
                             <field description="Action" name="buttonAction" type="S">
                               <selectionValues>
                                 <option description=""/>
-                                <option description="Edit">edit</option>
-                                <option description="Delete">delete</option>
                                 <option description="Cancel">cancel</option>
+                                <option description="Edit">edit</option>
                                 <option description="Apply">apply</option>
+                                <option description="Delete">delete</option>
                               </selectionValues>
                               <defaultValue/>
                             </field>
@@ -1829,16 +1837,16 @@ color: #fafafa;
                                       </field>
                                       <field description="Type" name="type" type="S">
                                         <selectionValues>
-                                          <option description="Integer">I</option>
-                                          <option description="String">S</option>
+                                          <option description="Data Block">A</option>
                                           <option description="Boolean">B</option>
-                                          <option description="Long">L</option>
-                                          <option description="Float">F</option>
-                                          <option description="Double">E</option>
+                                          <option description="String">S</option>
+                                          <option description="Color">C</option>
                                           <option description="Date">D</option>
                                           <option description="Data Table">T</option>
-                                          <option description="Color">C</option>
-                                          <option description="Data Block">A</option>
+                                          <option description="Double">E</option>
+                                          <option description="Float">F</option>
+                                          <option description="Integer">I</option>
+                                          <option description="Long">L</option>
                                         </selectionValues>
                                         <defaultValue>I</defaultValue>
                                       </field>
@@ -1905,34 +1913,34 @@ color: #fafafa;
                                           <option description="Default">
                                             <nullValue/>
                                           </option>
-                                          <option description="List">list</option>
                                           <option description="Date">date</option>
-                                          <option description="Time">time</option>
-                                          <option description="Bar">bar</option>
-                                          <option description="Bytes">bytes</option>
                                           <option description="Class Instance">instance</option>
-                                          <option description="Time Period">period</option>
-                                          <option description="Foreign Class Instance">foreignInstance</option>
-                                          <option description="Expression">expression</option>
-                                          <option description="Function Selector">functionselector</option>
-                                          <option description="Password">password</option>
-                                          <option description="Text Editor">text</option>
-                                          <option description="HTML">html</option>
-                                          <option description="Text Area">textarea</option>
-                                          <option description="Embedded Text Area">etextarea</option>
-                                          <option description="Context">context</option>
-                                          <option description="Context Mask">contextmask</option>
-                                          <option description="Font">font</option>
-                                          <option description="IP Address">ip</option>
-                                          <option description="Box">box</option>
-                                          <option description="Image">image</option>
-                                          <option description="Sound">sound</option>
-                                          <option description="Hex">hex</option>
-                                          <option description="Reference">reference</option>
-                                          <option description="Activator">activator</option>
                                           <option description="Code Editor">code</option>
-                                          <option description="Spinner">spinner</option>
+                                          <option description="Function Selector">functionselector</option>
+                                          <option description="Sound">sound</option>
+                                          <option description="Text Area">textarea</option>
+                                          <option description="Box">box</option>
+                                          <option description="Reference">reference</option>
+                                          <option description="Bar">bar</option>
+                                          <option description="Password">password</option>
                                           <option description="Event Level">eventLevel</option>
+                                          <option description="Context">context</option>
+                                          <option description="HTML">html</option>
+                                          <option description="Hex">hex</option>
+                                          <option description="Text Editor">text</option>
+                                          <option description="Spinner">spinner</option>
+                                          <option description="Image">image</option>
+                                          <option description="Time Period">period</option>
+                                          <option description="Expression">expression</option>
+                                          <option description="IP Address">ip</option>
+                                          <option description="List">list</option>
+                                          <option description="Embedded Text Area">etextarea</option>
+                                          <option description="Foreign Class Instance">foreignInstance</option>
+                                          <option description="Context Mask">contextmask</option>
+                                          <option description="Bytes">bytes</option>
+                                          <option description="Time">time</option>
+                                          <option description="Activator">activator</option>
+                                          <option description="Font">font</option>
                                         </selectionValues>
                                         <defaultValue>
                                           <nullValue/>
@@ -1953,11 +1961,11 @@ color: #fafafa;
                                                     <option description="Default">
                                                       <nullValue/>
                                                     </option>
+                                                    <option description="Regex Validator">R</option>
+                                                    <option description="Expression Validator">E</option>
                                                     <option description="ID Validator">I</option>
                                                     <option description="Limits Validator">L</option>
                                                     <option description="Non-Null Validator">N</option>
-                                                    <option description="Regex Validator">R</option>
-                                                    <option description="Expression Validator">E</option>
                                                   </selectionValues>
                                                   <defaultValue>
                                                     <nullValue/>
@@ -2061,32 +2069,32 @@ color: #fafafa;
                             </field>
                             <field description="Header Text Behavior" name="headerTextBehavior" type="S">
                               <selectionValues>
+                                <option description="Word Wrap">wordWrap</option>
                                 <option description="Expand Column">expandColumn</option>
                                 <option description="Ellipsis">ellipsis</option>
-                                <option description="Word Wrap">wordWrap</option>
                               </selectionValues>
                               <defaultValue>expandColumn</defaultValue>
                             </field>
                             <field description="Word Break" name="wordBreak" type="S">
                               <selectionValues>
-                                <option description="Break All">break-all</option>
-                                <option description="Break Word">break-word</option>
                                 <option description="Don&apos;t Break">false</option>
+                                <option description="Break Word">break-word</option>
+                                <option description="Break All">break-all</option>
                               </selectionValues>
                               <defaultValue>false</defaultValue>
                             </field>
                             <field description="Cell Text Horizontal Alignment" name="textAlignHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
                             </field>
                             <field description="Header Text Horizontal Alignment" name="textAlignHeaderHorizontal" type="S">
                               <selectionValues>
-                                <option description="Center">center</option>
                                 <option description="Left">left</option>
+                                <option description="Center">center</option>
                                 <option description="Right">right</option>
                               </selectionValues>
                               <defaultValue>center</defaultValue>
@@ -2113,16 +2121,16 @@ color: #fafafa;
                             <field description="Sorter Preset" name="sorterPreset" type="S">
                               <selectionValues>
                                 <option description="Ascending">ASC</option>
-                                <option description="Descending">DESC</option>
                                 <option description="Unset">unset</option>
+                                <option description="Descending">DESC</option>
                               </selectionValues>
                               <defaultValue>unset</defaultValue>
                             </field>
                             <field description="Filtering" name="filtering" type="S">
                               <selectionValues>
-                                <option description="None">none</option>
-                                <option description="Search">search</option>
                                 <option description="Filter">filter</option>
+                                <option description="Search">search</option>
+                                <option description="None">none</option>
                               </selectionValues>
                               <defaultValue>none</defaultValue>
                             </field>
@@ -2156,35 +2164,27 @@ color: #fafafa;
                         <records>
                           <record>
                             <value name="name">sl_no</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">device_id</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">device_name</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">device_type</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">building</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">lab_name</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">floor</value>
-                            <value name="sorter">0</value>
                           </record>
                           <record>
                             <value name="name">total_power_consumption</value>
-                            <value name="sorter">0</value>
                             <value name="width">200</value>
                           </record>
                         </records>
@@ -2261,10 +2261,10 @@ color: #fafafa;
                     <field description="Content Overflow" name="overflow" type="S">
                       <selectionValues>
                         <option description="Auto">auto</option>
+                        <option description="Visible">visible</option>
                         <option description="Hidden">hidden</option>
                         <option description="Scroll">scroll</option>
                         <option description="Unset">unset</option>
-                        <option description="Visible">visible</option>
                       </selectionValues>
                       <defaultValue>auto</defaultValue>
                     </field>
@@ -2318,17 +2318,17 @@ color: #fafafa;
                     </field>
                     <field description="Show Grid Background" name="showGridBackground" type="S">
                       <selectionValues>
+                        <option description="Rows And Columns">rowsAndColumns</option>
+                        <option description="Columns">columns</option>
                         <option description="None">none</option>
                         <option description="Rows">rows</option>
-                        <option description="Columns">columns</option>
-                        <option description="Rows And Columns">rowsAndColumns</option>
                       </selectionValues>
                       <defaultValue>rowsAndColumns</defaultValue>
                     </field>
                     <field description="Grid Type" name="gridType" type="S">
                       <selectionValues>
-                        <option description="Scrollable">scrollable</option>
                         <option description="Dockable">dockable</option>
+                        <option description="Scrollable">scrollable</option>
                       </selectionValues>
                       <defaultValue>scrollable</defaultValue>
                     </field>
@@ -2499,10 +2499,10 @@ color: #fafafa;
                     <field description="Content Overflow" name="overflow" type="S">
                       <selectionValues>
                         <option description="Auto">auto</option>
+                        <option description="Visible">visible</option>
                         <option description="Hidden">hidden</option>
                         <option description="Scroll">scroll</option>
                         <option description="Unset">unset</option>
-                        <option description="Visible">visible</option>
                       </selectionValues>
                       <defaultValue>auto</defaultValue>
                     </field>
@@ -2753,6 +2753,32 @@ border: 0;&#xd;
                 </records>
               </table>
             </value>
+          </record>
+        </records>
+      </table>
+    </entry>
+    <entry>
+      <string>groupMembership</string>
+      <table>
+        <format maxRecords="2147483647">
+          <fields>
+            <field description="Location" name="location" type="I">
+              <selectionValues>
+                <option description="Local">0</option>
+                <option description="Remote">1</option>
+              </selectionValues>
+              <help>Defines location of the group within a distributed installation. &apos;Local&apos; means this context is a member of the group defined on the consumer server while &apos;Remote&apos; indicates that this context is added to a group located on the remote provider server.</help>
+              <defaultValue>0</defaultValue>
+            </field>
+            <field description="Group" editor="context" name="group" type="S">
+              <help>Full path of group context that holds current context</help>
+              <defaultValue/>
+            </field>
+          </fields>
+        </format>
+        <records>
+          <record>
+            <value name="group">users.%.dashboards_groups.DCIM</value>
           </record>
         </records>
       </table>
